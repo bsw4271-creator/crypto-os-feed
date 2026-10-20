@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { fetchBars } from './lib/fetch.mjs';
 import { selectUniverse } from './lib/universe.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
+import { fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
 
 const DAY = 86400000;
 // Same lists as the paper-trading records in the private crypto-backtester repository.
@@ -35,11 +36,14 @@ const groups = new Map();
 for (const s of FIXED) groups.set(s, 'fixed');
 for (const s of auto) if (!groups.has(s)) groups.set(s, 'auto');
 
+const hl = await fetchHyperliquid();
 const symbols = [];
 for (const [symbol, group] of groups) {
   try {
     const { bars, venue, fallbackReason } = await fetchBars({ symbol, days: HISTORY_DAYS, now });
-    symbols.push(symbolBrief({ symbol, group, bars, venue, fallbackReason, strategies, now }));
+    const brief = symbolBrief({ symbol, group, bars, venue, fallbackReason, strategies, now });
+    if (brief.quality !== 'error') brief.hyperliquid = hyperliquidFor(symbol, brief.price, hl.spot, hl.perp);
+    symbols.push(brief);
   } catch (e) {
     symbols.push({ symbol, group, quality: 'error', quality_reason: e?.message ?? String(e) });
   }
@@ -69,6 +73,11 @@ const feed = {
     auto_error: autoError,
   },
   strategies,
+  hyperliquid: {
+    source: 'https://api.hyperliquid.xyz/info (public, read-only)',
+    note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - Binance close) / Binance close.',
+    errors: hl.errors,
+  },
   market: marketSummary(symbols),
   symbols,
 };
