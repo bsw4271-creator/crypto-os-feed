@@ -1,0 +1,6 @@
+{
+  "name": "bb",
+  "entry": [{ "kind": "close_below_bb_lower" }],
+  "exit": [{ "kind": "close_above_bb_upper" }],
+  "stopLoss": 0.03
+}

@@ -1,0 +1,6 @@
+{
+  "name": "rsi",
+  "entry": [{ "kind": "rsi_cross_up", "level": 30 }],
+  "exit": [{ "kind": "rsi_cross_down", "level": 70 }],
+  "stopLoss": 0.03
+}

@@ -1,0 +1,12 @@
+{
+  "name": "crypto-os-feed",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Crypto OS 공개 브리핑 피드 (시장 데이터만, 주문·지갑 기능 없음)",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "feed": "node feed.mjs",
+    "test": "node --test"
+  }
+}

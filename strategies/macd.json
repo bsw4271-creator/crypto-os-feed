@@ -1,0 +1,5 @@
+{
+  "name": "macd",
+  "entry": [{ "kind": "macd_cross_up" }],
+  "exit": [{ "kind": "macd_cross_down" }]
+}

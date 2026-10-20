@@ -1,0 +1,34 @@
+# Hourly public briefing feed. Reads public market data only; no keys, wallets or orders.
+# Cost: public repositories get free GitHub Actions minutes; one run takes about 1 minute.
+name: feed
+on:
+  schedule:
+    - cron: '17 * * * *' # minute 17 of every hour (UTC); GitHub may start it a few minutes late
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: feed
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: node --test
+      - name: Build feed
+        run: node feed.mjs --out feed
+      - name: Save feed
+        run: |
+          git config user.name "crypto-os-feed-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -q -m "피드 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') KST"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

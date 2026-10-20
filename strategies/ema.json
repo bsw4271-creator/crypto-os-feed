@@ -1,0 +1,6 @@
+{
+  "name": "ema",
+  "entry": [{ "kind": "ema_cross_sma_up" }, { "kind": "rsi_below", "level": 70 }],
+  "exit": [{ "kind": "ema_cross_sma_down" }],
+  "stopLoss": 0.05
+}
