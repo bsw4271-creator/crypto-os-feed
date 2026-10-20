@@ -1,0 +1,761 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-10-20T08:44:37.136Z",
+ "generated_at_kst": "2026-10-20 17:44 KST",
+ "next_update_expected_by": "2026-10-20T10:44:37.136Z",
+ "interval": "1h",
+ "source": "Binance spot public market data (Gate.io fallback). Read-only. No account, wallet or order data.",
+ "disclaimer": "분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아니며, 데이터가 늦거나 틀릴 수 있습니다.",
+ "quality_levels": {
+  "ok": "Binance data, last closed bar within 150 minutes",
+  "fallback": "Binance unavailable, another exchange used; prices can differ slightly",
+  "stale": "last closed bar older than 150 minutes; do not act on it",
+  "error": "no usable data"
+ },
+ "universe": {
+  "fixed": [
+   "BTCUSDT",
+   "ETHUSDT",
+   "SOLUSDT",
+   "HYPEUSDT",
+   "ZROUSDT"
+  ],
+  "auto": [
+   "BTCUSDT",
+   "ETHUSDT",
+   "SOLUSDT",
+   "ZECUSDT",
+   "XRPUSDT",
+   "NEARUSDT",
+   "SUIUSDT",
+   "BNBUSDT",
+   "DOGEUSDT",
+   "UNIUSDT"
+  ],
+  "auto_rule": "Binance spot USDT pairs, no stablecoins or pegged assets, listed >= 365 days, top 10 by 30-day average daily quote volume (daily candles closed before 00:00 UTC today)",
+  "auto_selected_asof": "2026-10-20T00:00:00.000Z",
+  "auto_error": null
+ },
+ "strategies": [
+  {
+   "name": "bb",
+   "entry": [
+    {
+     "kind": "close_below_bb_lower"
+    }
+   ],
+   "exit": [
+    {
+     "kind": "close_above_bb_upper"
+    }
+   ],
+   "stopLoss": 0.03
+  },
+  {
+   "name": "ema",
+   "entry": [
+    {
+     "kind": "ema_cross_sma_up"
+    },
+    {
+     "kind": "rsi_below",
+     "level": 70
+    }
+   ],
+   "exit": [
+    {
+     "kind": "ema_cross_sma_down"
+    }
+   ],
+   "stopLoss": 0.05
+  },
+  {
+   "name": "macd",
+   "entry": [
+    {
+     "kind": "macd_cross_up"
+    }
+   ],
+   "exit": [
+    {
+     "kind": "macd_cross_down"
+    }
+   ]
+  },
+  {
+   "name": "rsi",
+   "entry": [
+    {
+     "kind": "rsi_cross_up",
+     "level": 30
+    }
+   ],
+   "exit": [
+    {
+     "kind": "rsi_cross_down",
+     "level": 70
+    }
+   ],
+   "stopLoss": 0.03
+  }
+ ],
+ "market": {
+  "regime": "risk_off",
+  "regime_rule": "risk_on: BTC 7d > 0 and >= 60% of usable symbols up 24h; risk_off: BTC 7d < 0 and <= 40% up; else neutral; unknown if BTC data is missing",
+  "btc_change_24h_pct": -1.389,
+  "btc_change_7d_pct": -2.746,
+  "breadth_24h_up": "1/12",
+  "usable_symbols": 12,
+  "total_symbols": 12
+ },
+ "symbols": [
+  {
+   "symbol": "BTCUSDT",
+   "group": "fixed",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 81567.4,
+   "change_24h_pct": -1.389,
+   "change_7d_pct": -2.746,
+   "indicators_1h": {
+    "rsi14": 40.05,
+    "macd": -91.1989,
+    "macd_signal": -47.1869,
+    "macd_histogram": -44.0121,
+    "bb_upper": 82412.1,
+    "bb_lower": 81533,
+    "bb_position": 0.03916,
+    "ema9": 81840.3,
+    "sma9": 81844,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T15:00:00.000Z",
+     "last_exit_signal_at": "2026-10-18T10:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": true,
+     "last_entry_signal_at": "2026-10-20T04:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T08:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T00:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T14:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-15T05:00:00.000Z",
+     "last_exit_signal_at": "2026-10-11T19:00:00.000Z",
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "ETHUSDT",
+   "group": "fixed",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 2391.32,
+   "change_24h_pct": -1.627,
+   "change_7d_pct": -5.448,
+   "indicators_1h": {
+    "rsi14": 42.06,
+    "macd": -2.71763,
+    "macd_signal": -1.64938,
+    "macd_histogram": -1.06825,
+    "bb_upper": 2418.4,
+    "bb_lower": 2387.86,
+    "bb_position": 0.1132,
+    "ema9": 2401.12,
+    "sma9": 2402.72,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-16T12:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T21:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T04:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": "2026-10-12T08:00:00.000Z",
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "SOLUSDT",
+   "group": "fixed",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 104.41,
+   "change_24h_pct": -1.174,
+   "change_7d_pct": -3.84,
+   "indicators_1h": {
+    "rsi14": 47,
+    "macd": 0.107437,
+    "macd_signal": 0.166674,
+    "macd_histogram": -0.0592374,
+    "bb_upper": 105.534,
+    "bb_lower": 103.815,
+    "bb_position": 0.3461,
+    "ema9": 104.769,
+    "sma9": 104.897,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-15T16:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T21:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T03:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": "2026-10-12T06:00:00.000Z",
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "HYPEUSDT",
+   "group": "fixed",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 78.63,
+   "change_24h_pct": -1.553,
+   "change_7d_pct": -5.39,
+   "indicators_1h": {
+    "rsi14": 45.81,
+    "macd": 0.0291811,
+    "macd_signal": 0.040711,
+    "macd_histogram": -0.0115299,
+    "bb_upper": 79.8705,
+    "bb_lower": 77.8715,
+    "bb_position": 0.3794,
+    "ema9": 78.9975,
+    "sma9": 79.1411,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-12T05:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T22:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": true,
+     "last_entry_signal_at": "2026-10-20T01:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T08:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "ZROUSDT",
+   "group": "fixed",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 1.875,
+   "change_24h_pct": -1.73,
+   "change_7d_pct": -12.3,
+   "indicators_1h": {
+    "rsi14": 50.41,
+    "macd": 0.000386892,
+    "macd_signal": 0.00352808,
+    "macd_histogram": -0.00314119,
+    "bb_upper": 1.92656,
+    "bb_lower": 1.82884,
+    "bb_position": 0.4724,
+    "ema9": 1.87249,
+    "sma9": 1.87411,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T16:00:00.000Z",
+     "last_exit_signal_at": "2026-10-15T18:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T17:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T23:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T17:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T02:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T16:00:00.000Z",
+     "last_exit_signal_at": "2026-10-12T12:00:00.000Z",
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "ZECUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 1133.86,
+   "change_24h_pct": -2.26,
+   "change_7d_pct": -7.5,
+   "indicators_1h": {
+    "rsi14": 46.35,
+    "macd": 1.00886,
+    "macd_signal": 1.71145,
+    "macd_histogram": -0.702588,
+    "bb_upper": 1156.48,
+    "bb_lower": 1119.67,
+    "bb_position": 0.3855,
+    "ema9": 1141.03,
+    "sma9": 1144.09,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T03:00:00.000Z",
+     "latest": "exit"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T19:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T00:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T07:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T22:00:00.000Z",
+     "last_exit_signal_at": "2026-10-15T23:00:00.000Z",
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "XRPUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 1.2972,
+   "change_24h_pct": -1.256,
+   "change_7d_pct": -5.857,
+   "indicators_1h": {
+    "rsi14": 43.86,
+    "macd": -0.0000641334,
+    "macd_signal": 0.000650397,
+    "macd_histogram": -0.000714531,
+    "bb_upper": 1.30873,
+    "bb_lower": 1.29659,
+    "bb_position": 0.05059,
+    "ema9": 1.30181,
+    "sma9": 1.30221,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T19:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T07:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T23:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T14:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T22:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "NEARUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 4.781,
+   "change_24h_pct": -5.682,
+   "change_7d_pct": -8.005,
+   "indicators_1h": {
+    "rsi14": 36.99,
+    "macd": -0.0430792,
+    "macd_signal": -0.0290736,
+    "macd_histogram": -0.0140057,
+    "bb_upper": 5.0096,
+    "bb_lower": 4.7616,
+    "bb_position": 0.07822,
+    "ema9": 4.82594,
+    "sma9": 4.82889,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T06:00:00.000Z",
+     "last_exit_signal_at": "2026-10-17T11:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T19:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T01:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T23:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T14:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-13T02:00:00.000Z",
+     "last_exit_signal_at": "2026-10-15T21:00:00.000Z",
+     "latest": "exit"
+    }
+   }
+  },
+  {
+   "symbol": "SUIUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 0.9913,
+   "change_24h_pct": -2.094,
+   "change_7d_pct": -7.424,
+   "indicators_1h": {
+    "rsi14": 47.9,
+    "macd": 0.000825241,
+    "macd_signal": 0.00131727,
+    "macd_histogram": -0.000492032,
+    "bb_upper": 1.00535,
+    "bb_lower": 0.982868,
+    "bb_position": 0.375,
+    "ema9": 0.994789,
+    "sma9": 0.996111,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T22:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T04:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "BNBUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 728.58,
+   "change_24h_pct": 0.238,
+   "change_7d_pct": -2.281,
+   "indicators_1h": {
+    "rsi14": 52.3,
+    "macd": 1.51748,
+    "macd_signal": 1.83075,
+    "macd_histogram": -0.313267,
+    "bb_upper": 732.609,
+    "bb_lower": 725.029,
+    "bb_position": 0.4685,
+    "ema9": 729.602,
+    "sma9": 730.012,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T00:00:00.000Z",
+     "latest": "exit"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T22:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T03:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T23:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T02:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "DOGEUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 0.07928,
+   "change_24h_pct": -0.6143,
+   "change_7d_pct": -6.675,
+   "indicators_1h": {
+    "rsi14": 48.29,
+    "macd": 0.0000433571,
+    "macd_signal": 0.0000758432,
+    "macd_histogram": -0.0000324861,
+    "bb_upper": 0.0798823,
+    "bb_lower": 0.0789607,
+    "bb_position": 0.3465,
+    "ema9": 0.0794256,
+    "sma9": 0.07948,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T22:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T05:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-20T04:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  },
+  {
+   "symbol": "UNIUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-20T08:00:00.000Z",
+   "age_min": 45,
+   "price": 7.184,
+   "change_24h_pct": -3.48,
+   "change_7d_pct": -3.983,
+   "indicators_1h": {
+    "rsi14": 41.59,
+    "macd": -0.0099037,
+    "macd_signal": 0.00475861,
+    "macd_histogram": -0.0146623,
+    "bb_upper": 7.37822,
+    "bb_lower": 7.16578,
+    "bb_position": 0.08575,
+    "ema9": 7.2416,
+    "sma9": 7.26156,
+    "ema_above_sma": false
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T20:00:00.000Z",
+     "last_exit_signal_at": "2026-10-15T16:00:00.000Z",
+     "latest": "entry"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T23:00:00.000Z",
+     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
+     "latest": "exit"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-19T00:00:00.000Z",
+     "last_exit_signal_at": "2026-10-19T16:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T22:00:00.000Z",
+     "last_exit_signal_at": null,
+     "latest": "entry"
+    }
+   }
+  }
+ ]
+}
