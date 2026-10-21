@@ -6,7 +6,8 @@ import { fetchBars } from './lib/fetch.mjs';
 import { selectUniverse } from './lib/universe.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
-import { addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
+import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
+import { fetchWhales } from './lib/whales.mjs';
 
 const DAY = 86400000;
 // Same lists as the paper-trading records in the private crypto-backtester repository.
@@ -61,6 +62,19 @@ try {
 const perpChanges = addPerpChanges(symbols, prevFeed, now);
 const stables = await fetchStablecoins();
 
+// Large transfers of watched wallets since the previous run (first run or long gap: last 1 hour).
+const prevAtMs = Date.parse(prevFeed?.generated_at ?? '');
+const fromMs = Number.isFinite(prevAtMs) && now - prevAtMs > 0 && now - prevAtMs <= MAX_PREV_AGE_MS ? prevAtMs : now - 3600000;
+const priceOf = (sym) => symbols.find((x) => x.symbol === sym && (x.quality === 'ok' || x.quality === 'fallback'))?.price ?? null;
+const wallets = JSON.parse(readFileSync('config/wallets.json', 'utf8'));
+const whales = await fetchWhales({
+  wallets,
+  prices: { ETHUSDT: priceOf('ETHUSDT'), BTCUSDT: priceOf('BTCUSDT') },
+  fromSec: Math.floor(fromMs / 1000),
+  toSec: Math.floor(now / 1000),
+  key: process.env.ETHERSCAN_API_KEY,
+});
+
 const kst = new Date(now + 9 * 3600000).toISOString().replace('T', ' ').slice(0, 16) + ' KST';
 const feed = {
   schema_version: 1,
@@ -94,6 +108,7 @@ const feed = {
     note: '참고 신호입니다. 큰 자금 이동이 곧 매수·매도를 뜻하지는 않습니다.',
     stablecoins: { source: 'DefiLlama stablecoins (USD-pegged, all chains)', ...(stables.data ?? {}), error: stables.error },
     hyperliquid_perp_changes: perpChanges,
+    whales,
   },
   market: marketSummary(symbols),
   symbols,

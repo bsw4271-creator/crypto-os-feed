@@ -1,4 +1,5 @@
-# Hourly public briefing feed. Reads public market data only; no keys, wallets or orders.
+# Hourly public briefing feed. Reads public market data only; no wallets or orders.
+# The only key is a free Etherscan read-only API key (repo secret ETHERSCAN_API_KEY); it is never written to the feed.
 # Cost: public repositories get free GitHub Actions minutes; one run takes about 1 minute.
 name: feed
 on:
@@ -23,6 +24,8 @@ jobs:
         run: node --test
       - name: Build feed
         run: node feed.mjs --out feed
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
       - name: Save feed
         run: |
           git config user.name "crypto-os-feed-bot"
