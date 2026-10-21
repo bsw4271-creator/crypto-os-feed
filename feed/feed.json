@@ -1,8 +1,8 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-21T13:05:37.369Z",
- "generated_at_kst": "2026-10-21 22:05 KST",
- "next_update_expected_by": "2026-10-21T15:05:37.369Z",
+ "generated_at": "2026-10-21T13:48:40.134Z",
+ "generated_at_kst": "2026-10-21 22:48 KST",
+ "next_update_expected_by": "2026-10-21T15:48:40.134Z",
  "interval": "1h",
  "source": "Binance spot public market data (Gate.io fallback). Read-only. No account, wallet or order data.",
  "disclaimer": "분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아니며, 데이터가 늦거나 틀릴 수 있습니다.",
@@ -109,48 +109,121 @@
   "stablecoins": {
    "source": "DefiLlama stablecoins (USD-pegged, all chains)",
    "total": {
-    "supply_usd": 304875912777,
-    "change_1d_usd": 624637371,
-    "change_1d_pct": 0.205,
-    "change_7d_usd": -1724043961,
-    "change_7d_pct": -0.562,
-    "change_30d_pct": 0.252
+    "supply_usd": 304831756143,
+    "change_1d_usd": 591896958,
+    "change_1d_pct": 0.195,
+    "change_7d_usd": -1756727174,
+    "change_7d_pct": -0.573,
+    "change_30d_pct": 0.241
    },
    "USDT": {
-    "supply_usd": 182727631328,
-    "change_1d_usd": -233903755,
+    "supply_usd": 182720503270,
+    "change_1d_usd": -233894631,
     "change_1d_pct": -0.128,
-    "change_7d_usd": -1214260934,
+    "change_7d_usd": -1214213567,
     "change_7d_pct": -0.66,
     "change_30d_pct": -0.241
    },
    "USDC": {
-    "supply_usd": 72185909018,
-    "change_1d_usd": -36338865,
-    "change_1d_pct": -0.05,
-    "change_7d_usd": -931105415,
-    "change_7d_pct": -1.273,
-    "change_30d_pct": -2.98
+    "supply_usd": 72164958045,
+    "change_1d_usd": -53814459,
+    "change_1d_pct": -0.075,
+    "change_7d_usd": -948537953,
+    "change_7d_pct": -1.297,
+    "change_30d_pct": -3.003
    },
    "error": null
   },
   "hyperliquid_perp_changes": {
-   "compared_with": "2026-10-21T12:51:15.108Z",
+   "compared_with": "2026-10-21T13:05:37.369Z",
    "note": "oi_change_pct = change in open interest (coins) since compared_with"
   },
   "whales": {
    "source": "Etherscan API V2, Ethereum mainnet",
-   "window_from": "2026-10-21T12:51:15.000Z",
-   "window_to": "2026-10-21T13:05:37.000Z",
+   "window_from": "2026-10-21T13:05:37.000Z",
+   "window_to": "2026-10-21T13:48:40.000Z",
    "threshold_usd": 1000000,
    "watched": [
     {
      "label": "Galaxy Digital: 0x4AD...825",
      "address": "0x4adf44961a7cbe8ee46b2bf04e7198e879677825"
+    },
+    {
+     "label": "Jump Trading",
+     "address": "0xf584f8728b874a6a5c7a8d4d387c9aae9172d621"
+    },
+    {
+     "label": "Wintermute 4",
+     "address": "0xf8191d98ae98d2f7abdfb63a9b0b812b93c873aa"
+    },
+    {
+     "label": "Wintermute 5",
+     "address": "0xce84449a8ebec019ac110a4b6662e55d0fd9f228"
+    },
+    {
+     "label": "Galaxy Digital: OTC",
+     "address": "0x33566c9d8be6cf0b23795e0d380e112be9d75836"
+    },
+    {
+     "label": "Cumberland: 0xad6...862",
+     "address": "0xad6eaa735d9df3d7696fd03984379dae02ed8862"
+    },
+    {
+     "label": "Abraxas Capital Management: Heka Funds",
+     "address": "0xb99a2c4c1c4f1fc27150681b740396f6ce1cbcf5"
     }
    ],
    "exchanges_known": 6,
-   "transfers": [],
+   "transfers": [
+    {
+     "wallet": "Wintermute 4",
+     "direction": "out",
+     "counterparty": "0xeae7380dd4cef6fbd1144f49e4d1e6964258a4f4",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "ETH",
+     "amount": 2850,
+     "usd": 7036964,
+     "at": "2026-10-21T13:37:35.000Z",
+     "tx": "0xff918c390783691a032639e3a52848014880bdb3d4af1468e2a19c04acf979c0"
+    },
+    {
+     "wallet": "Wintermute 4",
+     "direction": "out",
+     "counterparty": "0xeae7380dd4cef6fbd1144f49e4d1e6964258a4f4",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "ETH",
+     "amount": 2854,
+     "usd": 7046840,
+     "at": "2026-10-21T13:33:47.000Z",
+     "tx": "0xfb05f6bbb28ed624fb14a707a47353900f8fb31757248c12fa8aeeab59dedb42"
+    },
+    {
+     "wallet": "Jump Trading",
+     "direction": "out",
+     "counterparty": "0xc7d3c88077d07b9ede6acd2060e5dacbcf08e668",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "USDT",
+     "amount": 1185562.8,
+     "usd": 1185563,
+     "at": "2026-10-21T13:26:59.000Z",
+     "tx": "0x1fefa5101843f2a3a7d37857f44fe62578c7e45d192c29615cc9f1a467f3887c"
+    },
+    {
+     "wallet": "Wintermute 4",
+     "direction": "in",
+     "counterparty": "0x4976a4a02f38326660d17bf34b431dc6e2eb2327",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "ETH",
+     "amount": 4058,
+     "usd": 10019648,
+     "at": "2026-10-21T13:09:11.000Z",
+     "tx": "0xe3a322c3946aa39da9ebe10ed6833786d11a94f2f9dee550667a4ab0d71915d4"
+    }
+   ],
    "to_exchange_usd": 0,
    "from_exchange_usd": 0,
    "errors": []
@@ -173,7 +246,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 83504,
    "change_24h_pct": 2.308,
    "change_7d_pct": 0.9188,
@@ -225,23 +298,23 @@
      "pair": "UBTC/USDC",
      "token": "UBTC",
      "token_id": "0x8f254b963e8468305d409b33aa137c67",
-     "mid": 83714.5,
-     "mark": 83715,
-     "day_volume_usd": 49448383.00235,
+     "mid": 83761.5,
+     "mark": 83762,
+     "day_volume_usd": 61232225.07633994,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.252
+     "gap_vs_binance_pct": 0.308
     },
     "perp": {
      "name": "BTC",
-     "mark": 83801,
-     "mid": 83797.5,
+     "mark": 83846,
+     "mid": 83846.5,
      "funding_1h": 0.0000125,
-     "open_interest": 41196.85842,
-     "day_volume_usd": 2420965404.970177,
+     "open_interest": 41441.52998,
+     "day_volume_usd": 2435108660.29653,
      "max_leverage": 40,
-     "gap_vs_binance_pct": 0.351,
-     "open_interest_usd": 3452337932,
-     "oi_change_pct": -0.408,
+     "gap_vs_binance_pct": 0.41,
+     "open_interest_usd": 3474706523,
+     "oi_change_pct": 0.594,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -253,7 +326,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 2469.11,
    "change_24h_pct": 3.037,
    "change_7d_pct": -0.3004,
@@ -305,23 +378,23 @@
      "pair": "UETH/USDC",
      "token": "UETH",
      "token_id": "0xe1edd30daaf5caac3fe63569e24748da",
-     "mid": 2483.65,
-     "mark": 2483.6,
-     "day_volume_usd": 12686777.370420005,
+     "mid": 2468.15,
+     "mark": 2468.1,
+     "day_volume_usd": 13213717.926300002,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.589
+     "gap_vs_binance_pct": -0.039
     },
     "perp": {
      "name": "ETH",
-     "mark": 2487.3,
-     "mid": 2487.35,
+     "mark": 2470.8,
+     "mid": 2470.75,
      "funding_1h": 0.0000125,
-     "open_interest": 1100909.540400001,
-     "day_volume_usd": 991500831.5939196,
+     "open_interest": 1102669.3892,
+     "day_volume_usd": 1030469960.1683999,
      "max_leverage": 25,
-     "gap_vs_binance_pct": 0.739,
-     "open_interest_usd": 2738292300,
-     "oi_change_pct": 0.048,
+     "gap_vs_binance_pct": 0.066,
+     "open_interest_usd": 2724475527,
+     "oi_change_pct": 0.16,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -333,7 +406,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 107.02,
    "change_24h_pct": 2.421,
    "change_7d_pct": 1.46,
@@ -385,24 +458,24 @@
      "pair": "USOL/USDC",
      "token": "USOL",
      "token_id": "0x49b67c39f5566535de22b29b0e51e685",
-     "mid": 107.445,
-     "mark": 107.45,
-     "day_volume_usd": 3421158.48685,
+     "mid": 106.765,
+     "mark": 106.76,
+     "day_volume_usd": 3790727.0665999986,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.397
+     "gap_vs_binance_pct": -0.238
     },
     "perp": {
      "name": "SOL",
-     "mark": 107.48,
-     "mid": 107.485,
+     "mark": 106.7939,
+     "mid": 106.795,
      "funding_1h": 0.0000125,
-     "open_interest": 5434135.359999998,
-     "day_volume_usd": 225485695.70569986,
+     "open_interest": 5450650.040000004,
+     "day_volume_usd": 236295847.41720006,
      "max_leverage": 20,
-     "gap_vs_binance_pct": 0.434,
-     "open_interest_usd": 584060868,
-     "oi_change_pct": 0.128,
-     "funding_1h_prev": 0.0000116716
+     "gap_vs_binance_pct": -0.21,
+     "open_interest_usd": 582096175,
+     "oi_change_pct": 0.304,
+     "funding_1h_prev": 0.0000125
     }
    }
   },
@@ -413,7 +486,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 81.41,
    "change_24h_pct": 3.72,
    "change_7d_pct": 0.8049,
@@ -465,23 +538,23 @@
      "pair": "HYPE/USDC",
      "token": "HYPE",
      "token_id": "0x0d01dc56dcaaca66ad901c959b4011ec",
-     "mid": 81.7885,
-     "mark": 81.789,
-     "day_volume_usd": 52521318.94845002,
+     "mid": 80.801,
+     "mark": 80.801,
+     "day_volume_usd": 55015874.55672006,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.465
+     "gap_vs_binance_pct": -0.748
     },
     "perp": {
      "name": "HYPE",
-     "mark": 81.751,
-     "mid": 81.7675,
-     "funding_1h": 0.0000125,
-     "open_interest": 20493120.86,
-     "day_volume_usd": 424072673.0927899,
+     "mark": 80.715,
+     "mid": 80.7145,
+     "funding_1h": 0.0000074647,
+     "open_interest": 20434360.819999985,
+     "day_volume_usd": 443126009.26010007,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.439,
-     "open_interest_usd": 1675333123,
-     "oi_change_pct": 0.01,
+     "gap_vs_binance_pct": -0.854,
+     "open_interest_usd": 1649359434,
+     "oi_change_pct": -0.287,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -493,7 +566,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 2.039,
    "change_24h_pct": 9.154,
    "change_7d_pct": 3.084,
@@ -543,16 +616,16 @@
     "spot": null,
     "perp": {
      "name": "ZRO",
-     "mark": 2.0597,
-     "mid": 2.06085,
-     "funding_1h": 0.0000158112,
-     "open_interest": 37564154.400000006,
-     "day_volume_usd": 22233827.072550006,
+     "mark": 2.0241,
+     "mid": 2.0231,
+     "funding_1h": 0.0000125,
+     "open_interest": 37606395.60000001,
+     "day_volume_usd": 21346919.55884,
      "max_leverage": 5,
-     "gap_vs_binance_pct": 1.072,
-     "open_interest_usd": 77370889,
-     "oi_change_pct": 0.119,
-     "funding_1h_prev": 0.0000125
+     "gap_vs_binance_pct": -0.78,
+     "open_interest_usd": 76119105,
+     "oi_change_pct": 0.112,
+     "funding_1h_prev": 0.0000158112
     }
    }
   },
@@ -563,7 +636,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 1297.49,
    "change_24h_pct": 12.69,
    "change_7d_pct": 6.499,
@@ -613,16 +686,16 @@
     "spot": null,
     "perp": {
      "name": "ZEC",
-     "mark": 1316.7,
-     "mid": 1316.7,
-     "funding_1h": 0.0000502629,
-     "open_interest": 555719.3,
-     "day_volume_usd": 424050391.89800006,
+     "mark": 1308.9,
+     "mid": 1308.95,
+     "funding_1h": 0.0000254739,
+     "open_interest": 561106.9600000002,
+     "day_volume_usd": 442520879.1779986,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 1.481,
-     "open_interest_usd": 731715602,
-     "oi_change_pct": -0.671,
-     "funding_1h_prev": 0.0000241251
+     "gap_vs_binance_pct": 0.883,
+     "open_interest_usd": 734432900,
+     "oi_change_pct": 0.969,
+     "funding_1h_prev": 0.0000502629
     }
    }
   },
@@ -633,7 +706,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 1.3578,
    "change_24h_pct": 4.438,
    "change_7d_pct": -0.007364,
@@ -683,15 +756,15 @@
     "spot": null,
     "perp": {
      "name": "XRP",
-     "mark": 1.3639,
-     "mid": 1.36395,
+     "mark": 1.3582,
+     "mid": 1.35825,
      "funding_1h": 0.0000125,
-     "open_interest": 174928406,
-     "day_volume_usd": 82107017.88340001,
+     "open_interest": 175097080,
+     "day_volume_usd": 85410951.90779994,
      "max_leverage": 20,
-     "gap_vs_binance_pct": 0.453,
-     "open_interest_usd": 238584853,
-     "oi_change_pct": -0.365,
+     "gap_vs_binance_pct": 0.033,
+     "open_interest_usd": 237816854,
+     "oi_change_pct": 0.096,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -703,7 +776,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 5.224,
    "change_24h_pct": 11.34,
    "change_7d_pct": 5.005,
@@ -753,16 +826,16 @@
     "spot": null,
     "perp": {
      "name": "NEAR",
-     "mark": 5.2642,
-     "mid": 5.263,
-     "funding_1h": 0.0000639191,
-     "open_interest": 73386500.40000002,
-     "day_volume_usd": 265529313.83781022,
+     "mark": 5.1965,
+     "mid": 5.19635,
+     "funding_1h": 0.0000407247,
+     "open_interest": 72789870.19999999,
+     "day_volume_usd": 279571888.84449166,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.747,
-     "open_interest_usd": 386321215,
-     "oi_change_pct": 0.161,
-     "funding_1h_prev": 0.0000496351
+     "gap_vs_binance_pct": -0.529,
+     "open_interest_usd": 378252560,
+     "oi_change_pct": -0.813,
+     "funding_1h_prev": 0.0000639191
     }
    }
   },
@@ -773,7 +846,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 1.0356,
    "change_24h_pct": 3.84,
    "change_7d_pct": 0.6707,
@@ -823,15 +896,15 @@
     "spot": null,
     "perp": {
      "name": "SUI",
-     "mark": 1.0405,
-     "mid": 1.0406,
+     "mark": 1.0311,
+     "mid": 1.03115,
      "funding_1h": 0.0000125,
-     "open_interest": 54154402.6,
-     "day_volume_usd": 13860300.462477006,
+     "open_interest": 54316002.8,
+     "day_volume_usd": 13907379.469112,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.483,
-     "open_interest_usd": 56347656,
-     "oi_change_pct": 0.043,
+     "gap_vs_binance_pct": -0.43,
+     "open_interest_usd": 56005230,
+     "oi_change_pct": 0.298,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -843,7 +916,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 746.37,
    "change_24h_pct": 2.038,
    "change_7d_pct": 1.256,
@@ -893,15 +966,15 @@
     "spot": null,
     "perp": {
      "name": "BNB",
-     "mark": 748.05,
-     "mid": 747.915,
+     "mark": 745.8,
+     "mid": 745.83,
      "funding_1h": 0.0000125,
-     "open_interest": 55368.778,
-     "day_volume_usd": 5998810.511819998,
+     "open_interest": 55203.79,
+     "day_volume_usd": 6072828.065619994,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.207,
-     "open_interest_usd": 41418614,
-     "oi_change_pct": -0.101,
+     "gap_vs_binance_pct": -0.072,
+     "open_interest_usd": 41170987,
+     "oi_change_pct": -0.298,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -913,7 +986,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 0.08218,
    "change_24h_pct": 3.619,
    "change_7d_pct": -1.309,
@@ -963,15 +1036,15 @@
     "spot": null,
     "perp": {
      "name": "DOGE",
-     "mark": 0.082502,
-     "mid": 0.082504,
+     "mark": 0.082184,
+     "mid": 0.082187,
      "funding_1h": 0.0000125,
-     "open_interest": 1175475750,
-     "day_volume_usd": 8247752.931491999,
+     "open_interest": 1177798264,
+     "day_volume_usd": 8448425.921877,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.394,
-     "open_interest_usd": 96979100,
-     "oi_change_pct": 0.237,
+     "gap_vs_binance_pct": 0.009,
+     "open_interest_usd": 96796173,
+     "oi_change_pct": 0.198,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -983,7 +1056,7 @@
    "quality": "ok",
    "quality_reason": null,
    "last_closed_bar_at": "2026-10-21T13:00:00.000Z",
-   "age_min": 6,
+   "age_min": 49,
    "price": 7.487,
    "change_24h_pct": 4.728,
    "change_7d_pct": 3.986,
@@ -1033,15 +1106,15 @@
     "spot": null,
     "perp": {
      "name": "UNI",
-     "mark": 7.551,
-     "mid": 7.55095,
+     "mark": 7.4466,
+     "mid": 7.44655,
      "funding_1h": 0.0000125,
-     "open_interest": 9208564.6,
-     "day_volume_usd": 16916315.60794999,
+     "open_interest": 9247697.999999998,
+     "day_volume_usd": 18337839.327790014,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.854,
-     "open_interest_usd": 69533871,
-     "oi_change_pct": -0.007,
+     "gap_vs_binance_pct": -0.54,
+     "open_interest_usd": 68863908,
+     "oi_change_pct": 0.425,
      "funding_1h_prev": 0.0000125
     }
    }
