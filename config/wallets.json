@@ -1,5 +1,5 @@
 {
- "note": "Ethereum mainnet. Labels are Etherscan public name tags, checked on the page linked in source. Add wallets only after checking the label (Etherscan or Arkham).",
+ "note": "Ethereum mainnet. Labels are Etherscan public name tags, checked on the page linked in source. Add wallets only after checking the label (Etherscan or Arkham). Watch list = funds and market makers with recent activity on the checked date.",
  "exchanges": [
   { "address": "0xdfd5293d8e347dfe59e90efd55b2956a1343963d", "label": "Binance 16", "source": "https://etherscan.io/address/0xdfd5293d8e347dfe59e90efd55b2956a1343963d", "checked": "2026-10-21" },
   { "address": "0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be", "label": "Binance", "source": "https://etherscan.io/address/0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be", "checked": "2026-10-21" },
@@ -9,6 +9,12 @@
   { "address": "0xee5b5b923ffce93a870b3104b7ca09c3db80047a", "label": "Bybit: Hot Wallet 4", "source": "https://etherscan.io/address/0xee5b5b923ffce93a870b3104b7ca09c3db80047a", "checked": "2026-10-21" }
  ],
  "watch": [
-  { "address": "0x4adf44961a7cbe8ee46b2bf04e7198e879677825", "label": "Galaxy Digital: 0x4AD...825", "source": "https://etherscan.io/address/0x4adf44961a7cbe8ee46b2bf04e7198e879677825", "checked": "2026-10-21" }
+  { "address": "0x4adf44961a7cbe8ee46b2bf04e7198e879677825", "label": "Galaxy Digital: 0x4AD...825", "source": "https://etherscan.io/address/0x4adf44961a7cbe8ee46b2bf04e7198e879677825", "checked": "2026-10-21" },
+  { "address": "0xf584f8728b874a6a5c7a8d4d387c9aae9172d621", "label": "Jump Trading", "source": "https://etherscan.io/address/0xf584f8728b874a6a5c7a8d4d387c9aae9172d621", "checked": "2026-10-21" },
+  { "address": "0xf8191d98ae98d2f7abdfb63a9b0b812b93c873aa", "label": "Wintermute 4", "source": "https://etherscan.io/address/0xf8191d98ae98d2f7abdfb63a9b0b812b93c873aa", "checked": "2026-10-21" },
+  { "address": "0xce84449a8ebec019ac110a4b6662e55d0fd9f228", "label": "Wintermute 5", "source": "https://etherscan.io/address/0xce84449a8ebec019ac110a4b6662e55d0fd9f228", "checked": "2026-10-21" },
+  { "address": "0x33566c9d8be6cf0b23795e0d380e112be9d75836", "label": "Galaxy Digital: OTC", "source": "https://etherscan.io/address/0x33566c9d8be6cf0b23795e0d380e112be9d75836", "checked": "2026-10-21" },
+  { "address": "0xad6eaa735d9df3d7696fd03984379dae02ed8862", "label": "Cumberland: 0xad6...862", "source": "https://etherscan.io/address/0xad6eaa735d9df3d7696fd03984379dae02ed8862", "checked": "2026-10-21" },
+  { "address": "0xb99a2c4c1c4f1fc27150681b740396f6ce1cbcf5", "label": "Abraxas Capital Management: Heka Funds", "source": "https://etherscan.io/address/0xb99a2c4c1c4f1fc27150681b740396f6ce1cbcf5", "checked": "2026-10-21" }
  ]
 }
