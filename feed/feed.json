@@ -1,8 +1,8 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-21T04:40:42.810Z",
- "generated_at_kst": "2026-10-21 13:40 KST",
- "next_update_expected_by": "2026-10-21T06:40:42.810Z",
+ "generated_at": "2026-10-21T05:40:22.418Z",
+ "generated_at_kst": "2026-10-21 14:40 KST",
+ "next_update_expected_by": "2026-10-21T07:40:22.418Z",
  "interval": "1h",
  "source": "Binance spot public market data (Gate.io fallback). Read-only. No account, wallet or order data.",
  "disclaimer": "분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아니며, 데이터가 늦거나 틀릴 수 있습니다.",
@@ -107,8 +107,8 @@
  "market": {
   "regime": "neutral",
   "regime_rule": "risk_on: BTC 7d > 0 and >= 60% of usable symbols up 24h; risk_off: BTC 7d < 0 and <= 40% up; else neutral; unknown if BTC data is missing",
-  "btc_change_24h_pct": 0.7249,
-  "btc_change_7d_pct": -1.154,
+  "btc_change_24h_pct": 0.8819,
+  "btc_change_7d_pct": -1.107,
   "breadth_24h_up": "12/12",
   "usable_symbols": 12,
   "total_symbols": 12
@@ -120,21 +120,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 82733.8,
-   "change_24h_pct": 0.7249,
-   "change_7d_pct": -1.154,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 82816,
+   "change_24h_pct": 0.8819,
+   "change_7d_pct": -1.107,
    "indicators_1h": {
-    "rsi14": 54.89,
-    "macd": 242.861,
-    "macd_signal": 231.446,
-    "macd_histogram": 11.4148,
-    "bb_upper": 83699.6,
-    "bb_lower": 81303.5,
-    "bb_position": 0.5969,
-    "ema9": 82829.4,
-    "sma9": 82903.2,
+    "rsi14": 56.49,
+    "macd": 228.367,
+    "macd_signal": 230.83,
+    "macd_histogram": -2.46378,
+    "bb_upper": 83685.5,
+    "bb_lower": 81444.9,
+    "bb_position": 0.6119,
+    "ema9": 82826.7,
+    "sma9": 82926.5,
     "ema_above_sma": false
    },
    "signals": {
@@ -154,10 +154,10 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-20T14:00:00.000Z",
-     "last_exit_signal_at": "2026-10-19T14:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -173,21 +173,21 @@
      "pair": "UBTC/USDC",
      "token": "UBTC",
      "token_id": "0x8f254b963e8468305d409b33aa137c67",
-     "mid": 82681.5,
-     "mark": 82681,
-     "day_volume_usd": 46685140.00383,
+     "mid": 82765.5,
+     "mark": 82766,
+     "day_volume_usd": 46854941.09691999,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.063
+     "gap_vs_binance_pct": -0.061
     },
     "perp": {
      "name": "BTC",
-     "mark": 82758,
-     "mid": 82760.5,
+     "mark": 82819.8,
+     "mid": 82819.5,
      "funding_1h": 0.0000125,
-     "open_interest": 40990.87642,
-     "day_volume_usd": 2515177512.5503883,
+     "open_interest": 41120.87454,
+     "day_volume_usd": 2511922139.003608,
      "max_leverage": 40,
-     "gap_vs_binance_pct": 0.032
+     "gap_vs_binance_pct": 0.004
     }
    }
   },
@@ -197,21 +197,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 2444.3,
-   "change_24h_pct": 1.213,
-   "change_7d_pct": -2.757,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 2445.14,
+   "change_24h_pct": 1.347,
+   "change_7d_pct": -2.777,
    "indicators_1h": {
-    "rsi14": 55.4,
-    "macd": 11.645,
-    "macd_signal": 11.3693,
-    "macd_histogram": 0.275672,
-    "bb_upper": 2489.64,
-    "bb_lower": 2375.91,
-    "bb_position": 0.6013,
-    "ema9": 2447.5,
-    "sma9": 2450.17,
+    "rsi14": 55.74,
+    "macd": 10.8033,
+    "macd_signal": 11.2561,
+    "macd_histogram": -0.452789,
+    "bb_upper": 2488.49,
+    "bb_lower": 2383.04,
+    "bb_position": 0.5889,
+    "ema9": 2447.03,
+    "sma9": 2450.97,
     "ema_above_sma": false
    },
    "signals": {
@@ -231,10 +231,10 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-20T14:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -250,21 +250,21 @@
      "pair": "UETH/USDC",
      "token": "UETH",
      "token_id": "0xe1edd30daaf5caac3fe63569e24748da",
-     "mid": 2441.55,
-     "mark": 2441.6,
-     "day_volume_usd": 9350007.25036,
+     "mid": 2443.65,
+     "mark": 2443.7,
+     "day_volume_usd": 9536621.712250002,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.113
+     "gap_vs_binance_pct": -0.061
     },
     "perp": {
      "name": "ETH",
-     "mark": 2443.2,
-     "mid": 2443.15,
+     "mark": 2445.08,
+     "mid": 2445.05,
      "funding_1h": 0.0000125,
-     "open_interest": 1075585.429,
-     "day_volume_usd": 963623254.2474399,
+     "open_interest": 1077632.014,
+     "day_volume_usd": 960426960.2921301,
      "max_leverage": 25,
-     "gap_vs_binance_pct": -0.047
+     "gap_vs_binance_pct": -0.004
     }
    }
   },
@@ -274,21 +274,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 105.86,
-   "change_24h_pct": 0.4936,
-   "change_7d_pct": -1.827,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 105.89,
+   "change_24h_pct": 0.6272,
+   "change_7d_pct": -1.917,
    "indicators_1h": {
-    "rsi14": 50.43,
-    "macd": 0.423732,
-    "macd_signal": 0.476972,
-    "macd_histogram": -0.0532395,
-    "bb_upper": 108.061,
-    "bb_lower": 103.715,
-    "bb_position": 0.4936,
-    "ema9": 106.331,
-    "sma9": 106.501,
+    "rsi14": 50.7,
+    "macd": 0.362498,
+    "macd_signal": 0.454077,
+    "macd_histogram": -0.091579,
+    "bb_upper": 107.994,
+    "bb_lower": 103.958,
+    "bb_position": 0.4787,
+    "ema9": 106.243,
+    "sma9": 106.478,
     "ema_above_sma": false
    },
    "signals": {
@@ -308,7 +308,7 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-20T15:00:00.000Z",
      "last_exit_signal_at": "2026-10-21T04:00:00.000Z",
      "latest": "exit"
@@ -327,21 +327,21 @@
      "pair": "USOL/USDC",
      "token": "USOL",
      "token_id": "0x49b67c39f5566535de22b29b0e51e685",
-     "mid": 105.655,
-     "mark": 105.66,
-     "day_volume_usd": 2942097.1227199994,
+     "mid": 105.885,
+     "mark": 105.89,
+     "day_volume_usd": 3426623.1405599993,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.194
+     "gap_vs_binance_pct": -0.005
     },
     "perp": {
      "name": "SOL",
-     "mark": 105.7035,
-     "mid": 105.705,
-     "funding_1h": 0.0000062712,
-     "open_interest": 5393262.56,
-     "day_volume_usd": 208981983.57180008,
+     "mark": 105.92,
+     "mid": 105.915,
+     "funding_1h": 0.0000094816,
+     "open_interest": 5383508.4799999995,
+     "day_volume_usd": 209639687.4653001,
      "max_leverage": 20,
-     "gap_vs_binance_pct": -0.146
+     "gap_vs_binance_pct": 0.024
     }
    }
   },
@@ -351,21 +351,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 81.16,
-   "change_24h_pct": 2.05,
-   "change_7d_pct": -1.505,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 80.77,
+   "change_24h_pct": 1.559,
+   "change_7d_pct": -1.942,
    "indicators_1h": {
-    "rsi14": 57.81,
-    "macd": 0.630081,
-    "macd_signal": 0.510518,
-    "macd_histogram": 0.119563,
-    "bb_upper": 82.504,
-    "bb_lower": 77.785,
-    "bb_position": 0.7152,
-    "ema9": 81.0396,
-    "sma9": 81.06,
+    "rsi14": 54.4,
+    "macd": 0.577016,
+    "macd_signal": 0.523818,
+    "macd_histogram": 0.0531985,
+    "bb_upper": 82.5027,
+    "bb_lower": 78.0163,
+    "bb_position": 0.6138,
+    "ema9": 80.9857,
+    "sma9": 81.1267,
     "ema_above_sma": false
    },
    "signals": {
@@ -378,7 +378,7 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-21T00:00:00.000Z",
      "last_exit_signal_at": "2026-10-21T04:00:00.000Z",
      "latest": "exit"
@@ -404,21 +404,21 @@
      "pair": "HYPE/USDC",
      "token": "HYPE",
      "token_id": "0x0d01dc56dcaaca66ad901c959b4011ec",
-     "mid": 80.8675,
-     "mark": 80.868,
-     "day_volume_usd": 49580093.32421001,
+     "mid": 80.8115,
+     "mark": 80.811,
+     "day_volume_usd": 49091506.10493001,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.36
+     "gap_vs_binance_pct": 0.051
     },
     "perp": {
      "name": "HYPE",
-     "mark": 80.824,
-     "mid": 80.8225,
-     "funding_1h": 0.0000089602,
-     "open_interest": 20337821.88000001,
-     "day_volume_usd": 428028316.9288202,
+     "mark": 80.7775,
+     "mid": 80.7805,
+     "funding_1h": 0.0000111238,
+     "open_interest": 20345941.380000003,
+     "day_volume_usd": 428123555.91928005,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.416
+     "gap_vs_binance_pct": 0.013
     }
    }
   },
@@ -428,22 +428,22 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 2.042,
-   "change_24h_pct": 9.432,
-   "change_7d_pct": -1.448,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 2.031,
+   "change_24h_pct": 9.429,
+   "change_7d_pct": -1.264,
    "indicators_1h": {
-    "rsi14": 61.76,
-    "macd": 0.039326,
-    "macd_signal": 0.0323366,
-    "macd_histogram": 0.00698938,
-    "bb_upper": 2.07951,
-    "bb_lower": 1.85389,
-    "bb_position": 0.8338,
-    "ema9": 2.014,
-    "sma9": 2.01211,
-    "ema_above_sma": true
+    "rsi14": 59.85,
+    "macd": 0.0386954,
+    "macd_signal": 0.0336084,
+    "macd_histogram": 0.00508706,
+    "bb_upper": 2.0856,
+    "bb_lower": 1.8601,
+    "bb_position": 0.7579,
+    "ema9": 2.0174,
+    "sma9": 2.02289,
+    "ema_above_sma": false
    },
    "signals": {
     "bb": {
@@ -455,10 +455,10 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-21T00:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T21:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "macd": {
      "entry_now": false,
@@ -479,13 +479,13 @@
     "spot": null,
     "perp": {
      "name": "ZRO",
-     "mark": 2.0368,
-     "mid": 2.03645,
+     "mark": 2.0223,
+     "mid": 2.02215,
      "funding_1h": 0.0000125,
-     "open_interest": 37459808.800000004,
-     "day_volume_usd": 24160194.56039,
+     "open_interest": 37485219,
+     "day_volume_usd": 24253954.63856001,
      "max_leverage": 5,
-     "gap_vs_binance_pct": -0.272
+     "gap_vs_binance_pct": -0.436
     }
    }
   },
@@ -495,21 +495,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 1260.6,
-   "change_24h_pct": 9.703,
-   "change_7d_pct": -0.4619,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 1259.19,
+   "change_24h_pct": 9.502,
+   "change_7d_pct": -0.4026,
    "indicators_1h": {
-    "rsi14": 65.46,
-    "macd": 32.1293,
-    "macd_signal": 27.959,
-    "macd_histogram": 4.17025,
-    "bb_upper": 1312.63,
-    "bb_lower": 1111.81,
-    "bb_position": 0.7409,
-    "ema9": 1252.99,
-    "sma9": 1257.21,
+    "rsi14": 64.9,
+    "macd": 30.9442,
+    "macd_signal": 28.5561,
+    "macd_histogram": 2.38815,
+    "bb_upper": 1313.7,
+    "bb_lower": 1123.57,
+    "bb_position": 0.7133,
+    "ema9": 1254.23,
+    "sma9": 1262.73,
     "ema_above_sma": false
    },
    "signals": {
@@ -546,13 +546,13 @@
     "spot": null,
     "perp": {
      "name": "ZEC",
-     "mark": 1259.5,
-     "mid": 1259.45,
+     "mark": 1262,
+     "mid": 1262.35,
      "funding_1h": 0.0000125,
-     "open_interest": 545710.84,
-     "day_volume_usd": 410448372.4159998,
+     "open_interest": 545666.1600000001,
+     "day_volume_usd": 411566849.36599994,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.091
+     "gap_vs_binance_pct": 0.251
     }
    }
   },
@@ -562,21 +562,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 1.3324,
-   "change_24h_pct": 1.967,
-   "change_7d_pct": -2.999,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 1.3335,
+   "change_24h_pct": 2.2,
+   "change_7d_pct": -3.046,
    "indicators_1h": {
-    "rsi14": 58.33,
-    "macd": 0.00847381,
-    "macd_signal": 0.00803178,
-    "macd_histogram": 0.000442026,
-    "bb_upper": 1.35635,
-    "bb_lower": 1.28896,
-    "bb_position": 0.6446,
-    "ema9": 1.33304,
-    "sma9": 1.33488,
+    "rsi14": 59.05,
+    "macd": 0.00804356,
+    "macd_signal": 0.00803414,
+    "macd_histogram": 0.00000942289,
+    "bb_upper": 1.35601,
+    "bb_lower": 1.29318,
+    "bb_position": 0.6417,
+    "ema9": 1.33313,
+    "sma9": 1.33537,
     "ema_above_sma": false
    },
    "signals": {
@@ -613,13 +613,13 @@
     "spot": null,
     "perp": {
      "name": "XRP",
-     "mark": 1.3324,
-     "mid": 1.33235,
+     "mark": 1.3379,
+     "mid": 1.33785,
      "funding_1h": 0.0000125,
-     "open_interest": 178851342,
-     "day_volume_usd": 90633861.81629997,
+     "open_interest": 177939138,
+     "day_volume_usd": 91380474.66249998,
      "max_leverage": 20,
-     "gap_vs_binance_pct": -0.004
+     "gap_vs_binance_pct": 0.326
     }
    }
   },
@@ -629,22 +629,22 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 5.033,
-   "change_24h_pct": 3.432,
-   "change_7d_pct": -1.003,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 5.015,
+   "change_24h_pct": 4.436,
+   "change_7d_pct": -1.415,
    "indicators_1h": {
-    "rsi14": 58.39,
-    "macd": 0.043784,
-    "macd_signal": 0.0232846,
-    "macd_histogram": 0.0204995,
-    "bb_upper": 5.14962,
-    "bb_lower": 4.62858,
-    "bb_position": 0.7762,
-    "ema9": 4.98532,
-    "sma9": 4.97622,
-    "ema_above_sma": true
+    "rsi14": 56.85,
+    "macd": 0.0444016,
+    "macd_signal": 0.027508,
+    "macd_histogram": 0.0168936,
+    "bb_upper": 5.1601,
+    "bb_lower": 4.6447,
+    "bb_position": 0.7185,
+    "ema9": 4.99125,
+    "sma9": 4.993,
+    "ema_above_sma": false
    },
    "signals": {
     "bb": {
@@ -656,10 +656,10 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-21T03:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T22:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "macd": {
      "entry_now": false,
@@ -680,13 +680,13 @@
     "spot": null,
     "perp": {
      "name": "NEAR",
-     "mark": 5.0205,
+     "mark": 5.0194,
      "mid": 5.01975,
      "funding_1h": 0.0000125,
-     "open_interest": 63999292.79999999,
-     "day_volume_usd": 268848457.7080899,
+     "open_interest": 64114614.199999996,
+     "day_volume_usd": 270270094.75009996,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.263
+     "gap_vs_binance_pct": 0.095
     }
    }
   },
@@ -696,21 +696,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 1.026,
-   "change_24h_pct": 2.293,
-   "change_7d_pct": -3.299,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 1.0242,
+   "change_24h_pct": 2.492,
+   "change_7d_pct": -3.523,
    "indicators_1h": {
-    "rsi14": 56.37,
-    "macd": 0.0089787,
-    "macd_signal": 0.00876086,
-    "macd_histogram": 0.000217841,
-    "bb_upper": 1.05111,
-    "bb_lower": 0.984382,
-    "bb_position": 0.6237,
-    "ema9": 1.02784,
-    "sma9": 1.03019,
+    "rsi14": 55.07,
+    "macd": 0.00818465,
+    "macd_signal": 0.00864562,
+    "macd_histogram": -0.000460972,
+    "bb_upper": 1.05001,
+    "bb_lower": 0.98914,
+    "bb_position": 0.576,
+    "ema9": 1.02711,
+    "sma9": 1.0303,
     "ema_above_sma": false
    },
    "signals": {
@@ -730,10 +730,10 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-20T14:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -747,13 +747,13 @@
     "spot": null,
     "perp": {
      "name": "SUI",
-     "mark": 1.02415,
-     "mid": 1.0242,
+     "mark": 1.0227,
+     "mid": 1.0227,
      "funding_1h": 0.0000125,
-     "open_interest": 53847843,
-     "day_volume_usd": 14841888.924488004,
+     "open_interest": 53836552.2,
+     "day_volume_usd": 14447285.954305004,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.175
+     "gap_vs_binance_pct": -0.146
     }
    }
   },
@@ -763,21 +763,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 740.37,
-   "change_24h_pct": 1.337,
-   "change_7d_pct": -0.6215,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 742.22,
+   "change_24h_pct": 1.431,
+   "change_7d_pct": -0.44,
    "indicators_1h": {
-    "rsi14": 60.51,
-    "macd": 3.40863,
-    "macd_signal": 3.35702,
-    "macd_histogram": 0.0516113,
-    "bb_upper": 747.369,
-    "bb_lower": 726.567,
-    "bb_position": 0.6635,
-    "ema9": 740.669,
-    "sma9": 741.397,
+    "rsi14": 63.95,
+    "macd": 3.34001,
+    "macd_signal": 3.35362,
+    "macd_histogram": -0.0136041,
+    "bb_upper": 747.49,
+    "bb_lower": 727.844,
+    "bb_position": 0.7317,
+    "ema9": 740.979,
+    "sma9": 741.746,
     "ema_above_sma": false
    },
    "signals": {
@@ -797,10 +797,10 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-20T14:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T02:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -814,13 +814,13 @@
     "spot": null,
     "perp": {
      "name": "BNB",
-     "mark": 741.58,
-     "mid": 741.56,
+     "mark": 743.8,
+     "mid": 743.78,
      "funding_1h": 0.0000125,
-     "open_interest": 56761.672,
-     "day_volume_usd": 5062937.047209999,
+     "open_interest": 56614.736,
+     "day_volume_usd": 5076806.858400001,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.161
+     "gap_vs_binance_pct": 0.21
     }
    }
   },
@@ -830,21 +830,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 0.08149,
-   "change_24h_pct": 2.079,
-   "change_7d_pct": -4.016,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 0.08156,
+   "change_24h_pct": 2.462,
+   "change_7d_pct": -4.261,
    "indicators_1h": {
-    "rsi14": 57.42,
-    "macd": 0.000626458,
-    "macd_signal": 0.000608824,
-    "macd_histogram": 0.000017634,
-    "bb_upper": 0.0832859,
-    "bb_lower": 0.0785971,
-    "bb_position": 0.617,
-    "ema9": 0.0816877,
-    "sma9": 0.0818722,
+    "rsi14": 58.13,
+    "macd": 0.000581219,
+    "macd_signal": 0.000603303,
+    "macd_histogram": -0.0000220842,
+    "bb_upper": 0.0832483,
+    "bb_lower": 0.0788917,
+    "bb_position": 0.6125,
+    "ema9": 0.0816621,
+    "sma9": 0.08187,
     "ema_above_sma": false
    },
    "signals": {
@@ -864,10 +864,10 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-20T14:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T06:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -881,13 +881,13 @@
     "spot": null,
     "perp": {
      "name": "DOGE",
-     "mark": 0.081463,
-     "mid": 0.081463,
+     "mark": 0.081621,
+     "mid": 0.08162,
      "funding_1h": 0.0000125,
-     "open_interest": 1170254496,
-     "day_volume_usd": 7796902.484242995,
+     "open_interest": 1170375118,
+     "day_volume_usd": 7773140.524746995,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.033
+     "gap_vs_binance_pct": 0.074
     }
    }
   },
@@ -897,22 +897,22 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-21T04:00:00.000Z",
-   "age_min": 41,
-   "price": 7.541,
-   "change_24h_pct": 3.132,
-   "change_7d_pct": 0.7616,
+   "last_closed_bar_at": "2026-10-21T05:00:00.000Z",
+   "age_min": 40,
+   "price": 7.485,
+   "change_24h_pct": 2.52,
+   "change_7d_pct": 0.01336,
    "indicators_1h": {
-    "rsi14": 58.51,
-    "macd": 0.0869051,
-    "macd_signal": 0.062967,
-    "macd_histogram": 0.0239381,
-    "bb_upper": 7.71702,
-    "bb_lower": 7.04038,
-    "bb_position": 0.7399,
-    "ema9": 7.51975,
-    "sma9": 7.512,
-    "ema_above_sma": true
+    "rsi14": 54.82,
+    "macd": 0.0800504,
+    "macd_signal": 0.0663837,
+    "macd_histogram": 0.0136667,
+    "bb_upper": 7.71908,
+    "bb_lower": 7.07242,
+    "bb_position": 0.638,
+    "ema9": 7.5128,
+    "sma9": 7.52944,
+    "ema_above_sma": false
    },
    "signals": {
     "bb": {
@@ -924,10 +924,10 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-21T00:00:00.000Z",
-     "last_exit_signal_at": "2026-10-20T21:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-21T05:00:00.000Z",
+     "latest": "exit"
     },
     "macd": {
      "entry_now": false,
@@ -948,13 +948,13 @@
     "spot": null,
     "perp": {
      "name": "UNI",
-     "mark": 7.5231,
-     "mid": 7.52305,
+     "mark": 7.4674,
+     "mid": 7.46965,
      "funding_1h": 0.0000125,
-     "open_interest": 9168437.2,
-     "day_volume_usd": 14580141.182860002,
+     "open_interest": 9154598.6,
+     "day_volume_usd": 15107305.9888,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.238
+     "gap_vs_binance_pct": -0.205
     }
    }
   }
