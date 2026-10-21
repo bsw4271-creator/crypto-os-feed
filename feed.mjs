@@ -1,11 +1,12 @@
 // Builds feed/feed.json and feed/feed.md from public Binance spot data (Gate.io as fallback). Read-only: no keys,
 // no wallets, no orders. Usage: node feed.mjs [--out feed]
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fetchBars } from './lib/fetch.mjs';
 import { selectUniverse } from './lib/universe.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
+import { addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 
 const DAY = 86400000;
 // Same lists as the paper-trading records in the private crypto-backtester repository.
@@ -49,6 +50,17 @@ for (const [symbol, group] of groups) {
   }
 }
 
+// The previous run's feed (committed in the repo) is the baseline for hourly changes.
+let prevFeed = null;
+try {
+  const prevPath = join(outDir, 'feed.json');
+  if (existsSync(prevPath)) prevFeed = JSON.parse(readFileSync(prevPath, 'utf8'));
+} catch {
+  prevFeed = null;
+}
+const perpChanges = addPerpChanges(symbols, prevFeed, now);
+const stables = await fetchStablecoins();
+
 const kst = new Date(now + 9 * 3600000).toISOString().replace('T', ' ').slice(0, 16) + ' KST';
 const feed = {
   schema_version: 1,
@@ -77,6 +89,11 @@ const feed = {
     source: 'https://api.hyperliquid.xyz/info (public, read-only)',
     note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - Binance close) / Binance close.',
     errors: hl.errors,
+  },
+  flows: {
+    note: '참고 신호입니다. 큰 자금 이동이 곧 매수·매도를 뜻하지는 않습니다.',
+    stablecoins: { source: 'DefiLlama stablecoins (USD-pegged, all chains)', ...(stables.data ?? {}), error: stables.error },
+    hyperliquid_perp_changes: perpChanges,
   },
   market: marketSummary(symbols),
   symbols,
