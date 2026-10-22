@@ -4,6 +4,7 @@
 
 ## 0. 이 문서의 위치
 - 피드: https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/feed.json
+- 일지 요약(6절): https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/journal_summary.json
 - 피드는 분석 참고용입니다. 매매 신호나 투자 권유가 아닙니다. 최종 판단과 책임은 소유자에게 있습니다.
 
 ## 1. 금액 한도 (소유자 결정, 2026-10-20)
@@ -91,16 +92,131 @@
 예상 비용: 거래 수수료 + 펀딩비(보유 기간 기준)
 판단 근거: 피드의 어떤 값을 봤는지, 피드 generated_at, gap_vs_binance_pct (symbols 밖 종목은 perps_all 값과 주문 직전 quote 가격)
 소유자 제공 정보(있으면): 받은 시각, 요약, 확인 결과(확인됨/미확인/반대 정보), 주된 근거인지 보조 근거인지
+일지 확인(6-4): 요약 파일의 tier·n_live·avg_r_net, similar_loss_flag, 시간 손절
 ```
+- 승인 주문 제안서 끝에는 4-1 진입 메시지 블록을 그대로 붙인다.
 
-## 4. 기록 (거래할 때마다 이 양식으로 남김)
+## 4. 기록 — 텔레그램 일지 메시지 (소유자 결정 2026-10-22, 기존 4절 대체)
+일지 원본은 소유자의 **비공개** 저장소에 있다. 그록봇은 일지 파일을 직접 쓰지 않고, **거래마다 아래 두 메시지를 소유자에게 텔레그램으로 따로 보낸다.** 소유자가 이 메시지를 기록용 봇에 전달하면 일지에 들어간다.
+- 첫 줄은 반드시 태그(`#일지 진입` 또는 `#일지 청산`)로 시작하고, 그다음 한 줄에 `키=값` 하나씩 쓴다. 값 안에 줄바꿈을 넣지 않는다. 굵게·코드블록 같은 꾸밈을 쓰지 않는다.
+- 다른 보고(3-0 사후 보고 등)와 **한 메시지에 섞지 않는다.** 일지 메시지는 일지 내용만 담는다.
+- 금액(USD)·체결가·수수료·펀딩비·손익은 **적지 않는다.** 이 값은 거래소 체결 내역에서 자동으로 가져온다.
+- 목록 값(setup, regime 등)은 6-1의 목록 밖 값을 쓰지 않는다.
+
+### 4-1. 진입 메시지 — 주문 **전에** 보낸다
+자동 주문은 이 메시지를 보낸 **뒤에** 주문한다. 승인 주문은 3-1 제안서 끝에 붙이고, 소유자 승인 후 같은 블록을 일지 메시지로 한 번 더 보낸다(승인 결과에 맞게 `approval`을 `approved` 또는 `modified`로 고쳐서).
 ```
-시각(KST) / 구분(일반 선물 / 현물 대용 1배 롱) / 종목(perp name 예: BTC) / 롱·숏 / 증거금·명목금액(USD) / 실제 적용 레버리지 / 체결 가격 / 계정 기준 청산 가격 / 수수료 / 주문 ID
-판단 근거: (피드의 어떤 값을 봤는지 — 예: rsi14 28, bb_position -0.1, rsi 전략 entry_now)
-소유자 제공 정보: (썼다면 받은 시각·요약·확인 결과)
-피드 생성 시각: generated_at 값
+#일지 진입
+trade_id=G20261023-01
+mode=live
+prompt_version=rules-6.0
+symbol=SOL
+side=long
+kind=perp
+setup=pullback
+regime=up
+confidence=3
+feed_generated_at=2026-10-23T09:40:12Z
+signals=rsi14 31, bb_position -0.05, funding_1h -0.0004
+owner_info=없음
+thesis=상승추세 중 지지선 눌림 후 반등 예상
+invalidation=4시간봉 종가가 지지선 아래로 마감
+entry_plan=180.5
+stop=176.0
+target=187.3
+time_stop_hours=
+risk_r=0.5
+leverage=0.6
+tier=explore
+similar_loss_flag=N
+similar_loss_note=없음
+memory_check=n=0 근거 부족
+approval=auto
 ```
+- `kind`: `perp`(일반 선물) 또는 `spot_proxy`(현물 대용 1배 롱)
+- `owner_info`: 3-2절 정보를 썼으면 받은 시각 / 요약 / 확인 결과, 아니면 `없음`
+- `confidence`: 1~5
+- `time_stop_hours`: 6-4에 따라 정한 값. 없으면 비워 둔다.
+- 거래하지 않기로 했으면 진입 메시지를 보내지 않는다. 메시지를 보냈는데 주문을 안 했거나 체결되지 않았으면, 그 사실을 소유자에게 따로 알린다.
+
+### 4-2. 청산 메시지 — 남은 포지션이 0인 것을 확인한 뒤 보낸다
+```
+#일지 청산
+trade_id=G20261023-01
+entry_oid=진입 주문 ID
+exit_reason=target
+followed_plan=Y
+loss_cause=
+incident=
+note=목표가 도달
+```
+- `exit_reason`, `loss_cause`는 6-1 목록에서 고른다. 이익이면 `loss_cause`는 비운다.
+- 손절 설정 실패로 닫았으면 `exit_reason=stop_fail_close`, `incident`에 경위를 적는다.
+- `followed_plan`: 진입 메시지의 계획(손절·목표·시간 손절·무효화)대로 했으면 `Y`, 아니면 `N`과 함께 `note`에 이유.
+
+### 4-3. 번호 규칙
+`trade_id`는 `G` + 날짜(YYYYMMDD, KST) + `-` + 그날 순번 두 자리. 한 번 쓴 번호는 다시 쓰지 않는다. 잘못 보낸 메시지는 같은 `trade_id`로 고쳐서 다시 보내면 나중 것으로 바뀐다.
 
 ## 5. 멈춤
 - 소유자가 "중단"이라고 하면 즉시 새 거래를 멈춘다.
 - 규칙과 상황이 충돌하면 거래하지 않고 소유자에게 묻는다.
+
+## 6. 매매일지·에피소딕 메모리 (소유자 결정 2026-10-22)
+
+### 6-0. 원칙
+- 과거 기록은 미래 예측이 아니라 "이 상황에서 내가 얼마나 자주 맞았는가"를 알려주는 기준값이다.
+- 기록은 **크기를 줄이는 데는 언제든 쓰고, 키우는 데는 6-3 승격 단계로만** 쓴다. 연승 횟수, 최근 몇 건의 성과, 확신도만으로 크기·레버리지를 키우지 않는다.
+- 이 절은 1~3절을 바꾸지 않는다. 데이터 확인(2절), 주문 방식(3절), 자동/승인 구분(3-0), 손절 규칙(3-0-1)은 그대로 지킨다.
+- 이 절의 숫자(1R 비율, 비상정지 기준)는 소유자만 바꾼다.
+
+### 6-1. 고정 목록
+- **setup**: `breakout`(돌파), `pullback`(눌림목), `trend`(추세추종), `x_sentiment`(X 여론), `funding_fade`(펀딩 과열 역행), `flow`(자금흐름·큰손 지갑), `owner_info`(소유자 제공 정보), `new`(새 셋업 — 청산 메시지 `note`에 설명)
+- **regime**: `up`, `down`, `range`, `high_vol`
+- **approval**: `auto`, `approved`, `modified`
+- **tier**: `explore`, `base`, `plus`, `max`
+- **exit_reason**: `stop`, `target`, `time_stop`, `invalidated`, `manual`, `circuit_breaker`, `stop_fail_close`
+- **loss_cause**: `chase`(추격진입), `sentiment_wrong`(여론오판), `stop_too_wide`, `stop_too_tight`, `regime_wrong`(장세오판), `late_exit`, `fees`, `data`(데이터 문제), `other`
+- **mode**: `live`(실거래), `paper`(모의, 통계에는 안 씀)
+
+### 6-2. 위험 단위
+- **1R = 진입 시점 계좌 평가액의 5%** (소유자 결정 2026-10-22)
+- 주문 크기 = 1R × `risk_r` ÷ |진입가 − 손절가|. 레버리지는 이 계산의 결과이며, 따로 올리는 값이 아니다.
+- `risk_r`은 6-3 단계의 배수: explore 0.5, base 1, plus 1.5, max 2. 6-4에서 줄이라고 하면 그 절반.
+- 계산된 레버리지가 2배 이하면 3-0 자동 주문, 2배 초과면 승인 주문이다.
+- 목표가까지 기대 수익이 수수료·펀딩비를 뺀 뒤 1.5R × `risk_r` 미만이면 거래하지 않는다.
+
+### 6-3. 승격 단계
+- 진입 전에 일지 요약 파일의 `cells`에서 같은 `setup` × `regime` 칸의 `tier`를 읽고 **그대로** 쓴다. 그록봇이 단계를 직접 계산하거나 올리지 않는다.
+- 칸이 없으면 `explore`.
+- 단계 기준(요약 파일이 계산): 20건 미만 explore → 20건 이상·평균 R 플러스 base → 30건 이상·평균 R 0.3 초과·승률 신뢰구간 하한이 손익분기 승률보다 높음 plus → 50건 이상·같은 조건 max. 최근 10건 평균 R이 마이너스면 한 단계 내림. `setup=new`는 항상 explore.
+
+### 6-4. 진입 전 확인 (2절 확인을 통과한 뒤)
+1. 요약 파일의 `updated_at`이 36시간 넘게 지났으면 모든 칸을 `explore`로 본다.
+2. 요약 파일 `account.circuit_breaker`가 `true`면 신규 진입하지 않는다(6-7).
+3. 같은 칸의 `tier`, `n_live`, `avg_r_net`을 `memory_check`에 적는다.
+4. `loss_patterns`에서 같은 `setup`의 손실 공통점을 확인한다. 지금 상황과 **2개 이상** 겹치면 `similar_loss_flag=Y`로 하고 `risk_r`을 절반으로 줄인다. 겹친 내용을 `similar_loss_note`에 적는다.
+5. 시간 손절: 같은 칸의 `median_hours_to_profit` 값이 있으면 그 시간을 `time_stop_hours`로 쓴다. **값이 없으면 시간 손절을 두지 않는다**(소유자 결정 2026-10-22). `similar_loss_flag=Y`이고 시간 손절이 있으면 그 절반.
+6. 4-1 진입 메시지를 보낸 뒤 주문한다.
+
+### 6-5. 보유 중 대응 (매시 50분 점검 때 함께 확인)
+- 시간 손절이 있으면: 그 시간 안에 예상 방향으로 +0.5R 이상 가지 않으면 청산(`time_stop`).
+- 무효화: 진입 메시지의 `thesis`·`invalidation`이 깨지면 손절가를 기다리지 않고 청산(`invalidated`).
+- +1R 도달 시 손절을 진입가로 올린다.
+- 손절은 진입가 쪽으로 당기기만 하고, 멀리 옮기지 않는다.
+
+### 6-6. 교훈
+- 요약 파일 `lesson_candidates`에 같은 손실 원인이 최근 30일 3번 이상인 것이 올라온다.
+- 그록봇은 후보마다 **위험을 줄이는** 대응 규칙 한 줄을 제안해 소유자에게 보낸다. 소유자가 승인한 것만 이 규칙서 7절에 추가된다. 위험을 늘리는 규칙은 제안하지 않는다.
+
+### 6-7. 계좌 비상정지 (소유자 결정 2026-10-22)
+- 계좌 평가액이 최고점 대비 **30% 하락**하면 **24시간** 신규 진입을 멈춘다. 요약 파일의 `account.circuit_breaker`가 `true`인 동안이 정지 기간이다(`breaker_until`까지).
+- 기존 포지션은 손절 규칙대로 관리한다.
+- 정지가 끝난 뒤(`last_breaker_at` 이후) 첫 5건은 단계와 상관없이 `risk_r=0.5`로 진입한다.
+- 요약 파일은 하루 두 번만 갱신되므로, 그록봇이 직접 확인한 평가액이 최근 최고점보다 30% 넘게 낮다고 보이면 요약 파일을 기다리지 말고 신규 진입을 멈추고 소유자에게 알린다.
+- 1절 "하루 손실 상한 없음"은 그대로이며, 이 기준만 추가한다.
+
+### 6-8. 점검자(GPT) 확인 항목
+승인 주문 제안서와 자동 주문 사후 보고를 점검할 때 `memory_check`, `tier`, `risk_r`, `similar_loss_flag`, `time_stop_hours`가 요약 파일 값과 6절 계산에 맞는지 함께 확인한다.
+
+## 7. 교훈 (소유자 승인분만)
+- 아직 없음.

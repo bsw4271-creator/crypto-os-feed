@@ -1,0 +1,11 @@
+{
+ "updated_at": null,
+ "r_unit_pct_of_equity": 5,
+ "counted_trades": 0,
+ "cells": [],
+ "loss_patterns": {},
+ "lesson_candidates": [],
+ "account": null,
+ "data_issues": {},
+ "note": "아직 기록 없음. 일지 수집이 시작되면 하루 두 번(08:40, 20:40 KST) 갱신된다. updated_at이 없거나 36시간 넘게 지났으면 모든 칸을 explore로 본다(규칙서 6-4)."
+}
