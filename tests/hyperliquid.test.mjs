@@ -72,3 +72,31 @@ test('unexpected shapes throw in the parsers but fetchHyperliquid reports them a
   assert.equal(r.perp.get('BTC').mark, 81600);
   assert.deepEqual(r.errors, ['spot: HTTP 503 from Hyperliquid']);
 });
+
+import { allPerps, autoPerps, candlesToKlines } from '../lib/hyperliquid.mjs';
+const perpMap = (rows) => new Map(rows.map((r) => [r.name, { mark: 1, funding_1h: 0, open_interest: 10, max_leverage: 5, ...r }]));
+
+test('auto perps: top by 24h volume, fixed names and zero-volume skipped', () => {
+  const m = perpMap([
+    { name: 'BTC', day_volume_usd: 900 },
+    { name: 'kPEPE', day_volume_usd: 500 },
+    { name: 'FARTCOIN', day_volume_usd: 700 },
+    { name: 'DEAD', day_volume_usd: 0 },
+    { name: 'AAA', day_volume_usd: 100 },
+  ]);
+  assert.deepEqual(autoPerps(m, ['BTC'], 2), ['FARTCOIN', 'kPEPE']);
+  assert.deepEqual(autoPerps(null), []);
+});
+
+test('all perps: compact, most traded first, marks feed symbols', () => {
+  const list = allPerps(perpMap([{ name: 'A', day_volume_usd: 1, mark: 2 }, { name: 'B', day_volume_usd: 5 }]), new Set(['A']));
+  assert.deepEqual(list.map((x) => x.name), ['B', 'A']);
+  assert.equal(list[1].open_interest_usd, 20);
+  assert.equal(list[1].in_feed_symbols, true);
+});
+
+test('candles: Hyperliquid rows become kline arrays with hour close time', () => {
+  const k = candlesToKlines([{ t: 3600000, T: 7199999, o: '1', h: '2', l: '0.5', c: '1.5', v: '10' }]);
+  assert.deepEqual(k, [[3600000, '1', '2', '0.5', '1.5', '10', 7199999]]);
+  assert.throws(() => candlesToKlines({}), /unexpected/);
+});

@@ -3,51 +3,56 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fetchBars } from './lib/fetch.mjs';
-import { selectUniverse } from './lib/universe.mjs';
+import { parseKlines } from './lib/indicator-view.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
-import { fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
+import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
 
-const DAY = 86400000;
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
-// paper-auto start (2026-10-18T13:00Z); the auto list is re-picked each day from daily candles closed before 00:00 UTC.
-export const AUTO_START = Date.parse('2026-10-18T13:00:00Z');
 const HISTORY_DAYS = 10; // 240 closed 1h bars: enough for warm-up and the 7d change
 
 const outDir = process.argv.includes('--out') ? process.argv[process.argv.indexOf('--out') + 1] : 'feed';
 const now = Date.now();
+// fetchBars falls back to Gate on any Binance failure; for auto symbols we want Binance or nothing.
+const binanceOnly = (url, opt) => (String(url).includes('gateio') ? Promise.reject(new Error('Gate skipped for auto symbols')) : globalThis.fetch(url, opt));
 const strategies = readdirSync('strategies')
   .filter((f) => f.endsWith('.json'))
   .sort()
   .map((f) => JSON.parse(readFileSync(join('strategies', f), 'utf8')));
 
-let auto = [],
-  autoAsOf = null,
-  autoError = null;
-try {
-  autoAsOf = Math.floor(now / DAY) * DAY;
-  const sel = await selectUniverse({ start: AUTO_START, now, asOf: autoAsOf });
-  auto = sel.selected;
-} catch (e) {
-  autoError = e?.message ?? String(e);
-}
-
-const groups = new Map();
-for (const s of FIXED) groups.set(s, 'fixed');
-for (const s of auto) if (!groups.has(s)) groups.set(s, 'auto');
-
 const hl = await fetchHyperliquid();
+const fixedNames = FIXED.map((x) => x.replace(/USDT$/, ''));
+let autoError = hl.perp ? null : 'Hyperliquid perp list unavailable';
+const auto = autoPerps(hl.perp, fixedNames, 10);
+
+// entries: [symbol, group, perpName]
+const entries = [...FIXED.map((s) => [s, 'fixed', s.replace(/USDT$/, '')]), ...auto.map((n) => [`${n}USDT`, 'auto', n])];
 const symbols = [];
-for (const [symbol, group] of groups) {
+const H = 3600000;
+for (const [symbol, group, perpName] of entries) {
   try {
-    const { bars, venue, fallbackReason } = await fetchBars({ symbol, days: HISTORY_DAYS, now });
-    const brief = symbolBrief({ symbol, group, bars, venue, fallbackReason, strategies, now });
-    if (brief.quality !== 'error') brief.hyperliquid = hyperliquidFor(symbol, brief.price, hl.spot, hl.perp);
+    let got;
+    if (group === 'fixed') got = await fetchBars({ symbol, days: HISTORY_DAYS, now });
+    else {
+      // Auto (Hyperliquid list): Binance spot if the same ticker trades there, otherwise Hyperliquid's own perp candles.
+      // No Gate fallback here: a same-named token on another exchange may be a different coin.
+      try {
+        if (!/^[A-Z0-9]{2,20}$/.test(perpName)) throw new Error('not a Binance-style ticker');
+        got = await fetchBars({ symbol, days: HISTORY_DAYS, now, fetchImpl: binanceOnly });
+      } catch (e) {
+        const start = Math.floor((now - HISTORY_DAYS * 24 * H) / H) * H;
+        const { rows } = parseKlines(await fetchCandles(perpName, start, now), now);
+        got = { bars: rows, venue: 'Hyperliquid', fallbackReason: null, binanceMiss: e.message };
+      }
+    }
+    const brief = symbolBrief({ symbol, group, bars: got.bars, venue: got.venue, fallbackReason: got.fallbackReason, strategies, now });
+    brief.perp_name = perpName;
+    if (brief.quality !== 'error') brief.hyperliquid = hyperliquidFor(symbol, brief.price, hl.spot, hl.perp, perpName);
     symbols.push(brief);
   } catch (e) {
-    symbols.push({ symbol, group, quality: 'error', quality_reason: e?.message ?? String(e) });
+    symbols.push({ symbol, group, perp_name: perpName, quality: 'error', quality_reason: e?.message ?? String(e) });
   }
 }
 
@@ -83,10 +88,10 @@ const feed = {
   // Runs hourly; GitHub can start late. Past this time, treat every symbol as stale.
   next_update_expected_by: new Date(now + 2 * 3600000).toISOString(),
   interval: '1h',
-  source: 'Binance spot public market data (Gate.io fallback). Read-only. No account, wallet or order data.',
+  source: 'Binance spot public market data (Gate.io fallback for fixed symbols) and Hyperliquid public info API. Read-only. No account, wallet or order data.',
   disclaimer: '분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아니며, 데이터가 늦거나 틀릴 수 있습니다.',
   quality_levels: {
-    ok: 'Binance data, last closed bar within 150 minutes',
+    ok: 'Binance (or, for Hyperliquid-only auto symbols, Hyperliquid perp) data, last closed bar within 150 minutes',
     fallback: 'Binance unavailable, another exchange used; prices can differ slightly',
     stale: 'last closed bar older than 150 minutes; do not act on it',
     error: 'no usable data',
@@ -94,15 +99,16 @@ const feed = {
   universe: {
     fixed: FIXED,
     auto,
-    auto_rule: 'Binance spot USDT pairs, no stablecoins or pegged assets, listed >= 365 days, top 10 by 30-day average daily quote volume (daily candles closed before 00:00 UTC today)',
-    auto_selected_asof: autoAsOf ? new Date(autoAsOf).toISOString() : null,
+    auto_rule: 'Hyperliquid perps (not delisted), top 10 by 24h notional volume, fixed names skipped; re-picked every run. Bars: Binance spot same ticker if it exists, else Hyperliquid perp 1h candles (venue Hyperliquid).',
     auto_error: autoError,
   },
   strategies,
   hyperliquid: {
     source: 'https://api.hyperliquid.xyz/info (public, read-only)',
-    note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - Binance close) / Binance close.',
+    note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - feed close) / feed close; the feed close is Binance unless the symbol venue is Hyperliquid.',
     errors: hl.errors,
+    // Every perp that can be traded now, most traded first. Symbols outside `symbols` have no indicators.
+    perps_all: allPerps(hl.perp, new Set(symbols.map((x) => x.perp_name))),
   },
   flows: {
     note: '참고 신호입니다. 큰 자금 이동이 곧 매수·매도를 뜻하지는 않습니다.',
