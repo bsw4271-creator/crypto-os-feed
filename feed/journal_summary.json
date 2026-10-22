@@ -1,11 +1,23 @@
 {
- "updated_at": null,
+ "updated_at": "2026-10-22T12:31:33.295Z",
  "r_unit_pct_of_equity": 5,
+ "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
  "counted_trades": 0,
  "cells": [],
  "loss_patterns": {},
  "lesson_candidates": [],
- "account": null,
- "data_issues": {},
- "note": "아직 기록 없음. 일지 수집이 시작되면 하루 두 번(08:40, 20:40 KST) 갱신된다. updated_at이 없거나 36시간 넘게 지났으면 모든 칸을 explore로 본다(규칙서 6-4)."
+ "account": {
+  "drawdown_from_peak_pct": 0,
+  "circuit_breaker": false,
+  "breaker_until": null,
+  "last_breaker_at": null,
+  "sampled_at": "2026-10-22T12:31:33.295Z"
+ },
+ "data_issues": {
+  "trades_without_entry_msg": 1,
+  "closed_without_close_msg": 0,
+  "entries_without_fill": 0,
+  "rows_with_issues": 0
+ },
+ "note": "그록봇 규칙서 6절용. R 단위 통계만 있고 금액·체결가·주문 ID·지갑 정보는 없음. 매매 권유 아님."
 }
