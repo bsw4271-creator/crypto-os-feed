@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-23T00:01:49.907Z",
+ "updated_at": "2026-10-23T01:57:41.835Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
  "counted_trades": 0,
@@ -11,13 +11,14 @@
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-10-23T00:01:49.907Z"
+  "sampled_at": "2026-10-23T01:57:41.835Z"
  },
  "data_issues": {
-  "trades_without_entry_msg": 2,
+  "trades_without_entry_msg": 1,
   "closed_without_close_msg": 0,
   "entries_without_fill": 0,
-  "rows_with_issues": 1
+  "broken_positions": 0,
+  "rows_with_issues": 0
  },
  "note": "그록봇 규칙서 6절용. R 단위 통계만 있고 금액·체결가·주문 ID·지갑 정보는 없음. 매매 권유 아님."
 }
