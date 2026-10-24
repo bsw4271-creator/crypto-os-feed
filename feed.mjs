@@ -8,6 +8,7 @@ import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
+import { withWhaleVerification } from './lib/signal-verification.mjs';
 
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
@@ -72,13 +73,13 @@ const prevAtMs = Date.parse(prevFeed?.generated_at ?? '');
 const fromMs = Number.isFinite(prevAtMs) && now - prevAtMs > 0 && now - prevAtMs <= MAX_PREV_AGE_MS ? prevAtMs : now - 3600000;
 const priceOf = (sym) => symbols.find((x) => x.symbol === sym && (x.quality === 'ok' || x.quality === 'fallback'))?.price ?? null;
 const wallets = JSON.parse(readFileSync('config/wallets.json', 'utf8'));
-const whales = await fetchWhales({
+const whales = withWhaleVerification(await fetchWhales({
   wallets,
   prices: { ETHUSDT: priceOf('ETHUSDT'), BTCUSDT: priceOf('BTCUSDT') },
   fromSec: Math.floor(fromMs / 1000),
   toSec: Math.floor(now / 1000),
   key: process.env.ETHERSCAN_API_KEY,
-});
+}), now);
 
 const kst = new Date(now + 9 * 3600000).toISOString().replace('T', ' ').slice(0, 16) + ' KST';
 const feed = {

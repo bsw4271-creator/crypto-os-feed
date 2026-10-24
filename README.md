@@ -33,3 +33,15 @@ Crypto OS의 **공개 브리핑 피드**입니다. 그록봇 등 AI가 링크 �
 - `lib/` — 지표·백테스트 엔진 (crypto-backtester와 같은 코드), `lib/brief.mjs` — 피드 항목 계산
 - `strategies/` — 모의매매와 같은 전략 4개
 - `tests/` — `node --test`
+
+## 큰 지갑 관측의 독립 위험 검사 계약
+
+`flows.whales.verification`과 모든 `transfers[].verification`을 기존 필드에 추가합니다. `schema_version: 1`, 기존 거래량·이동·시장·전략 필드는 유지합니다. 상태는 `CHECKED`(제한 범위 검사 확인), `UNKNOWN`(판정 불가), `EXCLUDED`(위험)입니다. 이동 관측은 `UNKNOWN`이어도 JSON·Markdown과 건수에 남습니다. 건수 단위는 지갑 수가 아닌 이동 관측 수입니다. 자료가 없거나 수집이 실패한 경우도 정상/안전 판정으로 바꾸지 않습니다.
+
+현재 피드에는 OS 독립 위험 검사와 Smart Money 확인 규칙을 연결하는 인증된 어댑터가 **없습니다**. 따라서 실제 생성기는 기존 수집 결과에 `UNKNOWN`, `positive_confirmation_allowed: false`를 붙입니다. 지갑 이름표, Etherscan 조회 성공, 시장 `risk_on`, 시세 `quality: ok`는 독립 위험 검사가 아닙니다. `CHECKED`도 안전 보증이나 긍정 매매 확인이 아닙니다. 기존 기술적 전략의 `entry_now`는 독립 위험 확인을 뜻하지 않습니다.
+
+이번 계약 범위는 큰 지갑 이동 `flows.whales`입니다. 시세 기반 RSI·MACD 등 `symbols[].signals`, 스테이블코인 공급량, OI 변화는 별도 관측이며 Smart Money 위험 검사나 지갑 추종 신호로 재분류하지 않습니다.
+
+`lib/signal-verification.mjs`의 선택적 Map 인자는 네트워크·파일 입력이 없는 **오프라인 계약 검증** 용도입니다. 계약 이름, 출처 검증 표시, 불투명 근거 ID, 정확한 개별 관측 주체, 원검사 시각과 5분 이내 만료를 확인합니다. 이 함수는 출처를 인증하지 않습니다. 향후 인증된 생산자 연결은 별도 설계·검토가 필요하며, 현재 생성기는 이 인자를 전달하지 않습니다. 일치하는 과거 `EXCLUDED`는 만료만으로 해제하지 않습니다. 출처가 확인된 새 정상 검사가 같은 주체의 이전 위험을 대체해야 합니다. 원근거·주체 식별·추가 주소는 공개 `verification`에 넣지 않습니다.
+
+개별·합계 모두 `status`, `label`, `scope`, `reason`, `checked_at`, `expires_at`, `positive_confirmation_allowed`를 전달합니다. 합계는 `counts`, `observed_transfers`, `count_unit`, `observation_status`를 추가합니다. 빈 관측과 수집 오류는 서로 다른 이유를 전달하고 모두 `UNKNOWN`입니다. Markdown은 합계와 모든 개별 관측 번호의 상태를 표시하며 기존 상세 표본 5개 제한은 유지합니다. 계약이 없는 이전 JSON은 `UNKNOWN`으로 해석해야 합니다. 소비자는 원검사 만료·누락을 확인해야 하며, 현재 확인 규칙이 연결되지 않았으므로 긍정 확인은 항상 보류합니다.
