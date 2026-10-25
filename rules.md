@@ -142,7 +142,7 @@
 #일지 진입
 trade_id=G20261023-01
 mode=live
-prompt_version=rules-6.2
+prompt_version=rules-6.3
 symbol=SOL
 side=long
 kind=perp
@@ -167,6 +167,7 @@ memory_check=n=0 근거 부족
 approval=auto
 ```
 - `kind`: `perp`(일반 선물) 또는 `spot_proxy`(현물 대용 1배 롱)
+- `entry_plan`, `stop`, `target`, `time_stop_hours`, `risk_r`, `leverage`, `confidence`에는 **숫자만** 적는다. 주문 방식(IOC 등) 같은 설명은 `thesis`에 적는다.
 - `owner_info`: 3-2절 정보를 썼으면 받은 시각 / 요약 / 확인 결과, 아니면 `없음`
 - `confidence`: 1~5
 - `time_stop_hours`: 6-4에 따라 정한 값. 없으면 비워 둔다.
@@ -205,7 +206,7 @@ note=목표가 도달
 ### 6-1. 고정 목록
 - **setup**: `breakout`(돌파), `pullback`(눌림목), `trend`(추세추종), `x_sentiment`(X 여론), `funding_fade`(펀딩 과열 역행), `flow`(자금흐름·큰손 지갑), `owner_info`(소유자 제공 정보), `bounce_fade`(반등 실패 숏), `breakdown`(지지선 이탈 숏), `new`(새 셋업 — 청산 메시지 `note`에 설명)
   - 숏 셋업 고르는 법: 피드 `short.setups.bounce_fade` → `bounce_fade`, `short.setups.breakdown` → `breakdown`, 숏 전략 신호(`short.strategies`)는 그 성격에 맞는 기존 값(ema·macd 하향 교차는 `trend`, bb·rsi는 `bounce_fade`)
-- **regime**: `up`, `down`, `range`, `high_vol`
+- **regime**: `up`, `down`, `range` — **피드 `market.regime`으로 기계적으로 정한다**(소유자 결정 2026-10-25): `risk_on` → `up`, `risk_off` → `down`, `neutral` → `range`. 개별 코인 모양으로 따로 판단하지 않는다. `unknown`이면 진입하지 않는다. `high_vol`은 판단 기준이 없어 쓰지 않는다.
 - **approval**: `auto`, `approved`, `modified`
 - **tier**: `explore`, `base`, `plus`, `max`
 - **exit_reason**: `stop`, `target`, `time_stop`, `invalidated`, `manual`, `circuit_breaker`, `stop_fail_close`
