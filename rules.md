@@ -230,6 +230,7 @@ note=목표가 도달
 2. 요약 파일 `account.circuit_breaker`가 `true`면 신규 진입하지 않는다(6-7).
 3. 같은 칸의 `tier`, `n_live`, `avg_r_net`을 `memory_check`에 적는다.
 4. `loss_patterns`에서 같은 `setup`의 손실 공통점을 확인한다. 지금 상황과 **2개 이상** 겹치면 `similar_loss_flag=Y`로 하고 `risk_r`을 절반으로 줄인다. 겹친 내용을 `similar_loss_note`에 적는다.
+   - `loss_patterns`는 같은 셋업의 손실이 **3건 이상** 쌓여야 생긴다. 공통점은 regime·side·시간대·loss_cause만 센다(2026-10-25).
    - **같은 셋업이 직전에 한 번 손실났다는 이유만으로는 건너뛰지도, 줄이지도 않는다.** `loss_patterns`에 나오기 전에는 칸의 `tier`대로(없으면 explore 0.5R) 진입해서 기록을 쌓는다. (소유자 결정 2026-10-23)
 5. 시간 손절은 **항상 설정한다**(소유자 결정 2026-10-25, 2026-10-22의 "값이 없으면 두지 않음"을 대체). 같은 칸의 `median_hours_to_profit` 값이 있으면 그 시간, 없으면 **4~12시간** 안에서 정하고 이유를 `note`가 아닌 진입 메시지 `thesis` 끝에 "(시간손절 N시간: 이유)"로 적는다. `similar_loss_flag=Y`면 그 절반.
 6. 4-1 진입 메시지를 보낸 뒤 주문한다.
