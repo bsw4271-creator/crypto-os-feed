@@ -1,8 +1,8 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-26T19:48:03.782Z",
- "generated_at_kst": "2026-10-27 04:48 KST",
- "next_update_expected_by": "2026-10-26T21:48:03.782Z",
+ "generated_at": "2026-10-26T20:42:56.861Z",
+ "generated_at_kst": "2026-10-27 05:42 KST",
+ "next_update_expected_by": "2026-10-26T22:42:56.861Z",
  "interval": "1h",
  "source": "Binance spot public market data (Gate.io fallback for fixed symbols) and Hyperliquid public info API. Read-only. No account, wallet or order data.",
  "disclaimer": "분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아니며, 데이터가 늦거나 틀릴 수 있습니다.",
@@ -23,8 +23,8 @@
   "auto": [
    "ZEC",
    "NEAR",
-   "ENA",
    "PUMP",
+   "ENA",
    "XMR",
    "XRP",
    "WLD",
@@ -105,1576 +105,1576 @@
   "perps_all": [
    {
     "name": "BTC",
-    "mark": 80015,
+    "mark": 79814,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 3337446656,
-    "day_volume_usd": 2781686645,
+    "open_interest_usd": 3386689806,
+    "day_volume_usd": 2833331866,
     "max_leverage": 40,
     "in_feed_symbols": true
    },
    {
     "name": "ETH",
-    "mark": 2318.22,
-    "funding_1h": 0.0000083762,
-    "open_interest_usd": 2592337330,
-    "day_volume_usd": 942514675,
+    "mark": 2308.35,
+    "funding_1h": 0.0000042129,
+    "open_interest_usd": 2601388349,
+    "day_volume_usd": 985737831,
     "max_leverage": 25,
     "in_feed_symbols": true
    },
    {
     "name": "HYPE",
-    "mark": 78.969,
+    "mark": 77.586,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1653477608,
-    "day_volume_usd": 486379856,
+    "open_interest_usd": 1601337226,
+    "day_volume_usd": 521454350,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "ZEC",
-    "mark": 1230.9,
+    "mark": 1223.1,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 600726811,
-    "day_volume_usd": 382949733,
+    "open_interest_usd": 596793519,
+    "day_volume_usd": 380871918,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "SOL",
-    "mark": 100.56,
+    "mark": 100.24,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 559245394,
-    "day_volume_usd": 151704299,
+    "open_interest_usd": 556478467,
+    "day_volume_usd": 155119423,
     "max_leverage": 20,
     "in_feed_symbols": true
    },
    {
     "name": "NEAR",
-    "mark": 4.4934,
-    "funding_1h": -0.000009131,
-    "open_interest_usd": 264072644,
-    "day_volume_usd": 132798320,
-    "max_leverage": 10,
-    "in_feed_symbols": true
-   },
-   {
-    "name": "ENA",
-    "mark": 0.20992,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 98839829,
-    "day_volume_usd": 58720826,
+    "mark": 4.46323,
+    "funding_1h": 0.0000023203,
+    "open_interest_usd": 262241044,
+    "day_volume_usd": 133239947,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "PUMP",
-    "mark": 0.004236,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 114163092,
-    "day_volume_usd": 58234056,
+    "mark": 0.004208,
+    "funding_1h": -0.0000117647,
+    "open_interest_usd": 113028042,
+    "day_volume_usd": 58241017,
+    "max_leverage": 10,
+    "in_feed_symbols": true
+   },
+   {
+    "name": "ENA",
+    "mark": 0.20771,
+    "funding_1h": 0.0000069716,
+    "open_interest_usd": 98077613,
+    "day_volume_usd": 57887524,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "XMR",
-    "mark": 595.59,
-    "funding_1h": 0.0000339868,
-    "open_interest_usd": 103070609,
-    "day_volume_usd": 50913490,
+    "mark": 594.83,
+    "funding_1h": 0.000083785,
+    "open_interest_usd": 104468199,
+    "day_volume_usd": 51285028,
     "max_leverage": 5,
     "in_feed_symbols": true
    },
    {
     "name": "XRP",
-    "mark": 1.294381,
+    "mark": 1.290712,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 221563185,
-    "day_volume_usd": 41660742,
+    "open_interest_usd": 221047771,
+    "day_volume_usd": 40885169,
     "max_leverage": 20,
     "in_feed_symbols": true
    },
    {
     "name": "WLD",
-    "mark": 0.44034,
-    "funding_1h": 0.0000035165,
-    "open_interest_usd": 63393300,
-    "day_volume_usd": 26314649,
+    "mark": 0.43569,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 62886141,
+    "day_volume_usd": 26356546,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "SUI",
-    "mark": 0.91284,
+    "mark": 0.9075,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 33689875,
-    "day_volume_usd": 21140249,
+    "open_interest_usd": 33427935,
+    "day_volume_usd": 20701505,
     "max_leverage": 10,
     "in_feed_symbols": true
    },
    {
     "name": "CHIP",
-    "mark": 0.053878,
+    "mark": 0.052345,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 17304951,
-    "day_volume_usd": 16278563,
+    "open_interest_usd": 15113799,
+    "day_volume_usd": 19384133,
     "max_leverage": 3,
     "in_feed_symbols": true
    },
    {
-    "name": "LIT",
-    "mark": 3.051723,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 108258134,
-    "day_volume_usd": 14108959,
-    "max_leverage": 5,
-    "in_feed_symbols": true
-   },
-   {
     "name": "ZRO",
-    "mark": 1.6326,
+    "mark": 1.617,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 63959690,
-    "day_volume_usd": 14083313,
+    "open_interest_usd": 63391016,
+    "day_volume_usd": 14254323,
     "max_leverage": 5,
     "in_feed_symbols": true
    },
    {
-    "name": "UNI",
-    "mark": 7.0797,
+    "name": "LIT",
+    "mark": 3.014763,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 79517949,
-    "day_volume_usd": 13603313,
+    "open_interest_usd": 106744702,
+    "day_volume_usd": 14163457,
+    "max_leverage": 5,
+    "in_feed_symbols": true
+   },
+   {
+    "name": "kPEPE",
+    "mark": 0.004296,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 37156307,
+    "day_volume_usd": 13286520,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
-    "name": "kPEPE",
-    "mark": 0.004314,
+    "name": "UNI",
+    "mark": 7.07212,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 37241512,
-    "day_volume_usd": 13447218,
+    "open_interest_usd": 79443411,
+    "day_volume_usd": 12888704,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "VVV",
-    "mark": 25.196,
+    "mark": 25.145,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 75124279,
-    "day_volume_usd": 11467842,
+    "open_interest_usd": 74894148,
+    "day_volume_usd": 11486462,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "FARTCOIN",
-    "mark": 0.12748,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 24102603,
-    "day_volume_usd": 8387937,
+    "mark": 0.12688,
+    "funding_1h": -0.0000087734,
+    "open_interest_usd": 24120191,
+    "day_volume_usd": 8204329,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "DOGE",
-    "mark": 0.077285,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 78220799,
-    "day_volume_usd": 7152987,
+    "mark": 0.077097,
+    "funding_1h": 0.0000103474,
+    "open_interest_usd": 77958775,
+    "day_volume_usd": 7155696,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "STRK",
-    "mark": 0.0466,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 34207098,
-    "day_volume_usd": 5650198,
+    "mark": 0.04665,
+    "funding_1h": 0.0000050254,
+    "open_interest_usd": 34282116,
+    "day_volume_usd": 5656570,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "INJ",
-    "mark": 8.0194,
+    "mark": 7.9809,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 5811303,
-    "day_volume_usd": 5532154,
+    "open_interest_usd": 5744535,
+    "day_volume_usd": 5559290,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "CRV",
-    "mark": 0.34296,
+    "mark": 0.34093,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 20238006,
-    "day_volume_usd": 5467966,
+    "open_interest_usd": 20103980,
+    "day_volume_usd": 5432921,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "TAO",
-    "mark": 251.28,
+    "mark": 250.12,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 38587795,
-    "day_volume_usd": 5297239,
+    "open_interest_usd": 38402757,
+    "day_volume_usd": 5327078,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "AAVE",
-    "mark": 135.22,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 51663746,
-    "day_volume_usd": 5123843,
+    "mark": 134.54,
+    "funding_1h": 0.0000022174,
+    "open_interest_usd": 51378846,
+    "day_volume_usd": 5080756,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "ONDO",
-    "mark": 0.414572,
+    "mark": 0.41241,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 21894855,
-    "day_volume_usd": 5010000,
-    "max_leverage": 10,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "BNB",
-    "mark": 743.03,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 44384001,
-    "day_volume_usd": 4818912,
-    "max_leverage": 10,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "ADA",
-    "mark": 0.2054,
-    "funding_1h": -0.000011323,
-    "open_interest_usd": 30094181,
-    "day_volume_usd": 4744301,
+    "open_interest_usd": 21774521,
+    "day_volume_usd": 5076744,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "CASHCAT",
-    "mark": 0.091661,
+    "mark": 0.09017,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 19838048,
-    "day_volume_usd": 4686465,
+    "open_interest_usd": 19400327,
+    "day_volume_usd": 4887556,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "LINK",
-    "mark": 11.405,
+    "name": "BNB",
+    "mark": 741.13,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 55513345,
-    "day_volume_usd": 4468480,
+    "open_interest_usd": 44250656,
+    "day_volume_usd": 4836057,
+    "max_leverage": 10,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "ADA",
+    "mark": 0.20445,
+    "funding_1h": 3.059e-7,
+    "open_interest_usd": 29961171,
+    "day_volume_usd": 4734326,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "XPL",
-    "mark": 0.073166,
+    "mark": 0.072639,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 51167463,
-    "day_volume_usd": 4341442,
+    "open_interest_usd": 50883259,
+    "day_volume_usd": 4574404,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
-    "name": "PONS",
-    "mark": 0.24701,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 20309189,
-    "day_volume_usd": 4256844,
-    "max_leverage": 3,
+    "name": "LINK",
+    "mark": 11.342,
+    "funding_1h": 0.0000017948,
+    "open_interest_usd": 55173481,
+    "day_volume_usd": 4518232,
+    "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "AERO",
-    "mark": 0.68183,
+    "mark": 0.67306,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 25774052,
-    "day_volume_usd": 4225744,
+    "open_interest_usd": 25436506,
+    "day_volume_usd": 4145633,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "PONS",
+    "mark": 0.24416,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 20068589,
+    "day_volume_usd": 4078602,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "GRASS",
-    "mark": 0.68521,
+    "mark": 0.67598,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 32750091,
-    "day_volume_usd": 3185287,
+    "open_interest_usd": 32283987,
+    "day_volume_usd": 3241338,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "LTC",
-    "mark": 56.401,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 22726087,
-    "day_volume_usd": 3182487,
+    "mark": 56.328,
+    "funding_1h": -0.0000108668,
+    "open_interest_usd": 22691286,
+    "day_volume_usd": 3186160,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "NIL",
-    "mark": 0.089014,
+    "mark": 0.0886,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 2957102,
-    "day_volume_usd": 3178429,
+    "open_interest_usd": 2943448,
+    "day_volume_usd": 3142805,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "PAXG",
-    "mark": 4023.183,
-    "funding_1h": 0.000009143,
-    "open_interest_usd": 25496053,
-    "day_volume_usd": 3025246,
+    "mark": 4024.1,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 25490299,
+    "day_volume_usd": 3014194,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "ARB",
-    "mark": 0.16848,
+    "mark": 0.1673,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 15591532,
-    "day_volume_usd": 2883417,
+    "open_interest_usd": 15357084,
+    "day_volume_usd": 2986830,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "USELESS",
-    "mark": 0.15435,
+    "mark": 0.15177,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 7503056,
-    "day_volume_usd": 2733710,
+    "open_interest_usd": 7369239,
+    "day_volume_usd": 2739937,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "GRAM",
-    "mark": 1.2182,
+    "mark": 1.2133,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 22859981,
-    "day_volume_usd": 2547661,
+    "open_interest_usd": 22830962,
+    "day_volume_usd": 2595669,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "TRUMP",
-    "mark": 1.7021,
-    "funding_1h": -0.0000195411,
-    "open_interest_usd": 8390736,
-    "day_volume_usd": 2539132,
+    "mark": 1.693,
+    "funding_1h": -0.0000501142,
+    "open_interest_usd": 8362562,
+    "day_volume_usd": 2586250,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "SKR",
-    "mark": 0.0139,
+    "mark": 0.013874,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 333720,
-    "day_volume_usd": 2443526,
+    "open_interest_usd": 334625,
+    "day_volume_usd": 2478442,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "MON",
-    "mark": 0.021705,
+    "mark": 0.021601,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 31845596,
-    "day_volume_usd": 2288041,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "TIA",
-    "mark": 0.55104,
-    "funding_1h": -0.000041473,
-    "open_interest_usd": 8899137,
-    "day_volume_usd": 2134578,
+    "open_interest_usd": 31719724,
+    "day_volume_usd": 2454922,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "BCH",
-    "mark": 278.21,
+    "mark": 277.72,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 8442554,
-    "day_volume_usd": 2122249,
+    "open_interest_usd": 8428243,
+    "day_volume_usd": 2104936,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "JUP",
-    "mark": 0.27834,
-    "funding_1h": -0.0000351677,
-    "open_interest_usd": 8019558,
-    "day_volume_usd": 2098987,
+    "mark": 0.2768,
+    "funding_1h": -0.000024481,
+    "open_interest_usd": 7961746,
+    "day_volume_usd": 2101200,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "WLFI",
-    "mark": 0.053242,
-    "funding_1h": 0.0000033389,
-    "open_interest_usd": 11974034,
-    "day_volume_usd": 2083513,
+    "mark": 0.05308,
+    "funding_1h": 0.0000070643,
+    "open_interest_usd": 11917175,
+    "day_volume_usd": 2082096,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "SPX",
-    "mark": 0.37177,
+    "mark": 0.37078,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 5001387,
-    "day_volume_usd": 2068315,
+    "open_interest_usd": 4977931,
+    "day_volume_usd": 2070594,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "RENDER",
-    "mark": 1.7238,
-    "funding_1h": -0.0000050031,
-    "open_interest_usd": 2446017,
-    "day_volume_usd": 2057445,
+    "mark": 1.7171,
+    "funding_1h": -0.0000049859,
+    "open_interest_usd": 2423491,
+    "day_volume_usd": 2065097,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "TIA",
+    "mark": 0.5418,
+    "funding_1h": -0.0000315616,
+    "open_interest_usd": 8765299,
+    "day_volume_usd": 2031727,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ETHFI",
-    "mark": 0.64645,
-    "funding_1h": 0.0000035119,
-    "open_interest_usd": 9816888,
-    "day_volume_usd": 1974724,
+    "mark": 0.64323,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 9756896,
+    "day_volume_usd": 1977573,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "AVAX",
-    "mark": 8.9266,
-    "funding_1h": -0.0000026224,
-    "open_interest_usd": 17887643,
-    "day_volume_usd": 1931296,
-    "max_leverage": 10,
-    "in_feed_symbols": false
-   },
-   {
     "name": "MET",
-    "mark": 0.316926,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 3748951,
-    "day_volume_usd": 1894044,
+    "mark": 0.31633,
+    "funding_1h": 0.0000043501,
+    "open_interest_usd": 3738981,
+    "day_volume_usd": 1915776,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
+    "name": "AVAX",
+    "mark": 8.8945,
+    "funding_1h": -0.000005415,
+    "open_interest_usd": 17820583,
+    "day_volume_usd": 1908227,
+    "max_leverage": 10,
+    "in_feed_symbols": false
+   },
+   {
     "name": "APT",
-    "mark": 0.6948,
-    "funding_1h": -0.0000073259,
-    "open_interest_usd": 4390419,
-    "day_volume_usd": 1855947,
+    "mark": 0.6921,
+    "funding_1h": -0.0000141679,
+    "open_interest_usd": 4372589,
+    "day_volume_usd": 1853677,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "INIT",
-    "mark": 0.14883,
+    "mark": 0.1574,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1760812,
-    "day_volume_usd": 1637328,
+    "open_interest_usd": 1904616,
+    "day_volume_usd": 1630880,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "DOT",
-    "mark": 1.0077,
-    "funding_1h": -4.692e-7,
-    "open_interest_usd": 5605019,
-    "day_volume_usd": 1623927,
+    "mark": 1.0017,
+    "funding_1h": -0.0000162712,
+    "open_interest_usd": 5567766,
+    "day_volume_usd": 1621000,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
     "name": "BABY",
-    "mark": 0.014104,
-    "funding_1h": -0.0000935152,
-    "open_interest_usd": 237642,
-    "day_volume_usd": 1575387,
+    "mark": 0.014132,
+    "funding_1h": -0.0001246759,
+    "open_interest_usd": 243631,
+    "day_volume_usd": 1573581,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "PYTH",
-    "mark": 0.074143,
+    "mark": 0.073371,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 2800911,
-    "day_volume_usd": 1533737,
+    "open_interest_usd": 2761202,
+    "day_volume_usd": 1506654,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "MORPHO",
+    "mark": 2.1156,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 6697969,
+    "day_volume_usd": 1455072,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "REZ",
-    "mark": 0.004638,
-    "funding_1h": -0.0000200399,
-    "open_interest_usd": 1653946,
-    "day_volume_usd": 1432181,
+    "mark": 0.004629,
+    "funding_1h": -0.000064527,
+    "open_interest_usd": 1646622,
+    "day_volume_usd": 1387041,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "MORPHO",
-    "mark": 2.1141,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 6683379,
-    "day_volume_usd": 1366369,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
     "name": "ASTER",
-    "mark": 0.711493,
-    "funding_1h": 0.0000066033,
-    "open_interest_usd": 24607281,
-    "day_volume_usd": 1310226,
+    "mark": 0.70875,
+    "funding_1h": 0.0000022546,
+    "open_interest_usd": 24508897,
+    "day_volume_usd": 1284228,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "FIL",
-    "mark": 0.9086,
-    "funding_1h": 0.0000054742,
-    "open_interest_usd": 9189536,
-    "day_volume_usd": 1301101,
+    "mark": 0.90299,
+    "funding_1h": 0.0000091399,
+    "open_interest_usd": 9123162,
+    "day_volume_usd": 1264752,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "HBAR",
-    "mark": 0.076855,
+    "mark": 0.076415,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 11796787,
-    "day_volume_usd": 1197818,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "PENGU",
-    "mark": 0.007507,
-    "funding_1h": 0.0000079869,
-    "open_interest_usd": 6063059,
-    "day_volume_usd": 1097885,
+    "open_interest_usd": 11724235,
+    "day_volume_usd": 1193128,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "TRX",
-    "mark": 0.33011,
-    "funding_1h": -0.0000375939,
-    "open_interest_usd": 12377539,
-    "day_volume_usd": 1043247,
+    "mark": 0.33002,
+    "funding_1h": -0.000028837,
+    "open_interest_usd": 12371136,
+    "day_volume_usd": 1042063,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
-    "name": "XLM",
-    "mark": 0.16823,
+    "name": "PENGU",
+    "mark": 0.007472,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 11885379,
-    "day_volume_usd": 947198,
+    "open_interest_usd": 6002108,
+    "day_volume_usd": 1004450,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ICP",
-    "mark": 2.60606,
+    "mark": 2.5974,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 3822746,
-    "day_volume_usd": 943050,
+    "open_interest_usd": 3794247,
+    "day_volume_usd": 969605,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "XLM",
+    "mark": 0.16767,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 11827086,
+    "day_volume_usd": 954719,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "LDO",
-    "mark": 0.36935,
+    "mark": 0.36766,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 8876651,
-    "day_volume_usd": 864528,
+    "open_interest_usd": 8892212,
+    "day_volume_usd": 856821,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "MEGA",
-    "mark": 0.046713,
+    "mark": 0.046499,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 7486890,
-    "day_volume_usd": 851837,
+    "open_interest_usd": 7448017,
+    "day_volume_usd": 847873,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "PURR",
+    "mark": 0.097899,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 10625875,
+    "day_volume_usd": 830909,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "SEI",
-    "mark": 0.052041,
-    "funding_1h": 0.000011574,
-    "open_interest_usd": 2567033,
-    "day_volume_usd": 793804,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "PURR",
-    "mark": 0.098755,
+    "mark": 0.051809,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 10721260,
-    "day_volume_usd": 792544,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "JTO",
-    "mark": 0.43235,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 2966015,
-    "day_volume_usd": 773011,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "ZK",
-    "mark": 0.012384,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 4870765,
-    "day_volume_usd": 770016,
+    "open_interest_usd": 2535104,
+    "day_volume_usd": 799787,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "OP",
-    "mark": 0.11019,
-    "funding_1h": 0.0000014492,
-    "open_interest_usd": 3832394,
-    "day_volume_usd": 690596,
+    "mark": 0.10981,
+    "funding_1h": -0.0000276978,
+    "open_interest_usd": 3806396,
+    "day_volume_usd": 786345,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "PENDLE",
-    "mark": 1.9578,
+    "name": "ZK",
+    "mark": 0.012279,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 8987383,
-    "day_volume_usd": 672100,
+    "open_interest_usd": 4826231,
+    "day_volume_usd": 769769,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "kBONK",
-    "mark": 0.003022,
+    "name": "JTO",
+    "mark": 0.43048,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 7932063,
-    "day_volume_usd": 627869,
-    "max_leverage": 10,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "FET",
-    "mark": 0.17449,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 7409407,
-    "day_volume_usd": 607180,
+    "open_interest_usd": 2956700,
+    "day_volume_usd": 763135,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "W",
-    "mark": 0.01243,
-    "funding_1h": -0.0000174926,
-    "open_interest_usd": 3306058,
-    "day_volume_usd": 605258,
+    "mark": 0.01228,
+    "funding_1h": 0.0000056764,
+    "open_interest_usd": 3240508,
+    "day_volume_usd": 704906,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "STX",
-    "mark": 0.30385,
+    "name": "PENDLE",
+    "mark": 1.9512,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1956930,
-    "day_volume_usd": 577684,
+    "open_interest_usd": 8954240,
+    "day_volume_usd": 668020,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "EIGEN",
-    "mark": 0.1969,
+    "name": "kBONK",
+    "mark": 0.003011,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 2754493,
-    "day_volume_usd": 559853,
+    "open_interest_usd": 7896695,
+    "day_volume_usd": 637851,
+    "max_leverage": 10,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "DASH",
+    "mark": 52.76,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 3805743,
+    "day_volume_usd": 598118,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "POL",
-    "mark": 0.090941,
-    "funding_1h": 0.000010611,
-    "open_interest_usd": 5809541,
-    "day_volume_usd": 554837,
+    "mark": 0.090653,
+    "funding_1h": -0.0000149963,
+    "open_interest_usd": 5838615,
+    "day_volume_usd": 585278,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "DASH",
-    "mark": 52.9179,
+    "name": "FET",
+    "mark": 0.17342,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 3789550,
-    "day_volume_usd": 550890,
+    "open_interest_usd": 7360493,
+    "day_volume_usd": 579952,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "EIGEN",
+    "mark": 0.1962,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 2742862,
+    "day_volume_usd": 566469,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "STX",
+    "mark": 0.30126,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 1934665,
+    "day_volume_usd": 551866,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ALT",
-    "mark": 0.006329,
-    "funding_1h": -0.0002932549,
-    "open_interest_usd": 1237707,
-    "day_volume_usd": 549946,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "2Z",
-    "mark": 0.02799,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 740069,
-    "day_volume_usd": 524780,
+    "mark": 0.006298,
+    "funding_1h": -0.0004026782,
+    "open_interest_usd": 1230472,
+    "day_volume_usd": 545537,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "CC",
-    "mark": 0.09953,
-    "funding_1h": -0.0000161807,
-    "open_interest_usd": 5818475,
-    "day_volume_usd": 521733,
+    "mark": 0.098989,
+    "funding_1h": 0.0000021149,
+    "open_interest_usd": 5787042,
+    "day_volume_usd": 539887,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "2Z",
+    "mark": 0.027687,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 737467,
+    "day_volume_usd": 513866,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "STBL",
-    "mark": 0.027237,
+    "mark": 0.027435,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1904473,
-    "day_volume_usd": 502270,
+    "open_interest_usd": 1916909,
+    "day_volume_usd": 499412,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "SYRUP",
-    "mark": 0.17484,
+    "mark": 0.1746,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 4974817,
-    "day_volume_usd": 464894,
+    "open_interest_usd": 4966002,
+    "day_volume_usd": 465122,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "VIRTUAL",
-    "mark": 0.61547,
+    "mark": 0.61135,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 5624589,
-    "day_volume_usd": 432411,
+    "open_interest_usd": 5585698,
+    "day_volume_usd": 433703,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ATOM",
-    "mark": 1.6349,
-    "funding_1h": -0.0000669781,
-    "open_interest_usd": 3735808,
-    "day_volume_usd": 428009,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "MINA",
-    "mark": 0.063608,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 988045,
-    "day_volume_usd": 417703,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "USUAL",
-    "mark": 0.01069,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 717377,
-    "day_volume_usd": 405694,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "COMP",
-    "mark": 21.5727,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1363767,
-    "day_volume_usd": 405398,
+    "mark": 1.6324,
+    "funding_1h": -0.0000638618,
+    "open_interest_usd": 3729537,
+    "day_volume_usd": 428184,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "MELANIA",
-    "mark": 0.08597,
+    "mark": 0.08532,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1184060,
-    "day_volume_usd": 400046,
+    "open_interest_usd": 1174282,
+    "day_volume_usd": 420987,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "MINA",
+    "mark": 0.063467,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 983345,
+    "day_volume_usd": 415581,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "USUAL",
+    "mark": 0.01076,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 722420,
+    "day_volume_usd": 402070,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "SOPH",
-    "mark": 0.001398,
-    "funding_1h": -0.0000011278,
-    "open_interest_usd": 312418,
-    "day_volume_usd": 396589,
+    "mark": 0.001395,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 310475,
+    "day_volume_usd": 398246,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
+    "name": "COMP",
+    "mark": 21.715,
+    "funding_1h": 0.0000046765,
+    "open_interest_usd": 1360334,
+    "day_volume_usd": 390121,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
     "name": "POLYX",
-    "mark": 0.033767,
-    "funding_1h": -0.0000028476,
-    "open_interest_usd": 155744,
-    "day_volume_usd": 362944,
+    "mark": 0.03384,
+    "funding_1h": -0.000037684,
+    "open_interest_usd": 155508,
+    "day_volume_usd": 367045,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "AR",
-    "mark": 3.395,
-    "funding_1h": -8.13e-8,
-    "open_interest_usd": 1304868,
-    "day_volume_usd": 360952,
+    "mark": 3.3775,
+    "funding_1h": -0.0000096418,
+    "open_interest_usd": 1291159,
+    "day_volume_usd": 363646,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ANIME",
-    "mark": 0.002748,
-    "funding_1h": -0.0002102794,
-    "open_interest_usd": 482451,
-    "day_volume_usd": 354195,
+    "mark": 0.002756,
+    "funding_1h": -0.0001844159,
+    "open_interest_usd": 490474,
+    "day_volume_usd": 353824,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "WIF",
-    "mark": 0.18024,
+    "name": "ALGO",
+    "mark": 0.104028,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 4734169,
-    "day_volume_usd": 346761,
+    "open_interest_usd": 3122876,
+    "day_volume_usd": 337532,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "WIF",
+    "mark": 0.17938,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 4710930,
+    "day_volume_usd": 330871,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "ZORA",
-    "mark": 0.006172,
-    "funding_1h": -0.0000090443,
-    "open_interest_usd": 666313,
-    "day_volume_usd": 326090,
+    "mark": 0.006152,
+    "funding_1h": -0.0000383299,
+    "open_interest_usd": 661390,
+    "day_volume_usd": 330004,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "AVNT",
-    "mark": 0.10971,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1643655,
-    "day_volume_usd": 307060,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "ALGO",
-    "mark": 0.10442,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 3139026,
-    "day_volume_usd": 302938,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
     "name": "ETC",
-    "mark": 7.5548,
-    "funding_1h": -0.0000281525,
-    "open_interest_usd": 2857283,
-    "day_volume_usd": 297830,
+    "mark": 7.5405,
+    "funding_1h": -0.0000125321,
+    "open_interest_usd": 2849504,
+    "day_volume_usd": 313645,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "AVNT",
+    "mark": 0.10969,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 1640609,
+    "day_volume_usd": 313451,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "GMX",
-    "mark": 8.0211,
+    "mark": 8.0298,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 836333,
-    "day_volume_usd": 297021,
+    "open_interest_usd": 838623,
+    "day_volume_usd": 300931,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "FOGO",
+    "mark": 0.003276,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 275691,
+    "day_volume_usd": 291123,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "kSHIB",
-    "mark": 0.00487,
+    "mark": 0.004852,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 2832032,
-    "day_volume_usd": 284606,
+    "open_interest_usd": 2824996,
+    "day_volume_usd": 261080,
     "max_leverage": 10,
     "in_feed_symbols": false
    },
    {
-    "name": "FOGO",
-    "mark": 0.003265,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 274150,
-    "day_volume_usd": 281181,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
     "name": "RUNE",
-    "mark": 0.62686,
+    "mark": 0.62494,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1978801,
-    "day_volume_usd": 258107,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "SAND",
-    "mark": 0.047942,
-    "funding_1h": 4.207e-7,
-    "open_interest_usd": 1050274,
-    "day_volume_usd": 239138,
+    "open_interest_usd": 1973071,
+    "day_volume_usd": 259151,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "S",
-    "mark": 0.047314,
-    "funding_1h": -0.0000141695,
-    "open_interest_usd": 814598,
-    "day_volume_usd": 237368,
+    "mark": 0.0468,
+    "funding_1h": -0.0000049533,
+    "open_interest_usd": 804626,
+    "day_volume_usd": 240030,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "IO",
-    "mark": 0.14458,
-    "funding_1h": 0.0000044808,
-    "open_interest_usd": 661545,
-    "day_volume_usd": 236223,
+    "mark": 0.14401,
+    "funding_1h": 0.0000075022,
+    "open_interest_usd": 652944,
+    "day_volume_usd": 237720,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
+    "name": "SAND",
+    "mark": 0.047691,
+    "funding_1h": -0.0000095452,
+    "open_interest_usd": 1045204,
+    "day_volume_usd": 236606,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
     "name": "SKY",
-    "mark": 0.068457,
-    "funding_1h": -0.0000058137,
-    "open_interest_usd": 3254548,
-    "day_volume_usd": 224178,
+    "mark": 0.06803,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 3230235,
+    "day_volume_usd": 229734,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "BSV",
-    "mark": 17.246,
+    "mark": 17.2465,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 850084,
-    "day_volume_usd": 218092,
+    "open_interest_usd": 850086,
+    "day_volume_usd": 218013,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "APE",
-    "mark": 0.12157,
+    "mark": 0.12107,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 991862,
-    "day_volume_usd": 215671,
+    "open_interest_usd": 988105,
+    "day_volume_usd": 215523,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "MNT",
-    "mark": 0.51537,
+    "mark": 0.51203,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 4998776,
-    "day_volume_usd": 207775,
+    "open_interest_usd": 4967652,
+    "day_volume_usd": 204366,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "CELO",
-    "mark": 0.078318,
+    "mark": 0.078531,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 566794,
-    "day_volume_usd": 202158,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "WCT",
-    "mark": 0.035887,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 107937,
-    "day_volume_usd": 198825,
+    "open_interest_usd": 568324,
+    "day_volume_usd": 202389,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "BRETT",
-    "mark": 0.004632,
+    "mark": 0.004621,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 189471,
-    "day_volume_usd": 197518,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "SUPER",
-    "mark": 0.17695,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1305167,
-    "day_volume_usd": 195960,
+    "open_interest_usd": 188487,
+    "day_volume_usd": 195594,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "AZTEC",
-    "mark": 0.016363,
+    "mark": 0.016283,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1524303,
-    "day_volume_usd": 190363,
+    "open_interest_usd": 1516932,
+    "day_volume_usd": 188181,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "BERA",
-    "mark": 0.15015,
-    "funding_1h": -0.0000295674,
-    "open_interest_usd": 1446894,
-    "day_volume_usd": 187481,
+    "mark": 0.1495,
+    "funding_1h": -0.0000166456,
+    "open_interest_usd": 1440059,
+    "day_volume_usd": 183781,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "CFX",
-    "mark": 0.048219,
+    "mark": 0.047764,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 3178405,
-    "day_volume_usd": 178942,
+    "open_interest_usd": 3148254,
+    "day_volume_usd": 182186,
     "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "KAS",
-    "mark": 0.035401,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1765070,
-    "day_volume_usd": 176906,
-    "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "CAKE",
-    "mark": 2.1308,
-    "funding_1h": -0.0000072474,
-    "open_interest_usd": 1782772,
-    "day_volume_usd": 171811,
+    "mark": 2.12624,
+    "funding_1h": 0.0000048738,
+    "open_interest_usd": 1789785,
+    "day_volume_usd": 176956,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "GOAT",
-    "mark": 0.013882,
+    "name": "SUPER",
+    "mark": 0.1762,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 617784,
-    "day_volume_usd": 170324,
+    "open_interest_usd": 1300294,
+    "day_volume_usd": 176761,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "BLUR",
-    "mark": 0.007352,
+    "name": "KAS",
+    "mark": 0.035304,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 622993,
-    "day_volume_usd": 165429,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "0G",
-    "mark": 0.2014,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1816836,
-    "day_volume_usd": 165150,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "PEOPLE",
-    "mark": 0.00744,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 170537,
-    "day_volume_usd": 164289,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "SNX",
-    "mark": 0.19539,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 445707,
-    "day_volume_usd": 162525,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "DYM",
-    "mark": 0.01764,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 276740,
-    "day_volume_usd": 160557,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "KAITO",
-    "mark": 0.24955,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 1589090,
-    "day_volume_usd": 156705,
-    "max_leverage": 5,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "MERL",
-    "mark": 0.027236,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 537230,
-    "day_volume_usd": 156697,
+    "open_interest_usd": 1761994,
+    "day_volume_usd": 175906,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "DYDX",
-    "mark": 0.10344,
+    "mark": 0.10275,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1408254,
-    "day_volume_usd": 154991,
+    "open_interest_usd": 1383481,
+    "day_volume_usd": 175305,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "MANTA",
-    "mark": 0.06151,
+    "name": "GOAT",
+    "mark": 0.01384,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 343421,
-    "day_volume_usd": 153424,
+    "open_interest_usd": 616380,
+    "day_volume_usd": 170926,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "HYPER",
-    "mark": 0.063369,
+    "name": "PEOPLE",
+    "mark": 0.007395,
+    "funding_1h": 0.0000054052,
+    "open_interest_usd": 174215,
+    "day_volume_usd": 167248,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "0G",
+    "mark": 0.20023,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 62318,
-    "day_volume_usd": 150998,
+    "open_interest_usd": 1806301,
+    "day_volume_usd": 166716,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "BLUR",
+    "mark": 0.007281,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 617234,
+    "day_volume_usd": 165627,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "SNX",
+    "mark": 0.19496,
+    "funding_1h": 0.0000114449,
+    "open_interest_usd": 443764,
+    "day_volume_usd": 164536,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "DYM",
+    "mark": 0.01763,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 272179,
+    "day_volume_usd": 163270,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "MERL",
+    "mark": 0.027193,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 536877,
+    "day_volume_usd": 161160,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "KAITO",
+    "mark": 0.24896,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 1585596,
+    "day_volume_usd": 156123,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "HYPER",
+    "mark": 0.063407,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 60950,
+    "day_volume_usd": 151442,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "MANTA",
+    "mark": 0.06146,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 342767,
+    "day_volume_usd": 151001,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "ACE",
-    "mark": 0.1414,
+    "mark": 0.1405,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 200576,
-    "day_volume_usd": 148896,
+    "open_interest_usd": 199490,
+    "day_volume_usd": 150598,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "POPCAT",
-    "mark": 0.04269,
+    "name": "WCT",
+    "mark": 0.036025,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1563469,
-    "day_volume_usd": 143675,
+    "open_interest_usd": 108105,
+    "day_volume_usd": 147400,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "YGG",
-    "mark": 0.02406,
-    "funding_1h": -0.0000226575,
-    "open_interest_usd": 196487,
-    "day_volume_usd": 141980,
+    "mark": 0.02403,
+    "funding_1h": -0.0000157378,
+    "open_interest_usd": 195190,
+    "day_volume_usd": 142984,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "NXPC",
-    "mark": 0.17085,
+    "mark": 0.170335,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 166261,
-    "day_volume_usd": 140790,
+    "open_interest_usd": 165542,
+    "day_volume_usd": 140489,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "MOODENG",
-    "mark": 0.038312,
+    "name": "POPCAT",
+    "mark": 0.042695,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 311928,
-    "day_volume_usd": 134587,
+    "open_interest_usd": 1563810,
+    "day_volume_usd": 138849,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "HEMI",
-    "mark": 0.004611,
+    "mark": 0.004593,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 378672,
-    "day_volume_usd": 134024,
+    "open_interest_usd": 375804,
+    "day_volume_usd": 136425,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "MOODENG",
+    "mark": 0.03806,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 308898,
+    "day_volume_usd": 135565,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "ENS",
-    "mark": 5.2069,
+    "mark": 5.1925,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1828141,
-    "day_volume_usd": 124738,
+    "open_interest_usd": 1822299,
+    "day_volume_usd": 122219,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "BIGTIME",
-    "mark": 0.006777,
-    "funding_1h": -2.166e-7,
-    "open_interest_usd": 122635,
-    "day_volume_usd": 110230,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
     "name": "PNUT",
-    "mark": 0.04127,
+    "mark": 0.04111,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1005226,
-    "day_volume_usd": 109870,
+    "open_interest_usd": 1001050,
+    "day_volume_usd": 111436,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "ZEN",
-    "mark": 5.6809,
+    "mark": 5.6576,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 718086,
-    "day_volume_usd": 109217,
+    "open_interest_usd": 717304,
+    "day_volume_usd": 110333,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
+    "name": "BIGTIME",
+    "mark": 0.006841,
+    "funding_1h": -0.0000014259,
+    "open_interest_usd": 123684,
+    "day_volume_usd": 109740,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
     "name": "GALA",
-    "mark": 0.001731,
-    "funding_1h": -0.0000361324,
-    "open_interest_usd": 479679,
-    "day_volume_usd": 105519,
+    "mark": 0.001721,
+    "funding_1h": -0.0000275875,
+    "open_interest_usd": 475596,
+    "day_volume_usd": 103539,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "STABLE",
-    "mark": 0.026483,
+    "mark": 0.026389,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 822340,
-    "day_volume_usd": 102219,
+    "open_interest_usd": 820475,
+    "day_volume_usd": 101974,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "MOVE",
-    "mark": 0.00678,
+    "mark": 0.006772,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 225007,
-    "day_volume_usd": 100754,
+    "open_interest_usd": 224932,
+    "day_volume_usd": 100765,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "BIO",
-    "mark": 0.022164,
+    "mark": 0.02207,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 808515,
-    "day_volume_usd": 100264,
+    "open_interest_usd": 805151,
+    "day_volume_usd": 100074,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "kLUNC",
+    "mark": 0.044576,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 246380,
+    "day_volume_usd": 92121,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "IMX",
-    "mark": 0.13889,
+    "mark": 0.13789,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 3830849,
-    "day_volume_usd": 95164,
+    "open_interest_usd": 3802858,
+    "day_volume_usd": 91152,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "kLUNC",
-    "mark": 0.044616,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 246273,
-    "day_volume_usd": 91911,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
     "name": "IOTA",
-    "mark": 0.042279,
+    "mark": 0.042028,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1221539,
-    "day_volume_usd": 88679,
+    "open_interest_usd": 1214224,
+    "day_volume_usd": 88607,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "SUSHI",
-    "mark": 0.20149,
-    "funding_1h": 0.0000039446,
-    "open_interest_usd": 282271,
-    "day_volume_usd": 87336,
+    "mark": 0.20049,
+    "funding_1h": -0.000022872,
+    "open_interest_usd": 280860,
+    "day_volume_usd": 87227,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "APEX",
-    "mark": 0.22001,
+    "mark": 0.219758,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1583988,
-    "day_volume_usd": 85329,
+    "open_interest_usd": 1582996,
+    "day_volume_usd": 85757,
     "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "AXS",
-    "mark": 0.94814,
-    "funding_1h": 0.0000065171,
-    "open_interest_usd": 446954,
-    "day_volume_usd": 80936,
-    "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "GRIFFAIN",
-    "mark": 0.01371,
+    "mark": 0.013543,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1364282,
-    "day_volume_usd": 76031,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "ORDI",
-    "mark": 3.5712,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 347606,
-    "day_volume_usd": 73236,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "GAS",
-    "mark": 1.162,
-    "funding_1h": 0.0000056161,
-    "open_interest_usd": 79960,
-    "day_volume_usd": 72895,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "BOME",
-    "mark": 0.00062,
-    "funding_1h": -0.0000101661,
-    "open_interest_usd": 442842,
-    "day_volume_usd": 72680,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "TRB",
-    "mark": 17.285,
-    "funding_1h": 0.0000100811,
-    "open_interest_usd": 528272,
-    "day_volume_usd": 70798,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "LINEA",
-    "mark": 0.002527,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 2340990,
-    "day_volume_usd": 70764,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "RSR",
-    "mark": 0.001589,
-    "funding_1h": 0.0000125,
-    "open_interest_usd": 353734,
-    "day_volume_usd": 69840,
-    "max_leverage": 3,
-    "in_feed_symbols": false
-   },
-   {
-    "name": "PROVE",
-    "mark": 0.18517,
-    "funding_1h": -0.0000103297,
-    "open_interest_usd": 217833,
-    "day_volume_usd": 69400,
+    "open_interest_usd": 1347043,
+    "day_volume_usd": 76191,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "RESOLV",
-    "mark": 0.016767,
+    "mark": 0.016708,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1178887,
-    "day_volume_usd": 65956,
+    "open_interest_usd": 1173217,
+    "day_volume_usd": 73102,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "GMT",
-    "mark": 0.006879,
+    "name": "TRB",
+    "mark": 17.258,
+    "funding_1h": -9.428e-7,
+    "open_interest_usd": 527653,
+    "day_volume_usd": 72268,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "GAS",
+    "mark": 1.1585,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 94939,
-    "day_volume_usd": 63434,
+    "open_interest_usd": 79784,
+    "day_volume_usd": 71977,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "AXS",
+    "mark": 0.94367,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 445485,
+    "day_volume_usd": 70863,
+    "max_leverage": 5,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "BOME",
+    "mark": 0.00062,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 442387,
+    "day_volume_usd": 70799,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "LINEA",
+    "mark": 0.002529,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 2342667,
+    "day_volume_usd": 70506,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "RSR",
+    "mark": 0.001588,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 352830,
+    "day_volume_usd": 70216,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "PROVE",
+    "mark": 0.18529,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 218024,
+    "day_volume_usd": 68479,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "ORDI",
+    "mark": 3.5635,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 346613,
+    "day_volume_usd": 68454,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "ME",
-    "mark": 0.06043,
+    "mark": 0.06047,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 199768,
-    "day_volume_usd": 63406,
+    "open_interest_usd": 199522,
+    "day_volume_usd": 64645,
+    "max_leverage": 3,
+    "in_feed_symbols": false
+   },
+   {
+    "name": "GMT",
+    "mark": 0.006863,
+    "funding_1h": 0.0000125,
+    "open_interest_usd": 94962,
+    "day_volume_usd": 63290,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "XAI",
-    "mark": 0.00766,
-    "funding_1h": -0.0000372325,
-    "open_interest_usd": 275279,
-    "day_volume_usd": 59846,
+    "mark": 0.00765,
+    "funding_1h": -0.0000490121,
+    "open_interest_usd": 274811,
+    "day_volume_usd": 59173,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "ZETA",
-    "mark": 0.0388,
+    "mark": 0.03877,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 741474,
-    "day_volume_usd": 59293,
+    "open_interest_usd": 740246,
+    "day_volume_usd": 57899,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
-    "name": "LAYER",
-    "mark": 0.064475,
+    "name": "TURBO",
+    "mark": 0.000812,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 392859,
-    "day_volume_usd": 58958,
+    "open_interest_usd": 199969,
+    "day_volume_usd": 57139,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "kFLOKI",
-    "mark": 0.022892,
+    "mark": 0.022819,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 393963,
-    "day_volume_usd": 56836,
+    "open_interest_usd": 393069,
+    "day_volume_usd": 56106,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
-    "name": "TURBO",
-    "mark": 0.000814,
+    "name": "LAYER",
+    "mark": 0.064256,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 199985,
-    "day_volume_usd": 56276,
+    "open_interest_usd": 390970,
+    "day_volume_usd": 56030,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "AIXBT",
-    "mark": 0.018265,
-    "funding_1h": 0.0000112811,
-    "open_interest_usd": 147645,
-    "day_volume_usd": 51975,
+    "mark": 0.018218,
+    "funding_1h": -0.0000130573,
+    "open_interest_usd": 146876,
+    "day_volume_usd": 51346,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "BANANA",
-    "mark": 3.3307,
+    "mark": 3.3314,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 122558,
-    "day_volume_usd": 50074,
+    "open_interest_usd": 122610,
+    "day_volume_usd": 49795,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "kNEIRO",
-    "mark": 0.06623,
+    "mark": 0.0659,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 133015,
-    "day_volume_usd": 46970,
+    "open_interest_usd": 132290,
+    "day_volume_usd": 47270,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "NEO",
-    "mark": 2.0806,
+    "mark": 2.0761,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 407418,
-    "day_volume_usd": 43620,
+    "open_interest_usd": 406363,
+    "day_volume_usd": 43579,
     "max_leverage": 5,
     "in_feed_symbols": false
    },
    {
     "name": "SAGA",
-    "mark": 0.01793,
+    "mark": 0.01792,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1147455,
-    "day_volume_usd": 39850,
+    "open_interest_usd": 1146815,
+    "day_volume_usd": 39815,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "UMA",
-    "mark": 0.35318,
+    "mark": 0.35252,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 137737,
-    "day_volume_usd": 35668,
+    "open_interest_usd": 137696,
+    "day_volume_usd": 34905,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "MEME",
-    "mark": 0.000465,
+    "mark": 0.000463,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 344281,
-    "day_volume_usd": 32173,
+    "open_interest_usd": 342927,
+    "day_volume_usd": 31269,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
@@ -1682,26 +1682,26 @@
     "name": "HMSTR",
     "mark": 0.00014,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 1247646,
-    "day_volume_usd": 14954,
+    "open_interest_usd": 1247688,
+    "day_volume_usd": 14996,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "NOT",
-    "mark": 0.000368,
+    "mark": 0.000367,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 233210,
-    "day_volume_usd": 8219,
+    "open_interest_usd": 231900,
+    "day_volume_usd": 8645,
     "max_leverage": 3,
     "in_feed_symbols": false
    },
    {
     "name": "TNSR",
-    "mark": 0.02939,
+    "mark": 0.02935,
     "funding_1h": 0.0000125,
-    "open_interest_usd": 146780,
-    "day_volume_usd": 6769,
+    "open_interest_usd": 146655,
+    "day_volume_usd": 6963,
     "max_leverage": 3,
     "in_feed_symbols": false
    }
@@ -1712,39 +1712,39 @@
   "stablecoins": {
    "source": "DefiLlama stablecoins (USD-pegged, all chains)",
    "total": {
-    "supply_usd": 303087786523,
-    "change_1d_usd": -497882800,
-    "change_1d_pct": -0.164,
-    "change_7d_usd": -2428239231,
-    "change_7d_pct": -0.795,
-    "change_30d_pct": -0.928
+    "supply_usd": 303106761715,
+    "change_1d_usd": -463205481,
+    "change_1d_pct": -0.153,
+    "change_7d_usd": -2393424456,
+    "change_7d_pct": -0.783,
+    "change_30d_pct": -0.916
    },
    "USDT": {
-    "supply_usd": 182049178095,
-    "change_1d_usd": -341351325,
+    "supply_usd": 182035096010,
+    "change_1d_usd": -341324920,
     "change_1d_pct": -0.187,
-    "change_7d_usd": -1322395162,
+    "change_7d_usd": -1322292870,
     "change_7d_pct": -0.721,
     "change_30d_pct": -0.836
    },
    "USDC": {
-    "supply_usd": 71337463243,
-    "change_1d_usd": -391880866,
-    "change_1d_pct": -0.546,
-    "change_7d_usd": -1213934728,
-    "change_7d_pct": -1.673,
-    "change_30d_pct": -5.422
+    "supply_usd": 71361146051,
+    "change_1d_usd": -364440987,
+    "change_1d_pct": -0.508,
+    "change_7d_usd": -1186451792,
+    "change_7d_pct": -1.635,
+    "change_30d_pct": -5.385
    },
    "error": null
   },
   "hyperliquid_perp_changes": {
-   "compared_with": "2026-10-26T18:54:39.106Z",
+   "compared_with": "2026-10-26T19:48:03.782Z",
    "note": "oi_change_pct = change in open interest (coins) since compared_with"
   },
   "whales": {
    "source": "Etherscan API V2, Ethereum mainnet",
-   "window_from": "2026-10-26T18:54:39.000Z",
-   "window_to": "2026-10-26T19:48:03.000Z",
+   "window_from": "2026-10-26T19:48:03.000Z",
+   "window_to": "2026-10-26T20:42:56.000Z",
    "threshold_usd": 1000000,
    "watched": [
     {
@@ -1779,28 +1779,40 @@
    "exchanges_known": 6,
    "transfers": [
     {
-     "wallet": "Wintermute 4",
+     "wallet": "Galaxy Digital: OTC",
      "direction": "out",
-     "counterparty": "0xeae7380dd4cef6fbd1144f49e4d1e6964258a4f4",
-     "counterparty_label": null,
-     "kind": "other",
-     "asset": "USDT",
-     "amount": 2941508,
-     "usd": 2941508,
-     "at": "2026-10-26T19:45:11.000Z",
-     "tx": "0xac5b68af5c72e8f91479fa515dd622ff951611dee365ff0d58f8dbfe1c6c4ad4"
-    },
-    {
-     "wallet": "Wintermute 5",
-     "direction": "in",
-     "counterparty": "0x9cc10439a3abb5e6cd0dabff4c6e0997211b2f3a",
+     "counterparty": "0xec5f2efa1a13c81179ddb0f0d4385e99e275994b",
      "counterparty_label": null,
      "kind": "other",
      "asset": "USDC",
-     "amount": 1049900,
-     "usd": 1049900,
-     "at": "2026-10-26T19:24:47.000Z",
-     "tx": "0x2f164280507a57e356550ceab6f3f2218de91ee6e1e68d2d5c7aa68f095a76fc"
+     "amount": 2204040.8,
+     "usd": 2204041,
+     "at": "2026-10-26T20:21:23.000Z",
+     "tx": "0x68ad173bbb78437624afbca08743885937767bd0bdc67540cfae090b59c36c6f"
+    },
+    {
+     "wallet": "Wintermute 4",
+     "direction": "in",
+     "counterparty": "0x21a31ee1afc51d94c2efccaa2092ad1028285549",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "ETH",
+     "amount": 3063,
+     "usd": 7100647,
+     "at": "2026-10-26T20:01:47.000Z",
+     "tx": "0x39a60ae95cc2b1d6dee3e4738b2f06bf1677445ec52e4fd2395578b4fdcd6f0a"
+    },
+    {
+     "wallet": "Wintermute 4",
+     "direction": "out",
+     "counterparty": "0x84b38bc60f3bd82640ecefa320dab2be62e2da15",
+     "counterparty_label": null,
+     "kind": "other",
+     "asset": "USDC",
+     "amount": 1289023,
+     "usd": 1289023,
+     "at": "2026-10-26T19:52:35.000Z",
+     "tx": "0xdf89412de4aad231b54876253a31d9cfcd0fcb88490f89813379027ab730baaa"
     }
    ],
    "to_exchange_usd": 0,
@@ -1811,9 +1823,9 @@
  "market": {
   "regime": "risk_off",
   "regime_rule": "risk_on: BTC 7d > 0 and >= 60% of usable symbols up 24h; risk_off: BTC 7d < 0 and <= 40% up; else neutral; unknown if BTC data is missing",
-  "btc_change_24h_pct": -0.8364,
-  "btc_change_7d_pct": -2.408,
-  "breadth_24h_up": "4/15",
+  "btc_change_24h_pct": -0.6795,
+  "btc_change_7d_pct": -2.273,
+  "breadth_24h_up": "5/15",
   "usable_symbols": 15,
   "total_symbols": 15
  },
@@ -1824,21 +1836,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 79992,
-   "change_24h_pct": -0.8364,
-   "change_7d_pct": -2.408,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 80020,
+   "change_24h_pct": -0.6795,
+   "change_7d_pct": -2.273,
    "indicators_1h": {
-    "rsi14": 44.91,
-    "macd": -52.4976,
-    "macd_signal": -65.6141,
-    "macd_histogram": 13.1165,
-    "bb_upper": 80694.4,
-    "bb_lower": 79588.3,
-    "bb_position": 0.365,
-    "ema9": 80214.3,
-    "sma9": 80247,
+    "rsi14": 45.45,
+    "macd": -64.5321,
+    "macd_signal": -65.3977,
+    "macd_histogram": 0.865613,
+    "bb_upper": 80690.2,
+    "bb_lower": 79579.1,
+    "bb_position": 0.3968,
+    "ema9": 80175.5,
+    "sma9": 80208.1,
     "ema_above_sma": false
    },
    "signals": {
@@ -1873,7 +1885,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -1906,13 +1918,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.8433,
       "peak_rsi": 50.64,
       "stop": 80634.2,
-      "target": 79588.3,
-      "reward_risk": 0.629
+      "target": 79579.1,
+      "reward_risk": 0.718
      },
      "breakdown": {
       "now": false,
@@ -1931,23 +1943,23 @@
      "pair": "UBTC/USDC",
      "token": "UBTC",
      "token_id": "0x8f254b963e8468305d409b33aa137c67",
-     "mid": 79923.5,
-     "mark": 79924,
-     "day_volume_usd": 19411445.84389001,
+     "mid": 79720.5,
+     "mark": 79721,
+     "day_volume_usd": 19560562.25165001,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.086
+     "gap_vs_binance_pct": -0.374
     },
     "perp": {
      "name": "BTC",
-     "mark": 80015,
-     "mid": 80015.5,
+     "mark": 79814,
+     "mid": 79813.5,
      "funding_1h": 0.0000125,
-     "open_interest": 41710.26252,
-     "day_volume_usd": 2781686644.515489,
+     "open_interest": 42432.27762,
+     "day_volume_usd": 2833331865.9624085,
      "max_leverage": 40,
-     "gap_vs_binance_pct": 0.029,
-     "open_interest_usd": 3337446656,
-     "oi_change_pct": -0.234,
+     "gap_vs_binance_pct": -0.258,
+     "open_interest_usd": 3386689806,
+     "oi_change_pct": 1.731,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -1958,21 +1970,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 2314.29,
-   "change_24h_pct": -1.753,
-   "change_7d_pct": -3.617,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 2318.2,
+   "change_24h_pct": -1.397,
+   "change_7d_pct": -3.208,
    "indicators_1h": {
-    "rsi14": 43.95,
-    "macd": -4.86922,
-    "macd_signal": -5.38262,
-    "macd_histogram": 0.5134,
-    "bb_upper": 2340.76,
-    "bb_lower": 2303.19,
-    "bb_position": 0.2955,
-    "ema9": 2322.12,
-    "sma9": 2322.94,
+    "rsi14": 45.79,
+    "macd": -4.88575,
+    "macd_signal": -5.28324,
+    "macd_histogram": 0.397497,
+    "bb_upper": 2339.88,
+    "bb_lower": 2302.9,
+    "bb_position": 0.4137,
+    "ema9": 2321.34,
+    "sma9": 2321.81,
     "ema_above_sma": false
    },
    "signals": {
@@ -2007,7 +2019,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -2040,13 +2052,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.8249,
       "peak_rsi": 48.43,
       "stop": 2339,
-      "target": 2303.19,
-      "reward_risk": 0.449
+      "target": 2302.9,
+      "reward_risk": 0.736
      },
      "breakdown": {
       "now": false,
@@ -2065,24 +2077,24 @@
      "pair": "UETH/USDC",
      "token": "UETH",
      "token_id": "0xe1edd30daaf5caac3fe63569e24748da",
-     "mid": 2316.7,
-     "mark": 2316.5,
-     "day_volume_usd": 10207703.977,
+     "mid": 2306.25,
+     "mark": 2306.3,
+     "day_volume_usd": 10405915.118329998,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.104
+     "gap_vs_binance_pct": -0.515
     },
     "perp": {
      "name": "ETH",
-     "mark": 2318.22,
-     "mid": 2318.25,
-     "funding_1h": 0.0000083762,
-     "open_interest": 1118244.7436,
-     "day_volume_usd": 942514675.4045411,
+     "mark": 2308.35,
+     "mid": 2308.35,
+     "funding_1h": 0.0000042129,
+     "open_interest": 1126947.1046,
+     "day_volume_usd": 985737830.5057393,
      "max_leverage": 25,
-     "gap_vs_binance_pct": 0.171,
-     "open_interest_usd": 2592337330,
-     "oi_change_pct": -0.217,
-     "funding_1h_prev": 0.0000101535
+     "gap_vs_binance_pct": -0.425,
+     "open_interest_usd": 2601388349,
+     "oi_change_pct": 0.778,
+     "funding_1h_prev": 0.0000083762
     }
    }
   },
@@ -2092,21 +2104,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 100.44,
-   "change_24h_pct": -1.355,
-   "change_7d_pct": -3.414,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 100.49,
+   "change_24h_pct": -1.277,
+   "change_7d_pct": -3.403,
    "indicators_1h": {
-    "rsi14": 42.16,
-    "macd": -0.0607196,
-    "macd_signal": -0.0348536,
-    "macd_histogram": -0.025866,
-    "bb_upper": 102.195,
-    "bb_lower": 100.292,
-    "bb_position": 0.07793,
-    "ema9": 101.269,
-    "sma9": 101.414,
+    "rsi14": 42.65,
+    "macd": -0.120321,
+    "macd_signal": -0.051947,
+    "macd_histogram": -0.0683738,
+    "bb_upper": 102.201,
+    "bb_lower": 100.195,
+    "bb_position": 0.1471,
+    "ema9": 101.113,
+    "sma9": 101.321,
     "ema_above_sma": false
    },
    "signals": {
@@ -2126,7 +2138,7 @@
     },
     "macd": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-26T10:00:00.000Z",
      "last_exit_signal_at": "2026-10-26T19:00:00.000Z",
      "latest": "exit"
@@ -2141,7 +2153,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -2158,7 +2170,7 @@
       "latest": "entry"
      },
      "macd": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T10:00:00.000Z",
@@ -2174,13 +2186,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.8814,
       "peak_rsi": 49.71,
       "stop": 102.082,
-      "target": 100.292,
-      "reward_risk": 0.0904
+      "target": 100.195,
+      "reward_risk": 0.185
      },
      "breakdown": {
       "now": false,
@@ -2199,23 +2211,23 @@
      "pair": "USOL/USDC",
      "token": "USOL",
      "token_id": "0x49b67c39f5566535de22b29b0e51e685",
-     "mid": 100.46,
-     "mark": 100.45,
-     "day_volume_usd": 3150665.98316,
+     "mid": 100.145,
+     "mark": 100.15,
+     "day_volume_usd": 3122481.916009999,
      "duplicates": 0,
-     "gap_vs_binance_pct": 0.02
+     "gap_vs_binance_pct": -0.343
     },
     "perp": {
      "name": "SOL",
-     "mark": 100.56,
-     "mid": 100.565,
+     "mark": 100.24,
+     "mid": 100.245,
      "funding_1h": 0.0000125,
-     "open_interest": 5561310.6000000015,
-     "day_volume_usd": 151704299.16050002,
+     "open_interest": 5551461.160000001,
+     "day_volume_usd": 155119422.51540002,
      "max_leverage": 20,
-     "gap_vs_binance_pct": 0.124,
-     "open_interest_usd": 559245394,
-     "oi_change_pct": 0.143,
+     "gap_vs_binance_pct": -0.244,
+     "open_interest_usd": 556478467,
+     "oi_change_pct": -0.177,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -2226,21 +2238,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 78.98,
-   "change_24h_pct": 2.385,
-   "change_7d_pct": 1.075,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 78.59,
+   "change_24h_pct": 1.669,
+   "change_7d_pct": 1.106,
    "indicators_1h": {
-    "rsi14": 63.11,
-    "macd": 0.621423,
-    "macd_signal": 0.35914,
-    "macd_histogram": 0.262283,
-    "bb_upper": 79.4265,
-    "bb_lower": 74.9475,
-    "bb_position": 0.9003,
-    "ema9": 78.2992,
-    "sma9": 78.1167,
+    "rsi14": 59.28,
+    "macd": 0.618735,
+    "macd_signal": 0.411059,
+    "macd_histogram": 0.207676,
+    "bb_upper": 79.5838,
+    "bb_lower": 75.0132,
+    "bb_position": 0.7826,
+    "ema9": 78.3574,
+    "sma9": 78.2856,
     "ema_above_sma": true
    },
    "signals": {
@@ -2267,7 +2279,7 @@
     },
     "rsi": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-22T19:00:00.000Z",
      "last_exit_signal_at": "2026-10-26T19:00:00.000Z",
      "latest": "exit"
@@ -2278,7 +2290,7 @@
     "entry_now": true,
     "strategies": {
      "bb": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-24T10:00:00.000Z",
@@ -2299,7 +2311,7 @@
       "latest": "exit"
      },
      "rsi": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-22T19:00:00.000Z",
@@ -2312,9 +2324,9 @@
       "why": "bb_upper 근처, RSI 60+",
       "peak_bb_position": 1.356,
       "peak_rsi": 72.37,
-      "stop": 79.5059,
-      "target": 74.99,
-      "reward_risk": 7.59
+      "stop": 79.6633,
+      "target": 75.0132,
+      "reward_risk": 3.33
      },
      "breakdown": {
       "now": false,
@@ -2333,23 +2345,23 @@
      "pair": "HYPE/USDC",
      "token": "HYPE",
      "token_id": "0x0d01dc56dcaaca66ad901c959b4011ec",
-     "mid": 78.9385,
-     "mark": 78.938,
-     "day_volume_usd": 54335864.980170056,
+     "mid": 77.6035,
+     "mark": 77.603,
+     "day_volume_usd": 56666701.22170999,
      "duplicates": 0,
-     "gap_vs_binance_pct": -0.053
+     "gap_vs_binance_pct": -1.255
     },
     "perp": {
      "name": "HYPE",
-     "mark": 78.969,
-     "mid": 78.9685,
+     "mark": 77.586,
+     "mid": 77.6015,
      "funding_1h": 0.0000125,
-     "open_interest": 20938312.59999999,
-     "day_volume_usd": 486379855.6329003,
+     "open_interest": 20639512.620000012,
+     "day_volume_usd": 521454349.8504305,
      "max_leverage": 10,
-     "gap_vs_binance_pct": -0.015,
-     "open_interest_usd": 1653477608,
-     "oi_change_pct": 0.155,
+     "gap_vs_binance_pct": -1.258,
+     "open_interest_usd": 1601337226,
+     "oi_change_pct": -1.427,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -2360,26 +2372,26 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 1.626,
-   "change_24h_pct": -8.908,
-   "change_7d_pct": -15.09,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 1.631,
+   "change_24h_pct": -8.319,
+   "change_7d_pct": -14.02,
    "indicators_1h": {
-    "rsi14": 36.16,
-    "macd": -0.0181864,
-    "macd_signal": -0.0130589,
-    "macd_histogram": -0.00512748,
-    "bb_upper": 1.76239,
-    "bb_lower": 1.63111,
-    "bb_position": -0.03892,
-    "ema9": 1.67477,
-    "sma9": 1.68033,
+    "rsi14": 37.33,
+    "macd": -0.0208278,
+    "macd_signal": -0.0146127,
+    "macd_histogram": -0.00621509,
+    "bb_upper": 1.75435,
+    "bb_lower": 1.62595,
+    "bb_position": 0.03931,
+    "ema9": 1.66601,
+    "sma9": 1.67478,
     "ema_above_sma": false
    },
    "signals": {
     "bb": {
-     "entry_now": true,
+     "entry_now": false,
      "exit_now": false,
      "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
      "last_exit_signal_at": "2026-10-25T19:00:00.000Z",
@@ -2408,12 +2420,12 @@
     }
    },
    "short": {
-    "oversold": true,
-    "entry_now": true,
+    "oversold": false,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
-      "exit_now": true,
+      "exit_now": false,
       "last_entry_signal_at": "2026-10-25T20:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T19:00:00.000Z",
       "latest": "exit"
@@ -2444,17 +2456,17 @@
      "bounce_fade": {
       "now": false,
       "why": null,
-      "peak_bb_position": 0.5326,
+      "peak_bb_position": 0.4089,
       "peak_rsi": 43.75,
-      "stop": 1.71271,
-      "target": null,
-      "reward_risk": null
+      "stop": 1.69369,
+      "target": 1.62595,
+      "reward_risk": 0.0805
      },
      "breakdown": {
-      "now": true,
-      "support": 1.633,
+      "now": false,
+      "support": 1.61,
       "oversold": false,
-      "stop": 1.68468,
+      "stop": null,
       "target": null,
       "reward_risk": null
      }
@@ -2465,15 +2477,15 @@
     "spot": null,
     "perp": {
      "name": "ZRO",
-     "mark": 1.6326,
-     "mid": 1.6327,
+     "mark": 1.617,
+     "mid": 1.6169,
      "funding_1h": 0.0000125,
-     "open_interest": 39176583.39999999,
-     "day_volume_usd": 14083313.290299995,
+     "open_interest": 39202854.6,
+     "day_volume_usd": 14254323.055289986,
      "max_leverage": 5,
-     "gap_vs_binance_pct": 0.412,
-     "open_interest_usd": 63959690,
-     "oi_change_pct": 0.2,
+     "gap_vs_binance_pct": -0.865,
+     "open_interest_usd": 63391016,
+     "oi_change_pct": 0.067,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -2484,21 +2496,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 1226.66,
-   "change_24h_pct": 0.3649,
-   "change_7d_pct": 8.562,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 1228.3,
+   "change_24h_pct": 0.8001,
+   "change_7d_pct": 9.3,
    "indicators_1h": {
-    "rsi14": 51.7,
-    "macd": 8.65272,
-    "macd_signal": 7.62097,
-    "macd_histogram": 1.03175,
-    "bb_upper": 1256.53,
-    "bb_lower": 1185.01,
-    "bb_position": 0.5823,
-    "ema9": 1233.38,
-    "sma9": 1235.75,
+    "rsi14": 52.26,
+    "macd": 7.79203,
+    "macd_signal": 7.65518,
+    "macd_histogram": 0.136848,
+    "bb_upper": 1257.25,
+    "bb_lower": 1185.75,
+    "bb_position": 0.5951,
+    "ema9": 1232.36,
+    "sma9": 1235.85,
     "ema_above_sma": false
    },
    "signals": {
@@ -2533,7 +2545,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -2566,13 +2578,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.9996,
       "peak_rsi": 57.42,
       "stop": 1257.26,
-      "target": 1185.01,
-      "reward_risk": 1.36
+      "target": 1185.75,
+      "reward_risk": 1.47
      },
      "breakdown": {
       "now": false,
@@ -2589,15 +2601,15 @@
     "spot": null,
     "perp": {
      "name": "ZEC",
-     "mark": 1230.9,
-     "mid": 1231.05,
+     "mark": 1223.1,
+     "mid": 1223.05,
      "funding_1h": 0.0000125,
-     "open_interest": 488038.6800000002,
-     "day_volume_usd": 382949732.5759997,
+     "open_interest": 487935.1799999999,
+     "day_volume_usd": 380871918.3379995,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.358,
-     "open_interest_usd": 600726811,
-     "oi_change_pct": -0.003,
+     "gap_vs_binance_pct": -0.427,
+     "open_interest_usd": 596793519,
+     "oi_change_pct": -0.021,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -2608,21 +2620,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 4.465,
-   "change_24h_pct": -3.04,
-   "change_7d_pct": -9.707,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 4.48,
+   "change_24h_pct": -2.077,
+   "change_7d_pct": -8.943,
    "indicators_1h": {
-    "rsi14": 43.84,
-    "macd": 0.000187758,
-    "macd_signal": 0.0062144,
-    "macd_histogram": -0.00602665,
-    "bb_upper": 4.63116,
-    "bb_lower": 4.42964,
-    "bb_position": 0.1755,
-    "ema9": 4.52945,
-    "sma9": 4.54767,
+    "rsi14": 45.35,
+    "macd": -0.00398651,
+    "macd_signal": 0.00417422,
+    "macd_histogram": -0.00816073,
+    "bb_upper": 4.62292,
+    "bb_lower": 4.42628,
+    "bb_position": 0.2732,
+    "ema9": 4.51956,
+    "sma9": 4.54178,
     "ema_above_sma": false
    },
    "signals": {
@@ -2657,7 +2669,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -2690,13 +2702,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "ema9/sma9 실패",
-      "peak_bb_position": 0.7207,
-      "peak_rsi": 47.82,
-      "stop": 4.58658,
+      "now": false,
+      "why": null,
+      "peak_bb_position": 0.6676,
+      "peak_rsi": 47.58,
+      "stop": 4.57557,
       "target": 4.431,
-      "reward_risk": 0.28
+      "reward_risk": 0.513
      },
      "breakdown": {
       "now": false,
@@ -2713,140 +2725,16 @@
     "spot": null,
     "perp": {
      "name": "NEAR",
-     "mark": 4.4934,
-     "mid": 4.49375,
-     "funding_1h": -0.000009131,
-     "open_interest": 58769004.399999976,
-     "day_volume_usd": 132798320.01644006,
+     "mark": 4.46323,
+     "mid": 4.46365,
+     "funding_1h": 0.0000023203,
+     "open_interest": 58755888.39999999,
+     "day_volume_usd": 133239947.34405988,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.644,
-     "open_interest_usd": 264072644,
-     "oi_change_pct": 0.679,
-     "funding_1h_prev": 0.0000125
-    }
-   }
-  },
-  {
-   "symbol": "ENAUSDT",
-   "group": "auto",
-   "venue": "Binance",
-   "quality": "ok",
-   "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 0.2085,
-   "change_24h_pct": 0.3852,
-   "change_7d_pct": 11.86,
-   "indicators_1h": {
-    "rsi14": 54.01,
-    "macd": 0.0020892,
-    "macd_signal": 0.00226404,
-    "macd_histogram": -0.000174847,
-    "bb_upper": 0.212351,
-    "bb_lower": 0.202419,
-    "bb_position": 0.6123,
-    "ema9": 0.208619,
-    "sma9": 0.208322,
-    "ema_above_sma": true
-   },
-   "signals": {
-    "bb": {
-     "entry_now": false,
-     "exit_now": false,
-     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
-     "last_exit_signal_at": "2026-10-25T19:00:00.000Z",
-     "latest": "exit"
-    },
-    "ema": {
-     "entry_now": false,
-     "exit_now": false,
-     "last_entry_signal_at": "2026-10-26T16:00:00.000Z",
-     "last_exit_signal_at": "2026-10-26T12:00:00.000Z",
-     "latest": "entry"
-    },
-    "macd": {
-     "entry_now": false,
-     "exit_now": false,
-     "last_entry_signal_at": "2026-10-26T06:00:00.000Z",
-     "last_exit_signal_at": "2026-10-26T08:00:00.000Z",
-     "latest": "exit"
-    },
-    "rsi": {
-     "entry_now": false,
-     "exit_now": false,
-     "last_entry_signal_at": "2026-10-24T19:00:00.000Z",
-     "last_exit_signal_at": "2026-10-25T20:00:00.000Z",
-     "latest": "exit"
-    }
-   },
-   "short": {
-    "oversold": false,
-    "entry_now": true,
-    "strategies": {
-     "bb": {
-      "entry_now": false,
-      "exit_now": false,
-      "last_entry_signal_at": "2026-10-25T20:00:00.000Z",
-      "last_exit_signal_at": "2026-10-18T21:00:00.000Z",
-      "latest": "entry"
-     },
-     "ema": {
-      "entry_now": false,
-      "exit_now": false,
-      "last_entry_signal_at": "2026-10-26T12:00:00.000Z",
-      "last_exit_signal_at": "2026-10-26T16:00:00.000Z",
-      "latest": "exit"
-     },
-     "macd": {
-      "entry_now": false,
-      "exit_now": false,
-      "last_entry_signal_at": "2026-10-26T08:00:00.000Z",
-      "last_exit_signal_at": "2026-10-26T06:00:00.000Z",
-      "latest": "entry"
-     },
-     "rsi": {
-      "entry_now": false,
-      "exit_now": false,
-      "last_entry_signal_at": "2026-10-25T20:00:00.000Z",
-      "last_exit_signal_at": "2026-10-24T19:00:00.000Z",
-      "latest": "entry"
-     }
-    },
-    "setups": {
-     "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
-      "peak_bb_position": 1.067,
-      "peak_rsi": 58.2,
-      "stop": 0.212563,
-      "target": 0.202419,
-      "reward_risk": 1.5
-     },
-     "breakdown": {
-      "now": false,
-      "support": 0.2013,
-      "oversold": false,
-      "stop": null,
-      "target": null,
-      "reward_risk": null
-     }
-    }
-   },
-   "perp_name": "ENA",
-   "hyperliquid": {
-    "spot": null,
-    "perp": {
-     "name": "ENA",
-     "mark": 0.20992,
-     "mid": 0.210005,
-     "funding_1h": 0.0000125,
-     "open_interest": 470845220,
-     "day_volume_usd": 58720826.46622999,
-     "max_leverage": 10,
-     "gap_vs_binance_pct": 0.722,
-     "open_interest_usd": 98839829,
-     "oi_change_pct": 0.283,
-     "funding_1h_prev": 0.0000125
+     "gap_vs_binance_pct": -0.365,
+     "open_interest_usd": 262241044,
+     "oi_change_pct": -0.022,
+     "funding_1h_prev": -0.000009131
     }
    }
   },
@@ -2856,21 +2744,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 0.004224,
-   "change_24h_pct": -2.358,
-   "change_7d_pct": -3.759,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 0.004228,
+   "change_24h_pct": -1.903,
+   "change_7d_pct": -2.243,
    "indicators_1h": {
-    "rsi14": 46.56,
-    "macd": 0.00000655363,
-    "macd_signal": 0.00000257274,
-    "macd_histogram": 0.00000398089,
-    "bb_upper": 0.00433659,
-    "bb_lower": 0.00413871,
-    "bb_position": 0.431,
-    "ema9": 0.00426462,
-    "sma9": 0.00427333,
+    "rsi14": 47.03,
+    "macd": 0.00000340377,
+    "macd_signal": 0.00000273895,
+    "macd_histogram": 6.64828e-7,
+    "bb_upper": 0.00433623,
+    "bb_lower": 0.00413817,
+    "bb_position": 0.4535,
+    "ema9": 0.00425729,
+    "sma9": 0.00427167,
     "ema_above_sma": false
    },
    "signals": {
@@ -2905,7 +2793,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -2938,13 +2826,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
-      "peak_bb_position": 0.9949,
+      "now": false,
+      "why": null,
+      "peak_bb_position": 0.9857,
       "peak_rsi": 52.15,
       "stop": 0.00433933,
-      "target": 0.00413871,
-      "reward_risk": 0.739
+      "target": 0.00413817,
+      "reward_risk": 0.807
      },
      "breakdown": {
       "now": false,
@@ -2961,15 +2849,139 @@
     "spot": null,
     "perp": {
      "name": "PUMP",
-     "mark": 0.004236,
-     "mid": 0.004237,
-     "funding_1h": 0.0000125,
-     "open_interest": 26950682776,
-     "day_volume_usd": 58234056.16486099,
+     "mark": 0.004208,
+     "mid": 0.004207,
+     "funding_1h": -0.0000117647,
+     "open_interest": 26860276038,
+     "day_volume_usd": 58241016.89781,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.308,
-     "open_interest_usd": 114163092,
-     "oi_change_pct": 0.939,
+     "gap_vs_binance_pct": -0.497,
+     "open_interest_usd": 113028042,
+     "oi_change_pct": -0.335,
+     "funding_1h_prev": 0.0000125
+    }
+   }
+  },
+  {
+   "symbol": "ENAUSDT",
+   "group": "auto",
+   "venue": "Binance",
+   "quality": "ok",
+   "quality_reason": null,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 0.209,
+   "change_24h_pct": 0.7715,
+   "change_7d_pct": 12.55,
+   "indicators_1h": {
+    "rsi14": 54.74,
+    "macd": 0.00199416,
+    "macd_signal": 0.00221007,
+    "macd_histogram": -0.000215908,
+    "bb_upper": 0.212499,
+    "bb_lower": 0.202481,
+    "bb_position": 0.6507,
+    "ema9": 0.208696,
+    "sma9": 0.208467,
+    "ema_above_sma": true
+   },
+   "signals": {
+    "bb": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-18T21:00:00.000Z",
+     "last_exit_signal_at": "2026-10-25T19:00:00.000Z",
+     "latest": "exit"
+    },
+    "ema": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-26T16:00:00.000Z",
+     "last_exit_signal_at": "2026-10-26T12:00:00.000Z",
+     "latest": "entry"
+    },
+    "macd": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-26T06:00:00.000Z",
+     "last_exit_signal_at": "2026-10-26T08:00:00.000Z",
+     "latest": "exit"
+    },
+    "rsi": {
+     "entry_now": false,
+     "exit_now": false,
+     "last_entry_signal_at": "2026-10-24T19:00:00.000Z",
+     "last_exit_signal_at": "2026-10-25T20:00:00.000Z",
+     "latest": "exit"
+    }
+   },
+   "short": {
+    "oversold": false,
+    "entry_now": false,
+    "strategies": {
+     "bb": {
+      "entry_now": false,
+      "exit_now": false,
+      "last_entry_signal_at": "2026-10-25T20:00:00.000Z",
+      "last_exit_signal_at": "2026-10-18T21:00:00.000Z",
+      "latest": "entry"
+     },
+     "ema": {
+      "entry_now": false,
+      "exit_now": false,
+      "last_entry_signal_at": "2026-10-26T12:00:00.000Z",
+      "last_exit_signal_at": "2026-10-26T16:00:00.000Z",
+      "latest": "exit"
+     },
+     "macd": {
+      "entry_now": false,
+      "exit_now": false,
+      "last_entry_signal_at": "2026-10-26T08:00:00.000Z",
+      "last_exit_signal_at": "2026-10-26T06:00:00.000Z",
+      "latest": "entry"
+     },
+     "rsi": {
+      "entry_now": false,
+      "exit_now": false,
+      "last_entry_signal_at": "2026-10-25T20:00:00.000Z",
+      "last_exit_signal_at": "2026-10-24T19:00:00.000Z",
+      "latest": "entry"
+     }
+    },
+    "setups": {
+     "bounce_fade": {
+      "now": false,
+      "why": null,
+      "peak_bb_position": 1.067,
+      "peak_rsi": 58.2,
+      "stop": 0.212712,
+      "target": 0.202481,
+      "reward_risk": 1.76
+     },
+     "breakdown": {
+      "now": false,
+      "support": 0.2013,
+      "oversold": false,
+      "stop": null,
+      "target": null,
+      "reward_risk": null
+     }
+    }
+   },
+   "perp_name": "ENA",
+   "hyperliquid": {
+    "spot": null,
+    "perp": {
+     "name": "ENA",
+     "mark": 0.20771,
+     "mid": 0.20774,
+     "funding_1h": 0.0000069716,
+     "open_interest": 472185322,
+     "day_volume_usd": 57887524.49393001,
+     "max_leverage": 10,
+     "gap_vs_binance_pct": -0.603,
+     "open_interest_usd": 98077613,
+     "oi_change_pct": 0.285,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -2980,21 +2992,21 @@
    "venue": "Hyperliquid",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 594.9,
-   "change_24h_pct": -1.294,
-   "change_7d_pct": 1.943,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 597.45,
+   "change_24h_pct": 0.1996,
+   "change_7d_pct": 0.7402,
    "indicators_1h": {
-    "rsi14": 50.38,
-    "macd": -1.45649,
-    "macd_signal": -2.43861,
-    "macd_histogram": 0.982122,
-    "bb_upper": 597.409,
-    "bb_lower": 586.34,
-    "bb_position": 0.7733,
-    "ema9": 593.239,
-    "sma9": 592.849,
+    "rsi14": 54.54,
+    "macd": -1.00186,
+    "macd_signal": -2.15126,
+    "macd_histogram": 1.1494,
+    "bb_upper": 597.975,
+    "bb_lower": 586.073,
+    "bb_position": 0.9559,
+    "ema9": 594.081,
+    "sma9": 593.709,
     "ema_above_sma": true
    },
    "signals": {
@@ -3029,7 +3041,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -3062,13 +3074,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처",
-      "peak_bb_position": 0.9685,
-      "peak_rsi": 50.7,
-      "stop": 597.657,
-      "target": 586.34,
-      "reward_risk": 3.1
+      "now": false,
+      "why": null,
+      "peak_bb_position": 1.141,
+      "peak_rsi": 54.54,
+      "stop": 598.573,
+      "target": 586.073,
+      "reward_risk": 10.1
      },
      "breakdown": {
       "now": false,
@@ -3085,16 +3097,16 @@
     "spot": null,
     "perp": {
      "name": "XMR",
-     "mark": 595.59,
-     "mid": 595.47,
-     "funding_1h": 0.0000339868,
-     "open_interest": 173056.3119999999,
-     "day_volume_usd": 50913489.67227999,
+     "mark": 594.83,
+     "mid": 594.905,
+     "funding_1h": 0.000083785,
+     "open_interest": 175626.9840000001,
+     "day_volume_usd": 51285027.73267,
      "max_leverage": 5,
-     "gap_vs_binance_pct": 0.096,
-     "open_interest_usd": 103070609,
-     "oi_change_pct": 1.48,
-     "funding_1h_prev": 0.0000125
+     "gap_vs_binance_pct": -0.426,
+     "open_interest_usd": 104468199,
+     "oi_change_pct": 1.485,
+     "funding_1h_prev": 0.0000339868
     }
    }
   },
@@ -3104,21 +3116,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 1.2934,
-   "change_24h_pct": -0.5383,
-   "change_7d_pct": -0.752,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 1.2937,
+   "change_24h_pct": -0.4999,
+   "change_7d_pct": -0.5687,
    "indicators_1h": {
-    "rsi14": 49.71,
-    "macd": 0.000289735,
-    "macd_signal": -0.000663141,
-    "macd_histogram": 0.000952876,
-    "bb_upper": 1.30413,
-    "bb_lower": 1.27828,
-    "bb_position": 0.5849,
-    "ema9": 1.29457,
-    "sma9": 1.29484,
+    "rsi14": 49.92,
+    "macd": 0.000238569,
+    "macd_signal": -0.000482799,
+    "macd_histogram": 0.000721368,
+    "bb_upper": 1.30386,
+    "bb_lower": 1.2783,
+    "bb_position": 0.6025,
+    "ema9": 1.29439,
+    "sma9": 1.29538,
     "ema_above_sma": false
    },
    "signals": {
@@ -3131,7 +3143,7 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-26T09:00:00.000Z",
      "last_exit_signal_at": "2026-10-26T19:00:00.000Z",
      "latest": "exit"
@@ -3153,7 +3165,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -3163,7 +3175,7 @@
       "latest": "exit"
      },
      "ema": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T09:00:00.000Z",
@@ -3186,13 +3198,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 1.003,
       "peak_rsi": 52.91,
-      "stop": 1.30543,
-      "target": 1.27828,
-      "reward_risk": 1.26
+      "stop": 1.30516,
+      "target": 1.2783,
+      "reward_risk": 1.34
      },
      "breakdown": {
       "now": false,
@@ -3209,15 +3221,15 @@
     "spot": null,
     "perp": {
      "name": "XRP",
-     "mark": 1.294381,
-     "mid": 1.29445,
+     "mark": 1.290712,
+     "mid": 1.29075,
      "funding_1h": 0.0000125,
-     "open_interest": 171173082,
-     "day_volume_usd": 41660742.030499995,
+     "open_interest": 171260336,
+     "day_volume_usd": 40885168.9841,
      "max_leverage": 20,
-     "gap_vs_binance_pct": 0.081,
-     "open_interest_usd": 221563185,
-     "oi_change_pct": 0.044,
+     "gap_vs_binance_pct": -0.228,
+     "open_interest_usd": 221047771,
+     "oi_change_pct": 0.051,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -3228,21 +3240,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 0.4379,
-   "change_24h_pct": -4.555,
-   "change_7d_pct": -13.7,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 0.44,
+   "change_24h_pct": -3.593,
+   "change_7d_pct": -13.18,
    "indicators_1h": {
-    "rsi14": 40.79,
-    "macd": -0.00378743,
-    "macd_signal": -0.00449084,
-    "macd_histogram": 0.000703408,
-    "bb_upper": 0.449868,
-    "bb_lower": 0.434502,
-    "bb_position": 0.2211,
-    "ema9": 0.4412,
-    "sma9": 0.441211,
+    "rsi14": 43.54,
+    "macd": -0.00364179,
+    "macd_signal": -0.00432103,
+    "macd_histogram": 0.000679243,
+    "bb_upper": 0.448403,
+    "bb_lower": 0.434927,
+    "bb_position": 0.3764,
+    "ema9": 0.44096,
+    "sma9": 0.4412,
     "ema_above_sma": false
    },
    "signals": {
@@ -3255,7 +3267,7 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": true,
+     "exit_now": false,
      "last_entry_signal_at": "2026-10-26T09:00:00.000Z",
      "last_exit_signal_at": "2026-10-26T19:00:00.000Z",
      "latest": "exit"
@@ -3277,7 +3289,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -3287,7 +3299,7 @@
       "latest": "exit"
      },
      "ema": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T09:00:00.000Z",
@@ -3310,13 +3322,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.6795,
       "peak_rsi": 44.43,
       "stop": 0.446446,
-      "target": 0.4346,
-      "reward_risk": 0.386
+      "target": 0.434927,
+      "reward_risk": 0.787
      },
      "breakdown": {
       "now": false,
@@ -3333,16 +3345,16 @@
     "spot": null,
     "perp": {
      "name": "WLD",
-     "mark": 0.44034,
-     "mid": 0.44049,
-     "funding_1h": 0.0000035165,
-     "open_interest": 143964435.80000004,
-     "day_volume_usd": 26314648.673209,
+     "mark": 0.43569,
+     "mid": 0.43555,
+     "funding_1h": 0.0000125,
+     "open_interest": 144336893.39999998,
+     "day_volume_usd": 26356546.283835005,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.591,
-     "open_interest_usd": 63393300,
-     "oi_change_pct": -0.115,
-     "funding_1h_prev": -0.0000152727
+     "gap_vs_binance_pct": -1.011,
+     "open_interest_usd": 62886141,
+     "oi_change_pct": 0.259,
+     "funding_1h_prev": 0.0000035165
     }
    }
   },
@@ -3352,21 +3364,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 0.909,
-   "change_24h_pct": -2.321,
-   "change_7d_pct": -8.005,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 0.9106,
+   "change_24h_pct": -1.96,
+   "change_7d_pct": -7.478,
    "indicators_1h": {
-    "rsi14": 43.85,
-    "macd": -0.00215941,
-    "macd_signal": -0.0025335,
-    "macd_histogram": 0.000374092,
-    "bb_upper": 0.925567,
-    "bb_lower": 0.904343,
-    "bb_position": 0.2194,
-    "ema9": 0.91521,
-    "sma9": 0.916111,
+    "rsi14": 45.07,
+    "macd": -0.00239056,
+    "macd_signal": -0.00250492,
+    "macd_histogram": 0.000114357,
+    "bb_upper": 0.924914,
+    "bb_lower": 0.904006,
+    "bb_position": 0.3154,
+    "ema9": 0.914288,
+    "sma9": 0.915556,
     "ema_above_sma": false
    },
    "signals": {
@@ -3401,7 +3413,7 @@
    },
    "short": {
     "oversold": false,
-    "entry_now": true,
+    "entry_now": false,
     "strategies": {
      "bb": {
       "entry_now": false,
@@ -3434,13 +3446,13 @@
     },
     "setups": {
      "bounce_fade": {
-      "now": true,
-      "why": "bb_upper 근처, ema9/sma9 실패",
+      "now": false,
+      "why": null,
       "peak_bb_position": 0.8301,
       "peak_rsi": 48.94,
       "stop": 0.923623,
-      "target": 0.904343,
-      "reward_risk": 0.319
+      "target": 0.904006,
+      "reward_risk": 0.506
      },
      "breakdown": {
       "now": false,
@@ -3457,15 +3469,15 @@
     "spot": null,
     "perp": {
      "name": "SUI",
-     "mark": 0.91284,
-     "mid": 0.91308,
+     "mark": 0.9075,
+     "mid": 0.90755,
      "funding_1h": 0.0000125,
-     "open_interest": 36906659.4,
-     "day_volume_usd": 21140248.632825017,
+     "open_interest": 36835189.800000004,
+     "day_volume_usd": 20701505.38317201,
      "max_leverage": 10,
-     "gap_vs_binance_pct": 0.449,
-     "open_interest_usd": 33689875,
-     "oi_change_pct": 0.319,
+     "gap_vs_binance_pct": -0.335,
+     "open_interest_usd": 33427935,
+     "oi_change_pct": -0.194,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -3476,21 +3488,21 @@
    "venue": "Binance",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 0.05491,
-   "change_24h_pct": 21.62,
-   "change_7d_pct": 31.58,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 0.05294,
+   "change_24h_pct": 16.76,
+   "change_7d_pct": 26.77,
    "indicators_1h": {
-    "rsi14": 72.42,
-    "macd": 0.00248958,
-    "macd_signal": 0.00158378,
-    "macd_histogram": 0.000905806,
-    "bb_upper": 0.0554201,
-    "bb_lower": 0.0401689,
-    "bb_position": 0.9666,
-    "ema9": 0.0517533,
-    "sma9": 0.0511389,
+    "rsi14": 63.99,
+    "macd": 0.0024753,
+    "macd_signal": 0.00176208,
+    "macd_histogram": 0.000713216,
+    "bb_upper": 0.0559699,
+    "bb_lower": 0.0405171,
+    "bb_position": 0.8039,
+    "ema9": 0.0519906,
+    "sma9": 0.0518244,
     "ema_above_sma": true
    },
    "signals": {
@@ -3517,9 +3529,9 @@
     },
     "rsi": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-18T23:00:00.000Z",
-     "last_exit_signal_at": "2026-10-26T16:00:00.000Z",
+     "last_exit_signal_at": "2026-10-26T20:00:00.000Z",
      "latest": "exit"
     }
    },
@@ -3528,7 +3540,7 @@
     "entry_now": true,
     "strategies": {
      "bb": {
-      "entry_now": true,
+      "entry_now": false,
       "exit_now": false,
       "last_entry_signal_at": "2026-10-26T19:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T03:00:00.000Z",
@@ -3549,9 +3561,9 @@
       "latest": "exit"
      },
      "rsi": {
-      "entry_now": false,
+      "entry_now": true,
       "exit_now": false,
-      "last_entry_signal_at": "2026-10-26T16:00:00.000Z",
+      "last_entry_signal_at": "2026-10-26T20:00:00.000Z",
       "last_exit_signal_at": "2026-10-18T23:00:00.000Z",
       "latest": "entry"
      }
@@ -3562,9 +3574,9 @@
       "why": "bb_upper 근처, RSI 60+",
       "peak_bb_position": 1.211,
       "peak_rsi": 76.05,
-      "stop": 0.0554755,
+      "stop": 0.0560259,
       "target": 0.04258,
-      "reward_risk": 21.8
+      "reward_risk": 3.36
      },
      "breakdown": {
       "now": false,
@@ -3581,15 +3593,15 @@
     "spot": null,
     "perp": {
      "name": "CHIP",
-     "mark": 0.053878,
-     "mid": 0.053894,
+     "mark": 0.052345,
+     "mid": 0.052365,
      "funding_1h": 0.0000125,
-     "open_interest": 321187694,
-     "day_volume_usd": 16278562.509293005,
+     "open_interest": 288734346,
+     "day_volume_usd": 19384133.484651003,
      "max_leverage": 3,
-     "gap_vs_binance_pct": -1.85,
-     "open_interest_usd": 17304951,
-     "oi_change_pct": -2.62,
+     "gap_vs_binance_pct": -1.086,
+     "open_interest_usd": 15113799,
+     "oi_change_pct": -10.104,
      "funding_1h_prev": 0.0000125
     }
    }
@@ -3600,22 +3612,22 @@
    "venue": "Hyperliquid",
    "quality": "ok",
    "quality_reason": null,
-   "last_closed_bar_at": "2026-10-26T19:00:00.000Z",
-   "age_min": 48,
-   "price": 3.0586,
-   "change_24h_pct": -5.012,
-   "change_7d_pct": 0.3313,
+   "last_closed_bar_at": "2026-10-26T20:00:00.000Z",
+   "age_min": 43,
+   "price": 3.0467,
+   "change_24h_pct": -4.734,
+   "change_7d_pct": 0.8774,
    "indicators_1h": {
-    "rsi14": 42.21,
-    "macd": -0.0206021,
-    "macd_signal": -0.0225223,
-    "macd_histogram": 0.0019202,
-    "bb_upper": 3.18194,
-    "bb_lower": 3.03016,
-    "bb_position": 0.1874,
-    "ema9": 3.0991,
-    "sma9": 3.09887,
-    "ema_above_sma": true
+    "rsi14": 41.06,
+    "macd": -0.0235387,
+    "macd_signal": -0.0227256,
+    "macd_histogram": -0.000813147,
+    "bb_upper": 3.17347,
+    "bb_lower": 3.02608,
+    "bb_position": 0.1399,
+    "ema9": 3.08862,
+    "sma9": 3.09433,
+    "ema_above_sma": false
    },
    "signals": {
     "bb": {
@@ -3627,17 +3639,17 @@
     },
     "ema": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-26T15:00:00.000Z",
-     "last_exit_signal_at": "2026-10-26T14:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-26T20:00:00.000Z",
+     "latest": "exit"
     },
     "macd": {
      "entry_now": false,
-     "exit_now": false,
+     "exit_now": true,
      "last_entry_signal_at": "2026-10-26T15:00:00.000Z",
-     "last_exit_signal_at": "2026-10-25T22:00:00.000Z",
-     "latest": "entry"
+     "last_exit_signal_at": "2026-10-26T20:00:00.000Z",
+     "latest": "exit"
     },
     "rsi": {
      "entry_now": false,
@@ -3659,18 +3671,18 @@
       "latest": "exit"
      },
      "ema": {
-      "entry_now": false,
+      "entry_now": true,
       "exit_now": false,
-      "last_entry_signal_at": "2026-10-26T14:00:00.000Z",
+      "last_entry_signal_at": "2026-10-26T20:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T15:00:00.000Z",
-      "latest": "exit"
+      "latest": "entry"
      },
      "macd": {
-      "entry_now": false,
+      "entry_now": true,
       "exit_now": false,
-      "last_entry_signal_at": "2026-10-25T22:00:00.000Z",
+      "last_entry_signal_at": "2026-10-26T20:00:00.000Z",
       "last_exit_signal_at": "2026-10-26T15:00:00.000Z",
-      "latest": "exit"
+      "latest": "entry"
      },
      "rsi": {
       "entry_now": false,
@@ -3687,8 +3699,8 @@
       "peak_bb_position": 0.7621,
       "peak_rsi": 49.18,
       "stop": 3.15665,
-      "target": 3.03016,
-      "reward_risk": 0.29
+      "target": 3.02608,
+      "reward_risk": 0.188
      },
      "breakdown": {
       "now": false,
@@ -3705,16 +3717,16 @@
     "spot": null,
     "perp": {
      "name": "LIT",
-     "mark": 3.051723,
-     "mid": 3.05185,
+     "mark": 3.014763,
+     "mid": 3.01485,
      "funding_1h": 0.0000125,
-     "open_interest": 35474430,
-     "day_volume_usd": 14108958.752100017,
+     "open_interest": 35407328,
+     "day_volume_usd": 14163456.886399994,
      "max_leverage": 5,
-     "gap_vs_binance_pct": -0.221,
-     "open_interest_usd": 108258134,
-     "oi_change_pct": null,
-     "funding_1h_prev": null
+     "gap_vs_binance_pct": -1.045,
+     "open_interest_usd": 106744702,
+     "oi_change_pct": -0.189,
+     "funding_1h_prev": 0.0000125
     }
    }
   }
