@@ -8,6 +8,7 @@ import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
+import { stopGuide, STOP_RULE } from './lib/stopguide.mjs';
 
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
@@ -50,6 +51,20 @@ for (const [symbol, group, perpName] of entries) {
     const brief = symbolBrief({ symbol, group, bars: got.bars, venue: got.venue, fallbackReason: got.fallbackReason, strategies, now });
     brief.perp_name = perpName;
     if (brief.quality !== 'error') brief.hyperliquid = hyperliquidFor(symbol, brief.price, hl.spot, hl.perp, perpName);
+    // 손절 가이드(3-0-3): 거래 장소인 하이퍼리퀴드 1h 봉 기준. 피드 봉이 바이낸스여도 여기는 HL 봉을 쓴다.
+    if (brief.quality !== 'error') {
+      try {
+        let hlBars = got.venue === 'Hyperliquid' ? got.bars : null;
+        if (!hlBars) {
+          const start = Math.floor((now - 3 * 24 * H) / H) * H;
+          hlBars = parseKlines(await fetchCandles(perpName, start, now), now).rows;
+        }
+        const px = brief.hyperliquid?.perp?.mid ?? brief.hyperliquid?.perp?.mark ?? brief.price;
+        brief.stop_guide = stopGuide(hlBars.slice(-72), px);
+      } catch (e) {
+        brief.stop_guide = { error: e?.message ?? String(e) };
+      }
+    }
     symbols.push(brief);
   } catch (e) {
     symbols.push({ symbol, group, perp_name: perpName, quality: 'error', quality_reason: e?.message ?? String(e) });
@@ -103,6 +118,11 @@ const feed = {
     auto_error: autoError,
   },
   strategies,
+  stop_rule: {
+    ...STOP_RULE,
+    formula: '손절 = 진입가 ± max(1.5×ATR14, 진입가~스윙 거리 + 0.1×ATR). 스윙 = 최근 24봉 안 좌우 2봉 기준 가장 최근 스윙 저점(롱)·고점(숏), 진입가 반대쪽에 없으면 24봉 최저·최고가. 거리 2.0 ATR 초과면 진입 안 함. 하이퍼리퀴드 1h 봉 기준.',
+    note: 'stop_guide.long/short는 피드 생성 시점 가격 기준이다. 실제 진입가가 다르면 같은 공식으로 다시 계산한다.',
+  },
   hyperliquid: {
     source: 'https://api.hyperliquid.xyz/info (public, read-only)',
     note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - feed close) / feed close; the feed close is Binance unless the symbol venue is Hyperliquid.',
