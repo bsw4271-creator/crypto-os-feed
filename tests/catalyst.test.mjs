@@ -31,6 +31,7 @@ test('상대강도·거래량을 모두 넘으면 eligible, 진입 구간과 손
   assert.equal(r.entry_zones.body_mid.stop, 100 - 0.2); // max(99.8, 100) − 0.1×2
   assert.equal(r.entry_zones.body_mid.entry, 104);
   assert.equal(r.entry_zones.body_mid.too_wide, false);
+  assert.equal(r.direction, "long");
 });
 
 test('시장도 같이 올랐으면(초과 5%p 미만) 시장 확인 실패', () => {
@@ -61,4 +62,20 @@ test('손절이 4 ATR보다 멀면 too_wide', () => {
   const now = base + 41 * H + 60000;
   const r = evaluateCatalyst({ cat, coinBars: coinBars(10, 30), marketBars: [flat(0)], atr: 1, now });
   assert.equal(r.entry_zones.ema9.too_wide, true);
+});
+
+test('숏(공식 악재): 시장보다 5%p 이상 약하면 확인, 손절은 뉴스 봉 고점·발표 전 가격 중 낮은 쪽 + 0.1 ATR', () => {
+  const out = [];
+  for (let i = 0; i < 30; i++) out.push({ t: base + i * H, o: 100, h: 100.5, l: 99.5, c: 100, v: 10 });
+  out.push({ t: base + 30 * H, o: 100, h: 100.3, l: 88, c: 90, v: 400 }); // 해킹 발표 봉
+  for (let i = 1; i <= 10; i++) out.push({ t: base + (30 + i) * H, o: 90, h: 92, l: 88, c: 89, v: 40 });
+  const now = base + 41 * H + 60000;
+  const short = { ...cat, direction: 'short', kind: 'exploit' };
+  const r = evaluateCatalyst({ cat: short, coinBars: out, marketBars: [flat(0), flat(1)], atr: 2, now });
+  assert.equal(r.direction, 'short');
+  assert.equal(r.confirm.market_confirmed, true, JSON.stringify(r.confirm));
+  assert.equal(r.eligible, true);
+  assert.equal(r.entry_zones.body_mid.stop, 100 + 0.2); // min(100.3, 100) + 0.1×2
+  assert.equal(r.entry_zones.body_mid.stop_wrong_side, false);
+  assert.match(validateCatalyst({ ...cat, kind: 'exploit' }).join(), /kind 목록 밖\(long\)/);
 });
