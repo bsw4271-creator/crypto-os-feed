@@ -8,7 +8,8 @@ import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
-import { stopGuide, STOP_RULE } from './lib/stopguide.mjs';
+import { stopGuide, STOP_RULE, atr as atrOf } from './lib/stopguide.mjs';
+import { evaluateCatalyst, CATALYST_RULE } from './lib/catalyst.mjs';
 
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
@@ -29,6 +30,7 @@ let autoError = hl.perp ? null : 'Hyperliquid perp list unavailable';
 const auto = autoPerps(hl.perp, fixedNames, 10);
 
 // entries: [symbol, group, perpName]
+const marketBars = new Map(); // 시장 중앙값 계산용(major_catalyst)
 const entries = [...FIXED.map((s) => [s, 'fixed', s.replace(/USDT$/, '')]), ...auto.map((n) => [`${n}USDT`, 'auto', n])];
 const symbols = [];
 const H = 3600000;
@@ -48,6 +50,7 @@ for (const [symbol, group, perpName] of entries) {
         got = { bars: rows, venue: 'Hyperliquid', fallbackReason: null, binanceMiss: e.message };
       }
     }
+    marketBars.set(perpName, got.bars);
     const brief = symbolBrief({ symbol, group, bars: got.bars, venue: got.venue, fallbackReason: got.fallbackReason, strategies, now });
     brief.perp_name = perpName;
     if (brief.quality !== 'error') brief.hyperliquid = hyperliquidFor(symbol, brief.price, hl.spot, hl.perp, perpName);
@@ -68,6 +71,30 @@ for (const [symbol, group, perpName] of entries) {
     symbols.push(brief);
   } catch (e) {
     symbols.push({ symbol, group, perp_name: perpName, quality: 'error', quality_reason: e?.message ?? String(e) });
+  }
+}
+
+// 대형 공식 호재(규칙서 3-0-4): config/catalysts.json의 CONFIRMED 항목 중 발표 후 7일 안의 것만 계산해 싣는다.
+const majorCatalyst = [];
+let catalystConfigError = null;
+let catalystList = [];
+try {
+  if (existsSync('config/catalysts.json')) catalystList = JSON.parse(readFileSync('config/catalysts.json', 'utf8'));
+  if (!Array.isArray(catalystList)) throw new Error('catalysts.json은 배열이어야 함');
+} catch (e) {
+  catalystConfigError = e?.message ?? String(e);
+  catalystList = [];
+}
+for (const cat of catalystList) {
+  const at = Date.parse(cat?.announced_at);
+  if (!Number.isFinite(at) || now - at > 7 * 24 * H) continue;
+  try {
+    const start = Math.floor((at - 26 * H) / H) * H;
+    const coinBars = parseKlines(await fetchCandles(cat.coin, start, now), now).rows;
+    const others = [...marketBars.entries()].filter(([n]) => n !== cat.coin).map(([, b]) => b);
+    majorCatalyst.push(evaluateCatalyst({ cat, coinBars, marketBars: others, atr: atrOf(coinBars.slice(-40)), now }));
+  } catch (e) {
+    majorCatalyst.push({ id: cat?.id ?? null, coin: cat?.coin ?? null, eligible: false, reason: `계산 오류: ${e?.message ?? e}` });
   }
 }
 
@@ -122,6 +149,12 @@ const feed = {
     ...STOP_RULE,
     formula: '손절 = 진입가 ± max(1.5×ATR14, 진입가~스윙 거리 + 0.1×ATR). 스윙 = 최근 24봉 안 좌우 2봉 기준 가장 최근 스윙 저점(롱)·고점(숏), 진입가 반대쪽에 없으면 24봉 최저·최고가. 거리 2.0 ATR 초과면 진입 안 함. 하이퍼리퀴드 1h 봉 기준.',
     note: 'stop_guide.long/short는 피드 생성 시점 가격 기준이다. 실제 진입가가 다르면 같은 공식으로 다시 계산한다.',
+  },
+  major_catalyst: {
+    rule: CATALYST_RULE,
+    note: '규칙서 3-0-4. 목록은 소유자가 Catalyst Monitor CONFIRMED 신호만 config/catalysts.json에 넣은 것. eligible=true인 코인의 롱에만 예외 진입 가능. 손절·진입 구간은 피드 시점 기준이며 실제 진입가로 다시 계산한다.',
+    config_error: catalystConfigError,
+    items: majorCatalyst,
   },
   hyperliquid: {
     source: 'https://api.hyperliquid.xyz/info (public, read-only)',

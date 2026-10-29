@@ -98,6 +98,30 @@
 - **진입 메시지에 손절 근거를 남긴다:** `atr14`(값), `stop_atr_mult`(손절 거리 ÷ ATR), `stop_swing_atr`(진입가~스윙 거리 ÷ ATR), `stop_vs_feed`(피드 `stop_guide` 값과 같음 / 다름이면 이유). 숫자 칸은 숫자만.
 - **재검증 조건:** 이 규칙은 13건 탐색 결과에서 나온 시험 규칙이다. 이 규칙으로 10~20건이 쌓이면 일지 요약의 `post_exit`(손절 뒤 12시간 목표가 도달 비율·MFE)와 R 합계로 다시 판단한다.
 
+### 3-0-4. 대형 공식 호재(major_catalyst) 예외 진입 (소유자 승인 2026-10-29, rules-6.5)
+공식 대형 호재로 생긴 상대강도는 3-0-3의 2 ATR 한도로는 잡을 수 없어서 따로 다룬다. **이 절에 맞는 롱만** 아래 예외를 쓰고, 나머지는 모두 기존 규칙대로다.
+
+**1. 판정 — 4가지 모두 충족**
+- a) **공식 출처:** 프로젝트 또는 상대 기관의 공식 발표(보도자료, 공식 X, 거래소 공지). 1급 매체(Bloomberg, Reuters, CoinDesk) 보도는 6시간 안에 공식 발표로 확인될 때만 인정.
+- b) **실체:** 최종 계약, 출시(LIVE), 상장 확정, 바이백·소각 실행, 규제 승인 중 하나. exploring·검토 중·MOU·루머·KOL 주장은 제외.
+- c) **규모:** 상대가 시총 100억 달러 이상 기관 또는 티어1 거래소. 또는 토큰 수익·공급에 직접 영향(수수료 전환, 바이백 등).
+- d) **시장 확인:** 발표 후 24시간 상승률이 시장 중앙값보다 **5%p 이상** 높고, 발표 시간봉 거래량이 직전 24시간 평균의 **3배 이상**.
+- **a~c는 Catalyst Monitor가 CONFIRMED로 기록한 신호만** 인정한다. 소유자가 그 신호를 피드 저장소 `config/catalysts.json`에 넣고, 피드가 d)와 유효기간을 매시간 계산해 `feed.json`의 `major_catalyst.items`에 싣는다. **그록봇은 스스로 호재를 판정하거나 목록에 추가하지 않는다.** X 글·뉴스만 보고 예외 진입하지 않는다.
+- 예외 진입은 `major_catalyst.items` 중 **`eligible=true`** 인 코인에만 한다.
+
+**2. 예외 진입 규칙 (그 코인의 롱에만)**
+- 시장 국면이 risk_off여도 롱 허용.
+- **손절:** 뉴스 봉 저점과 발표 직전 가격 중 **가까운 쪽(높은 쪽)보다 0.1 ATR 아래**. 손절 거리 한도는 2 ATR 대신 **4 ATR**. 피드 `entry_zones.*.stop`에 계산값이 있다.
+- **손실 한도 1.0 USD 고정**(6-2의 1.0~1.5 USD보다 낮춤). **레버리지 1배 이하.**
+- **추격 금지:** 발표 뒤 **첫 되돌림**에서 **지정가로만** 진입한다. 기준은 EMA9 근처 또는 뉴스 봉 몸통의 50% 지점(피드 `entry_zones.ema9`, `entry_zones.body_mid`).
+- 순 R:R 최소 1.5 유지(목표가는 진입 메시지 `target`에 적고 그 기준으로 계산). 하이퍼리퀴드·바이낸스 가격 차이 2% 초과 PASS(2절)도 유지.
+- **유효기간 72시간**(피드 `expires_at`). 그 안에 진입하지 못하면 신호 소멸.
+- **같은 호재로는 1회만** 진입한다(같은 `catalyst_id`로 두 번째 진입 금지).
+
+**3. 기록**
+- 진입 메시지 `setup=major_catalyst`, `catalyst_id=<신호 ID>`, `thesis` 앞에 "major_catalyst 예외 · <신호 ID>". trades.md에도 같은 표기.
+- 6.4 시험 카운트(N/10)에 포함한다. 일지 요약에서는 `setup=major_catalyst` 칸으로 따로 집계된다.
+
 ### 3-0-2. 숏 검토 (소유자 결정 2026-10-25)
 - **매 회차마다 롱과 똑같이 숏 후보를 검토**하고, 검토한 코인과 넘긴 이유를 회차 기록에 남긴다.
 - **좋은 숏:** risk_off나 하락 국면에서 반등이 저항선에 막힐 때 — `bb_position` 0.8 이상, RSI 60 이상에서 꺾임, ema9/sma9 근처에서 반등 실패. 펀딩비 플러스, 반등 중 OI 증가는 가점.
@@ -154,7 +178,7 @@
 #일지 진입
 trade_id=G20261023-01
 mode=live
-prompt_version=rules-6.4
+prompt_version=rules-6.5
 symbol=SOL
 side=long
 kind=perp
@@ -182,6 +206,7 @@ stop_swing_atr=1.2
 stop_vs_feed=같음
 approval=auto
 ```
+- major_catalyst 예외 진입이면 위에 `catalyst_id=<신호 ID>` 한 줄을 더 넣는다.
 - `kind`: `perp`(일반 선물) 또는 `spot_proxy`(현물 대용 1배 롱)
 - `entry_plan`, `stop`, `target`, `time_stop_hours`, `risk_r`, `leverage`, `confidence`에는 **숫자만** 적는다. 주문 방식(IOC 등) 같은 설명은 `thesis`에 적는다.
 - `owner_info`: 3-2절 정보를 썼으면 받은 시각 / 요약 / 확인 결과, 아니면 `없음`
@@ -220,7 +245,7 @@ note=목표가 도달
 - 이 절의 숫자(1R 비율, 비상정지 기준)는 소유자만 바꾼다.
 
 ### 6-1. 고정 목록
-- **setup**: `breakout`(돌파), `pullback`(눌림목), `trend`(추세추종), `x_sentiment`(X 여론), `funding_fade`(펀딩 과열 역행), `flow`(자금흐름·큰손 지갑), `owner_info`(소유자 제공 정보), `bounce_fade`(반등 실패 숏), `breakdown`(지지선 이탈 숏), `new`(새 셋업 — 청산 메시지 `note`에 설명)
+- **setup**: `breakout`(돌파), `pullback`(눌림목), `trend`(추세추종), `x_sentiment`(X 여론), `funding_fade`(펀딩 과열 역행), `flow`(자금흐름·큰손 지갑), `owner_info`(소유자 제공 정보), `bounce_fade`(반등 실패 숏), `breakdown`(지지선 이탈 숏), `major_catalyst`(대형 공식 호재 예외 롱, 3-0-4), `new`(새 셋업 — 청산 메시지 `note`에 설명)
   - 숏 셋업 고르는 법: 피드 `short.setups.bounce_fade` → `bounce_fade`, `short.setups.breakdown` → `breakdown`, 숏 전략 신호(`short.strategies`)는 그 성격에 맞는 기존 값(ema·macd 하향 교차는 `trend`, bb·rsi는 `bounce_fade`)
 - **regime**: `up`, `down`, `range` — **피드 `market.regime`으로 기계적으로 정한다**(소유자 결정 2026-10-25): `risk_on` → `up`, `risk_off` → `down`, `neutral` → `range`. 개별 코인 모양으로 따로 판단하지 않는다. `unknown`이면 진입하지 않는다. `high_vol`은 판단 기준이 없어 쓰지 않는다.
 - **approval**: `auto`, `approved`, `modified`
