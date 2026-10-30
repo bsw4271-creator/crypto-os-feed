@@ -1,32 +1,32 @@
 # Crypto OS 브리핑 피드
 
-- 생성: 2026-10-31 03:53 KST (UTC 2026-10-30T18:53:17.458Z)
-- 다음 갱신 예상: 2026-10-30T20:53:17.458Z 까지. 이 시각이 지났으면 피드가 멈춘 것.
-- 시장: **risk_off** · BTC 24h -4.57% · 7d -5.46% · 24h 상승 1/15
-- 스테이블코인 공급: 300.5B USD · 1일 -0.30% · 7일 -1.24%
-- 큰 지갑 이동(이더리움, 1M USD 이상): 6건 · 거래소로 0.0M · 거래소에서 2.5M
-  - 18:51Z Galaxy Digital: OTC → 0x936dc23b · USDT 2.9M USD
-  - 18:46Z Abraxas Capital Management: Heka Funds → 0x2f14b422 · ETH 11.2M USD
-  - 18:21Z Wintermute 4 → 0x5392bd00 · USDC 1.2M USD
-  - 17:56Z Wintermute 4 → 0x10cadff3 · ETH 1.1M USD
-  - 17:54Z Wintermute 4 → 0x32d4703e · ETH 1.1M USD
+- 생성: 2026-10-31 04:52 KST (UTC 2026-10-30T19:52:10.038Z)
+- 다음 갱신 예상: 2026-10-30T21:52:10.038Z 까지. 이 시각이 지났으면 피드가 멈춘 것.
+- 시장: **risk_off** · BTC 24h -5.20% · 7d -5.87% · 24h 상승 0/15
+- 스테이블코인 공급: 300.3B USD · 1일 -0.36% · 7일 -1.30%
+- 큰 지갑 이동(이더리움, 1M USD 이상): 11건 · 거래소로 0.0M · 거래소에서 0.0M
+  - 19:48Z Abraxas Capital Management: Heka Funds → 0xa188eec8 · USDC 10.0M USD
+  - 19:43Z Abraxas Capital Management: Heka Funds ← 0x6fa5b6d9 · USDC 10.0M USD
+  - 19:34Z Wintermute 4 ← 0xf89d7b9c · ETH 1.5M USD
+  - 19:29Z Wintermute 4 ← 0xaa8ba7d4 · USDT 2.3M USD
+  - 19:25Z Galaxy Digital: OTC ← 0xaa8ba7d4 · USDT 2.3M USD
 - 고래 이동은 OS 위험 검사 대상 아님 · OS Smart Money는 이 피드에 미포함
 - 분석 참고용 데이터입니다. 매매 신호나 투자 권유가 아닙니다.
 
 | 종목 | 품질 | 가격 | 24h | 7d | RSI | BB위치 | 지금 롱 진입 | 지금 롱 청산 | 지금 숏 진입 | HL 현물 | HL 선물 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| BTCUSDT | ok | 77192.4 | -4.57% | -5.46% | 36.35 | 0.24 | — | — | bounce_fade | UBTC/USDC (-1.15%) | BTC (-1.08%, OI -2.39%) |
-| ETHUSDT | ok | 2244.15 | -4.16% | -6.87% | 46.08 | 0.63 | — | — | — | UETH/USDC (-1.07%) | ETH (-1.04%, OI 0.50%) |
-| SOLUSDT | ok | 94.48 | -6.54% | -9.61% | 35.24 | 0.16 | — | — | — | USOL/USDC (-0.89%) | SOL (-0.83%, OI 0.27%) |
-| HYPEUSDT | ok | 91.07 | -3.69% | 16.06% | 50.88 | 0.34 | — | — | bounce_fade | HYPE/USDC (-2.09%) | HYPE (-2.09%, OI -0.70%) |
-| ZROUSDT | ok | 1.724 | 0.35% | -3.20% | 56.84 | 0.70 | — | — | bounce_fade | — | ZRO (-3.65%, OI -0.21%) |
-| ZECUSDT | ok | 1230.49 | -7.85% | -1.40% | 42.40 | 0.25 | — | — | — | — | ZEC (-1.61%, OI 0.32%) |
-| BNBUSDT | ok | 699.75 | -6.19% | -6.11% | 34.88 | 0.30 | — | — | — (과매도) | — | BNB (-0.61%, OI -0.59%) |
-| kPEPEUSDT | ok | 0.005079 | -6.65% | 6.32% | 53.05 | 0.66 | — | — | bounce_fade | — | kPEPE (-1.10%, OI 0.67%) |
-| NEARUSDT | ok | 4.267 | -5.24% | -12.51% | 46.25 | 0.57 | — | — | bounce_fade | — | NEAR (-0.80%, OI 0.06%) |
-| ENAUSDT | ok | 0.1879 | -11.20% | -11.28% | 45.70 | 0.59 | — | — | bounce_fade | — | ENA (-2.73%, OI -0.39%) |
-| XRPUSDT | ok | 1.2454 | -3.73% | -5.00% | 43.78 | 0.49 | — | — | bounce_fade | — | XRP (-0.87%, OI 0.06%) |
-| XMRUSDT | ok | 592.29 | -2.22% | -0.57% | 45.89 | 0.33 | — | — | bounce_fade | — | XMR (-0.15%, OI -0.31%) |
-| UNIUSDT | ok | 6.97 | -4.07% | -2.79% | 54.86 | 0.79 | — | ema | ema, bounce_fade | — | UNI (-1.56%, OI -0.10%) |
-| PUMPUSDT | ok | 0.004022 | -10.40% | -11.99% | 42.51 | 0.44 | — | — | bounce_fade | — | PUMP (-2.16%, OI -2.17%) |
-| LITUSDT | ok | 2.7354 | -15.01% | -17.22% | 39.29 | 0.19 | — | — | bounce_fade | — | LIT (-1.63%, OI -0.43%) |
+| BTCUSDT | ok | 76661.1 | -5.20% | -5.87% | 32.12 | 0.04 | — | macd | macd (과매도) | UBTC/USDC (0.16%) | BTC (0.32%, OI 2.45%) |
+| ETHUSDT | ok | 2232.84 | -4.23% | -7.05% | 42.97 | 0.48 | — | — | bounce_fade | UETH/USDC (0.22%) | ETH (0.27%, OI -0.84%) |
+| SOLUSDT | ok | 94.28 | -6.31% | -9.40% | 34.45 | 0.16 | — | — | — (과매도) | USOL/USDC (0.45%) | SOL (0.55%, OI -0.13%) |
+| HYPEUSDT | ok | 89.83 | -5.12% | 15.39% | 46.44 | 0.10 | — | — | bounce_fade | HYPE/USDC (0.95%) | HYPE (1.03%, OI 0.08%) |
+| ZROUSDT | ok | 1.678 | -1.58% | -4.71% | 49.59 | 0.56 | — | — | bounce_fade | — | ZRO (2.29%, OI 0.60%) |
+| ZECUSDT | ok | 1220.36 | -7.89% | -1.47% | 39.94 | 0.15 | — | — | bounce_fade | — | ZEC (0.95%, OI -0.55%) |
+| BNBUSDT | ok | 698.31 | -6.20% | -6.09% | 33.74 | 0.27 | — | — | — (과매도) | — | BNB (0.21%, OI -0.81%) |
+| kPEPEUSDT | ok | 0.005032 | -4.59% | 5.96% | 50.87 | 0.58 | — | — | bounce_fade | — | kPEPE (0.50%, OI -0.78%) |
+| NEARUSDT | ok | 4.278 | -3.32% | -10.95% | 47.21 | 0.57 | — | — | — | — | NEAR (1.24%, OI -0.35%) |
+| ENAUSDT | ok | 0.185 | -11.78% | -11.90% | 42.30 | 0.43 | — | — | bounce_fade | — | ENA (1.52%, OI -1.99%) |
+| XRPUSDT | ok | 1.2411 | -3.53% | -5.21% | 42.00 | 0.42 | — | — | bounce_fade | — | XRP (0.69%, OI 0.00%) |
+| XMRUSDT | ok | 590.47 | -1.76% | -1.08% | 44.81 | 0.30 | — | — | bounce_fade | — | XMR (0.91%, OI -0.24%) |
+| UNIUSDT | ok | 6.92 | -3.75% | -2.81% | 51.72 | 0.70 | — | — | bounce_fade | — | UNI (0.56%, OI -0.88%) |
+| PUMPUSDT | ok | 0.003949 | -10.86% | -12.67% | 38.17 | 0.23 | — | — | bounce_fade | — | PUMP (3.24%, OI -0.77%) |
+| LITUSDT | ok | 2.7301 | -14.61% | -17.11% | 38.95 | 0.19 | — | ema | ema, bounce_fade | — | LIT (0.89%, OI 0.12%) |
