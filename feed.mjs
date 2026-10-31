@@ -6,7 +6,7 @@ import { fetchBars } from './lib/fetch.mjs';
 import { parseKlines } from './lib/indicator-view.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
 import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor, post as hlPost } from './lib/hyperliquid.mjs';
-import { XYZ_DEX, INDEX_FOR_REGIME, parseXyz, equitySession, equityRegime } from './lib/equities.mjs';
+import { XYZ_DEX, INDEX_FOR_REGIME, parseXyz, equitySession, equityRegime, ownRegime } from './lib/equities.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
 import { stopGuide, STOP_RULE, atr as atrOf } from './lib/stopguide.mjs';
@@ -124,14 +124,17 @@ try {
   const xyz = parseXyz(await hlPost({ type: 'metaAndAssetCtxs', dex: XYZ_DEX }, globalThis.fetch));
   const barsOf = async (name) => parseKlines(await fetchCandles(name, Math.floor((now - HISTORY_DAYS * 24 * H) / H) * H, now), now).rows;
   const briefs = [];
-  // 상세(지표·숏 신호·손절 가이드): 교차 마진 가능 + 거래대금 300만 USD 이상 주식, 거래대금 상위 15개
-  for (const it of xyz.filter((x) => x.asset_class === 'equity' && !x.only_isolated && (x.day_volume_usd ?? 0) >= EQUITY_MIN_VOLUME).slice(0, 15)) {
+  // 상세(지표·숏 신호·손절 가이드): 교차 마진 가능 + 거래대금 300만 USD 이상. 주식 상위 15개 + 지수·원자재·통화 상위 10개
+  const liquid = (cls) => xyz.filter((x) => x.asset_class === cls && !x.only_isolated && (x.day_volume_usd ?? 0) >= EQUITY_MIN_VOLUME);
+  for (const it of [...liquid('equity').slice(0, 15), ...liquid('index_commodity_fx').slice(0, 10)]) {
     try {
       const bars = await barsOf(it.name);
       const b = symbolBrief({ symbol: it.name, group: 'equity', bars, venue: 'Hyperliquid', strategies, now });
       Object.assign(it, { detail: true, quality: b.quality, change_24h_pct: b.change_24h_pct, change_7d_pct: b.change_7d_pct, indicators_1h: b.indicators_1h, signals: b.signals, short: b.short });
       it.stop_guide = stopGuide(bars.slice(-72), it.mid ?? it.mark);
-      briefs.push(b);
+      // 지수·원자재·통화는 주식 국면과 따로 움직이므로 종목 자체 추세로 국면을 정한다(규칙서 1-2)
+      if (it.asset_class !== 'equity') it.own_regime = ownRegime(b);
+      else briefs.push(b);
     } catch (e) {
       it.detail_error = e?.message ?? String(e);
     }
@@ -204,7 +207,7 @@ const feed = {
     note: 'stop_guide.long/short는 피드 생성 시점 가격 기준이다. 실제 진입가가 다르면 같은 공식으로 다시 계산한다.',
   },
   equities: {
-    note: '규칙서 1-2. trade.xyz(HIP-3) 주식 선물. 주문·캔들 이름은 name(예: xyz:NVDA) 그대로. detail=true인 종목에만 지표·숏 신호·손절 가이드가 있다. 시장 국면은 market.regime(코인 국면과 별개).',
+    note: '규칙서 1-2. trade.xyz(HIP-3) 주식 선물. 주문·캔들 이름은 name(예: xyz:NVDA) 그대로. detail=true인 종목에만 지표·숏 신호·손절 가이드가 있다. 주식 국면은 market.regime, 지수·원자재·통화는 각 종목 own_regime(코인 국면과 별개).',
     ...equities,
   },
   major_catalyst: {

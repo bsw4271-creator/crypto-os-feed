@@ -43,3 +43,11 @@ test('주식 국면: 지수 7일·종목 상승 비율', () => {
   assert.equal(equityRegime({ symbol: 'xyz:XYZ100', change_7d_pct: -2 }, [b(-1), b(-2), b(1)]).regime, 'risk_off');
   assert.equal(equityRegime(null, [b(1)]).regime, 'unknown');
 });
+
+test('지수·원자재 자체 국면: 7일 변화 + ema9/sma9', async () => {
+  const { ownRegime } = await import('../lib/equities.mjs');
+  assert.equal(ownRegime({ change_7d_pct: 3, indicators_1h: { ema_above_sma: true } }), 'up');
+  assert.equal(ownRegime({ change_7d_pct: -3, indicators_1h: { ema_above_sma: false } }), 'down');
+  assert.equal(ownRegime({ change_7d_pct: 3, indicators_1h: { ema_above_sma: false } }), 'range');
+  assert.equal(ownRegime({ change_7d_pct: null, indicators_1h: {} }), 'unknown');
+});
