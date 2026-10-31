@@ -1,17 +1,17 @@
 {
- "updated_at": "2026-10-30T12:16:49.096Z",
+ "updated_at": "2026-10-31T00:11:44.499Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 17,
+ "counted_trades": 21,
  "cells": [
   {
    "setup": "bounce_fade",
    "regime": "down",
-   "n_live": 4,
-   "win_rate": 0.25,
-   "win_rate_ci_low": 0.046,
-   "breakeven_win_rate": 0.102,
-   "avg_r_net": 0.828,
+   "n_live": 7,
+   "win_rate": 0.286,
+   "win_rate_ci_low": 0.082,
+   "breakeven_win_rate": 0.132,
+   "avg_r_net": 0.507,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
@@ -59,11 +59,11 @@
   {
    "setup": "trend",
    "regime": "range",
-   "n_live": 2,
-   "win_rate": 0,
-   "win_rate_ci_low": 0,
-   "breakeven_win_rate": null,
-   "avg_r_net": -0.894,
+   "n_live": 3,
+   "win_rate": 0.333,
+   "win_rate_ci_low": 0.061,
+   "breakeven_win_rate": 0.899,
+   "avg_r_net": -0.563,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
@@ -75,14 +75,14 @@
    {
     "feature": "side",
     "value": "short",
-    "count": 10,
-    "of": 10
+    "count": 12,
+    "of": 12
    },
    {
     "feature": "regime",
     "value": "range",
     "count": 7,
-    "of": 10
+    "of": 12
    }
   ],
   "trend": [
@@ -103,7 +103,7 @@
  "lesson_candidates": [
   {
    "loss_cause": "regime_wrong",
-   "count_30d": 4
+   "count_30d": 5
   },
   {
    "loss_cause": "fees",
@@ -123,18 +123,18 @@
   "median_mfe_r_after_stop": 2.151
  },
  "account": {
-  "drawdown_from_peak_pct": 10.224,
+  "drawdown_from_peak_pct": 9.817,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-10-30T12:16:49.096Z"
+  "sampled_at": "2026-10-31T00:11:44.499Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
   "closed_without_close_msg": 0,
   "entries_without_fill": 0,
   "broken_positions": 0,
-  "rows_with_issues": 2
+  "rows_with_issues": 3
  },
  "note": "그록봇 규칙서 6절용. R 단위 통계만 있고 금액·체결가·주문 ID·지갑 정보는 없음. 매매 권유 아님."
 }
