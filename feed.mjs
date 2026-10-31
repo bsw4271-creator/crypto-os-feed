@@ -5,7 +5,8 @@ import { join } from 'node:path';
 import { fetchBars } from './lib/fetch.mjs';
 import { parseKlines } from './lib/indicator-view.mjs';
 import { marketSummary, symbolBrief, toMarkdown } from './lib/brief.mjs';
-import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor } from './lib/hyperliquid.mjs';
+import { allPerps, autoPerps, fetchCandles, fetchHyperliquid, hyperliquidFor, post as hlPost } from './lib/hyperliquid.mjs';
+import { XYZ_DEX, INDEX_FOR_REGIME, parseXyz, equitySession, equityRegime } from './lib/equities.mjs';
 import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.mjs';
 import { fetchWhales } from './lib/whales.mjs';
 import { stopGuide, STOP_RULE, atr as atrOf } from './lib/stopguide.mjs';
@@ -116,6 +117,40 @@ for (const p of hlOnlyTargets) {
   }
 }
 
+// 주식 선물 (trade.xyz HIP-3, 규칙서 1-2, rules-6.8)
+const EQUITY_MIN_VOLUME = 3_000_000;
+const equities = { dex: XYZ_DEX, ...equitySession(now), error: null, market: null, items: [] };
+try {
+  const xyz = parseXyz(await hlPost({ type: 'metaAndAssetCtxs', dex: XYZ_DEX }, globalThis.fetch));
+  const barsOf = async (name) => parseKlines(await fetchCandles(name, Math.floor((now - HISTORY_DAYS * 24 * H) / H) * H, now), now).rows;
+  const briefs = [];
+  // 상세(지표·숏 신호·손절 가이드): 교차 마진 가능 + 거래대금 300만 USD 이상 주식, 거래대금 상위 15개
+  for (const it of xyz.filter((x) => x.asset_class === 'equity' && !x.only_isolated && (x.day_volume_usd ?? 0) >= EQUITY_MIN_VOLUME).slice(0, 15)) {
+    try {
+      const bars = await barsOf(it.name);
+      const b = symbolBrief({ symbol: it.name, group: 'equity', bars, venue: 'Hyperliquid', strategies, now });
+      Object.assign(it, { detail: true, quality: b.quality, change_24h_pct: b.change_24h_pct, change_7d_pct: b.change_7d_pct, indicators_1h: b.indicators_1h, signals: b.signals, short: b.short });
+      it.stop_guide = stopGuide(bars.slice(-72), it.mid ?? it.mark);
+      briefs.push(b);
+    } catch (e) {
+      it.detail_error = e?.message ?? String(e);
+    }
+  }
+  let indexBrief = null;
+  const idx = xyz.find((x) => INDEX_FOR_REGIME.includes(x.ticker));
+  if (idx) {
+    try {
+      indexBrief = symbolBrief({ symbol: idx.name, group: 'index', bars: await barsOf(idx.name), venue: 'Hyperliquid', strategies, now });
+    } catch (e) {
+      equities.index_error = e?.message ?? String(e);
+    }
+  }
+  equities.market = equityRegime(indexBrief, briefs);
+  equities.items = xyz;
+} catch (e) {
+  equities.error = e?.message ?? String(e);
+}
+
 // The previous run's feed (committed in the repo) is the baseline for hourly changes.
 let prevFeed = null;
 try {
@@ -167,6 +202,10 @@ const feed = {
     ...STOP_RULE,
     formula: '손절 = 진입가 ± max(1.5×ATR14, 진입가~스윙 거리 + 0.1×ATR). 스윙 = 최근 24봉 안 좌우 2봉 기준 가장 최근 스윙 저점(롱)·고점(숏), 진입가 반대쪽에 없으면 24봉 최저·최고가. 거리 2.0 ATR 초과면 진입 안 함. 하이퍼리퀴드 1h 봉 기준.',
     note: 'stop_guide.long/short는 피드 생성 시점 가격 기준이다. 실제 진입가가 다르면 같은 공식으로 다시 계산한다.',
+  },
+  equities: {
+    note: '규칙서 1-2. trade.xyz(HIP-3) 주식 선물. 주문·캔들 이름은 name(예: xyz:NVDA) 그대로. detail=true인 종목에만 지표·숏 신호·손절 가이드가 있다. 시장 국면은 market.regime(코인 국면과 별개).',
+    ...equities,
   },
   major_catalyst: {
     rule: CATALYST_RULE,
