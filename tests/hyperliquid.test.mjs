@@ -42,7 +42,7 @@ test('spot: USDC pairs are indexed by base token with order coin, tokenId and pr
 test('perp: delisted markets are dropped, numbers parsed', () => {
   const p = parsePerp(perpRaw);
   assert.equal(p.has('OLD'), false);
-  assert.deepEqual(p.get('ZRO'), { name: 'ZRO', mark: 1.87, mid: 1.88, funding_1h: -0.00001, open_interest: 50, day_volume_usd: 20000, max_leverage: 5 });
+  assert.deepEqual(p.get('ZRO'), { name: 'ZRO', mark: 1.87, mid: 1.88, oracle: null, funding_1h: -0.00001, open_interest: 50, day_volume_usd: 20000, max_leverage: 5 });
 });
 
 test('per symbol: spot only where a spot token is mapped; gap to the Binance price in percent', () => {
@@ -99,4 +99,37 @@ test('candles: Hyperliquid rows become kline arrays with hour close time', () =>
   const k = candlesToKlines([{ t: 3600000, T: 7199999, o: '1', h: '2', l: '0.5', c: '1.5', v: '10' }]);
   assert.deepEqual(k, [[3600000, '1', '2', '0.5', '1.5', '10', 7199999]]);
   assert.throws(() => candlesToKlines({}), /unexpected/);
+});
+
+test('all perps (§2-4): 오라클 차이, 연환산 펀딩, 바이낸스 상장 여부(kPEPE→PEPE)', async () => {
+  const { binanceBase } = await import('../lib/hyperliquid.mjs');
+  assert.equal(binanceBase('kPEPE'), 'PEPE');
+  assert.equal(binanceBase('KAITO'), 'KAITO');
+  const list = allPerps(
+    perpMap([
+      { name: 'PURR', day_volume_usd: 3, mark: 1.01, mid: 1.01, oracle: 1.0, funding_1h: 0.000125 },
+      { name: 'kPEPE', day_volume_usd: 9, mark: 0.005, oracle: 0.005 },
+    ]),
+    new Set(),
+    new Set(['PEPE', 'BTC']),
+  );
+  const purr = list.find((x) => x.name === 'PURR');
+  assert.equal(purr.mark_vs_oracle_pct, 1);
+  assert.equal(purr.funding_annual_pct, 109.5);
+  assert.equal(purr.binance_listed, false);
+  assert.equal(list.find((x) => x.name === 'kPEPE').binance_listed, true);
+  assert.equal(allPerps(perpMap([{ name: 'X', day_volume_usd: 1 }]))[0].binance_listed, null);
+});
+
+test('바이낸스 exchangeInfo → 거래 중 자산 (1000PEPE→PEPE, 중단·다른 호가 통화 제외)', async () => {
+  const { basesFrom } = await import('../lib/binance-list.mjs');
+  const set = basesFrom({
+    symbols: [
+      { baseAsset: 'BTC', quoteAsset: 'USDT', status: 'TRADING' },
+      { baseAsset: '1000PEPE', quoteAsset: 'USDT', status: 'TRADING' },
+      { baseAsset: 'XMR', quoteAsset: 'USDT', status: 'BREAK' },
+      { baseAsset: 'ABC', quoteAsset: 'BTC', status: 'TRADING' },
+    ],
+  });
+  assert.deepEqual([...set].sort(), ['BTC', 'PEPE']);
 });

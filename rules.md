@@ -47,6 +47,16 @@
 2. **피드 `symbols`에 있는 종목:** `quality`가 `ok`가 아니면 거래하지 않는다. (`fallback`은 가격 확인만, `stale`·`error`는 제외)
    **`symbols`에 없는 종목(`perps_all`에만 있음):** quality 확인과 아래 3번 가격 차이 확인은 없다. 대신 주문 직전 `mm perps quote`로 현재 가격을 다시 받아 그 가격 기준 1% 이내 지정가·IOC로만 주문하고, 24시간 거래대금(`day_volume_usd`)이 **100만 USD 미만이면 레버리지와 상관없이 승인 주문**으로 낸다(거래가 적어 가격이 크게 튈 수 있음).
 3. (`symbols`에 있는 종목) 거래하려는 시장(현물은 `hyperliquid.spot`, 선물은 `hyperliquid.perp`)의 `gap_vs_binance_pct`(Hyperliquid 가격과 바이낸스 가격 차이)가 ±2%를 넘거나 비어 있으면 거래하지 않고 보고한다. 주문 직전 실제 화면 가격도 피드 가격과 2% 넘게 다르면 거래하지 않는다.
+4. **바이낸스 미상장 종목 (HL 전용, 소유자 승인 2026-10-31, rules-6.7)** — 피드 `hyperliquid.perps_all`에서 그 종목의 `binance_listed=false`이면(피드 `symbols`에 있든 없든) 위 2·3번 대신 아래를 모두 지킨다.
+   - **가격 확인:** `mark_vs_oracle_pct`(HL 가격과 HL 오라클 가격 차이)가 **±1% 이내**여야 한다. 주문 직전 `mm perps quote` 가격으로도 오라클과 ±1% 이내인지 다시 본다. (HL 오라클은 바이낸스·OKX·Bybit·Kraken·KuCoin·Gate·MEXC 가격의 가중 중앙값이라 따로 다른 거래소를 찾아보지 않는다. 단, HL에서 주로 거래되는 코인은 오라클이 HL 현물만 쓰므로 외부 대조가 안 된다 — 그래서 아래 유동성·크기 제한이 실제 안전장치다.)
+   - **유동성:** 24시간 거래대금(`day_volume_usd`) **300만 USD 이상**, 주문 직전 호가 스프레드 **0.3% 이하**. 300만 USD 미만이면 승인 요청 없이 **넘긴다**(이 종목에는 위 2번의 "100만 USD 미만 승인 주문"을 적용하지 않는다).
+   - **크기:** 계획 손실 **1.0 USD 고정**, 레버리지 **1배 이하**(6-2·3-0-0보다 우선).
+   - **펀딩 과열:** `funding_1h`가 **+0.000114 이상**(연 100% 이상, 롱이 냄)이면 **롱 금지**, **−0.000114 이하**(숏이 냄)이면 **숏 금지**. 피드 `funding_annual_pct`에 연환산 값이 있다.
+   - **손절:** 3-0-3 그대로. 피드 `symbols` 밖 종목은 `perps_all`의 그 종목 `stop_guide`를 쓴다(300만 USD 이상인 HL 전용 종목에 들어 있다).
+   - **기록:** 진입 메시지에 `venue_check=hl_only`를 넣고, `memory_check`에 "HL전용 시험 N/5"를 적는다. 바이낸스 상장 종목은 `venue_check=binance`.
+   - **시험 운영:** 처음 5건 뒤 결과를 보고 소유자가 유지 여부를 정한다.
+   - 1, 1-1, 3-0, 3-0-3, 6절의 나머지 규칙은 그대로 적용한다.
+   - 피드 `binance_listing.sources`에 `futures`가 없으면 바이낸스 선물 상장 여부는 확인되지 않은 것이다. 그래도 이 절이 더 엄격하므로 그대로 따른다. `binance_listed=null`(확인 실패)이면 이 종목은 거래하지 않는다.
 
 ## 3. 지켜야 할 것
 - 지갑의 비밀복구구문(12단어)·개인키를 요구하거나 입력하지 않는다.
@@ -197,7 +207,7 @@
 #일지 진입
 trade_id=G20261023-01
 mode=live
-prompt_version=rules-6.6
+prompt_version=rules-6.7
 symbol=SOL
 side=long
 kind=perp
@@ -226,6 +236,7 @@ stop_vs_feed=같음
 approval=auto
 ```
 - major_catalyst 예외 진입이면 위에 `catalyst_id`, `catalyst_source`, `catalyst_check` 세 줄을 더 넣는다(3-0-4).
+- 모든 진입에 `venue_check=binance` 또는 `venue_check=hl_only` 한 줄을 넣는다(2절 4번).
 - `kind`: `perp`(일반 선물) 또는 `spot_proxy`(현물 대용 1배 롱)
 - `entry_plan`, `stop`, `target`, `time_stop_hours`, `risk_r`, `leverage`, `confidence`에는 **숫자만** 적는다. 주문 방식(IOC 등) 같은 설명은 `thesis`에 적는다.
 - `owner_info`: 3-2절 정보를 썼으면 받은 시각 / 요약 / 확인 결과, 아니면 `없음`

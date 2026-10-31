@@ -10,6 +10,7 @@ import { MAX_PREV_AGE_MS, addPerpChanges, fetchStablecoins } from './lib/flows.m
 import { fetchWhales } from './lib/whales.mjs';
 import { stopGuide, STOP_RULE, atr as atrOf } from './lib/stopguide.mjs';
 import { evaluateCatalyst, CATALYST_RULE } from './lib/catalyst.mjs';
+import { fetchBinanceBases } from './lib/binance-list.mjs';
 
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
@@ -98,6 +99,23 @@ for (const cat of catalystList) {
   }
 }
 
+// 바이낸스 상장 여부와 HL 전용 종목 손절 가이드 (규칙서 §2-4, rules-6.7)
+const binanceList = await fetchBinanceBases();
+const perpsAll = allPerps(hl.perp, new Set(symbols.map((x) => x.perp_name)), binanceList.set);
+const HL_ONLY_MIN_VOLUME = 3_000_000;
+const hlOnlyTargets = perpsAll
+  .filter((p) => p.binance_listed === false && !p.in_feed_symbols && (p.day_volume_usd ?? 0) >= HL_ONLY_MIN_VOLUME)
+  .slice(0, 40);
+for (const p of hlOnlyTargets) {
+  try {
+    const start = Math.floor((now - 3 * 24 * H) / H) * H;
+    const bars = parseKlines(await fetchCandles(p.name, start, now), now).rows;
+    p.stop_guide = stopGuide(bars.slice(-72), p.mark);
+  } catch (e) {
+    p.stop_guide = { error: e?.message ?? String(e) };
+  }
+}
+
 // The previous run's feed (committed in the repo) is the baseline for hourly changes.
 let prevFeed = null;
 try {
@@ -161,7 +179,8 @@ const feed = {
     note: 'spot.coin / perp.name are the identifiers Hyperliquid orders use. Check spot.token_id against rules.md before trading. gap_vs_binance_pct = (Hyperliquid mid - feed close) / feed close; the feed close is Binance unless the symbol venue is Hyperliquid.',
     errors: hl.errors,
     // Every perp that can be traded now, most traded first. Symbols outside `symbols` have no indicators.
-    perps_all: allPerps(hl.perp, new Set(symbols.map((x) => x.perp_name))),
+    perps_all: perpsAll,
+    binance_listing: { sources: binanceList.sources, errors: binanceList.errors, note: 'binance_listed는 바이낸스 USDT·USDC·FDUSD 마켓 기준. sources에 futures가 없으면 현물만 확인한 것(선물 전용 상장 코인도 미상장으로 보임 → 더 엄격한 §2-4가 적용될 뿐 위험해지지는 않음).' },
   },
   flows: {
     note: '참고 신호입니다. 큰 자금 이동이 곧 매수·매도를 뜻하지는 않습니다.',
