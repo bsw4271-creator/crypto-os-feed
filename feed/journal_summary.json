@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-01T00:09:26.803Z",
+ "updated_at": "2026-11-01T12:10:54.329Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 23,
+ "counted_trades": 26,
  "cells": [
   {
    "setup": "bounce_fade",
@@ -20,15 +20,28 @@
   {
    "setup": "bounce_fade",
    "regime": "range",
-   "n_live": 7,
+   "n_live": 8,
    "win_rate": 0,
    "win_rate_ci_low": 0,
    "breakeven_win_rate": null,
-   "avg_r_net": -0.695,
+   "avg_r_net": -0.64,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
    "top_loss_cause": "fees"
+  },
+  {
+   "setup": "new",
+   "regime": "range",
+   "n_live": 1,
+   "win_rate": 1,
+   "win_rate_ci_low": 0.207,
+   "breakeven_win_rate": null,
+   "avg_r_net": 0.099,
+   "last10_avg_r": null,
+   "tier": "explore",
+   "median_hours_to_profit": null,
+   "top_loss_cause": null
   },
   {
    "setup": "pullback",
@@ -59,15 +72,15 @@
   {
    "setup": "trend",
    "regime": "range",
-   "n_live": 3,
-   "win_rate": 0.333,
-   "win_rate_ci_low": 0.061,
-   "breakeven_win_rate": 0.899,
-   "avg_r_net": -0.563,
+   "n_live": 4,
+   "win_rate": 0.25,
+   "win_rate_ci_low": 0.046,
+   "breakeven_win_rate": 0.873,
+   "avg_r_net": -0.494,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
-   "top_loss_cause": "stop_too_tight"
+   "top_loss_cause": "regime_wrong"
   }
  ],
  "loss_patterns": {
@@ -75,14 +88,14 @@
    {
     "feature": "side",
     "value": "short",
-    "count": 12,
-    "of": 12
+    "count": 13,
+    "of": 13
    },
    {
     "feature": "regime",
     "value": "range",
-    "count": 7,
-    "of": 12
+    "count": 8,
+    "of": 13
    }
   ],
   "trend": [
@@ -90,20 +103,32 @@
     "feature": "side",
     "value": "long",
     "count": 4,
-    "of": 4
+    "of": 5
    },
    {
     "feature": "loss_cause",
     "value": "regime_wrong",
+    "count": 4,
+    "of": 5
+   },
+   {
+    "feature": "regime",
+    "value": "range",
     "count": 3,
-    "of": 4
+    "of": 5
+   },
+   {
+    "feature": "time_kst",
+    "value": "12-18시",
+    "count": 3,
+    "of": 5
    }
   ]
  },
  "lesson_candidates": [
   {
    "loss_cause": "regime_wrong",
-   "count_30d": 5
+   "count_30d": 6
   },
   {
    "loss_cause": "fees",
@@ -116,23 +141,23 @@
  ],
  "post_exit": {
   "hours": 12,
-  "checked": 22,
+  "checked": 23,
   "stops_checked": 14,
   "stops_then_target": 5,
   "stops_then_target_share": 0.357,
   "median_mfe_r_after_stop": 2.151
  },
  "account": {
-  "drawdown_from_peak_pct": 9.621,
+  "drawdown_from_peak_pct": 9.21,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-01T00:09:26.803Z"
+  "sampled_at": "2026-11-01T12:10:54.329Z"
  },
  "data_issues": {
-  "trades_without_entry_msg": 0,
+  "trades_without_entry_msg": 1,
   "closed_without_close_msg": 0,
-  "entries_without_fill": 0,
+  "entries_without_fill": 1,
   "broken_positions": 0,
   "rows_with_issues": 3
  },
