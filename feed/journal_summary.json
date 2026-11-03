@@ -1,17 +1,17 @@
 {
- "updated_at": "2026-11-02T12:31:00.108Z",
+ "updated_at": "2026-11-03T00:12:38.444Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 27,
+ "counted_trades": 29,
  "cells": [
   {
    "setup": "bounce_fade",
    "regime": "down",
-   "n_live": 8,
-   "win_rate": 0.375,
-   "win_rate_ci_low": 0.137,
-   "breakeven_win_rate": 0.185,
-   "avg_r_net": 0.447,
+   "n_live": 9,
+   "win_rate": 0.333,
+   "win_rate_ci_low": 0.121,
+   "breakeven_win_rate": 0.162,
+   "avg_r_net": 0.393,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
@@ -59,11 +59,11 @@
   {
    "setup": "trend",
    "regime": "down",
-   "n_live": 3,
-   "win_rate": 0.333,
-   "win_rate_ci_low": 0.061,
-   "breakeven_win_rate": 0.899,
-   "avg_r_net": -0.767,
+   "n_live": 4,
+   "win_rate": 0.25,
+   "win_rate_ci_low": 0.046,
+   "breakeven_win_rate": 0.895,
+   "avg_r_net": -0.846,
    "last10_avg_r": null,
    "tier": "explore",
    "median_hours_to_profit": null,
@@ -88,51 +88,57 @@
    {
     "feature": "side",
     "value": "short",
-    "count": 14,
-    "of": 14
+    "count": 15,
+    "of": 15
    },
    {
     "feature": "regime",
     "value": "range",
     "count": 9,
-    "of": 14
+    "of": 15
    }
   ],
   "trend": [
    {
     "feature": "side",
     "value": "long",
-    "count": 4,
-    "of": 5
+    "count": 5,
+    "of": 6
    },
    {
     "feature": "loss_cause",
     "value": "regime_wrong",
-    "count": 4,
-    "of": 5
+    "count": 5,
+    "of": 6
+   },
+   {
+    "feature": "regime",
+    "value": "down",
+    "count": 3,
+    "of": 6
    },
    {
     "feature": "regime",
     "value": "range",
     "count": 3,
-    "of": 5
+    "of": 6
    },
    {
     "feature": "time_kst",
     "value": "12-18시",
     "count": 3,
-    "of": 5
+    "of": 6
    }
   ]
  },
  "lesson_candidates": [
   {
    "loss_cause": "regime_wrong",
-   "count_30d": 6
+   "count_30d": 7
   },
   {
    "loss_cause": "fees",
-   "count_30d": 4
+   "count_30d": 5
   },
   {
    "loss_cause": "stop_too_tight",
@@ -152,16 +158,16 @@
   "median_mfe_r_after_stop": 2.151
  },
  "account": {
-  "drawdown_from_peak_pct": 9.818,
+  "drawdown_from_peak_pct": 12.122,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-02T12:31:00.108Z"
+  "sampled_at": "2026-11-03T00:12:38.444Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
   "closed_without_close_msg": 0,
-  "entries_without_fill": 1,
+  "entries_without_fill": 3,
   "broken_positions": 0,
   "rows_with_issues": 3
  },
