@@ -1,21 +1,21 @@
 {
- "updated_at": "2026-11-06T03:39:19.932Z",
+ "updated_at": "2026-11-06T18:26:14.886Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 31,
+ "counted_trades": 34,
  "cells": [
   {
    "setup": "bounce_fade",
    "regime": "down",
-   "n_live": 10,
-   "win_rate": 0.3,
-   "win_rate_ci_low": 0.108,
-   "breakeven_win_rate": 0.165,
-   "avg_r_net": 0.31,
-   "last10_avg_r": 0.31,
+   "n_live": 13,
+   "win_rate": 0.231,
+   "win_rate_ci_low": 0.082,
+   "breakeven_win_rate": 0.181,
+   "avg_r_net": 0.117,
+   "last10_avg_r": -0.183,
    "tier": "explore",
    "median_hours_to_profit": null,
-   "top_loss_cause": "regime_wrong"
+   "top_loss_cause": "sentiment_wrong"
   },
   {
    "setup": "bounce_fade",
@@ -88,14 +88,20 @@
    {
     "feature": "side",
     "value": "short",
-    "count": 17,
-    "of": 17
+    "count": 20,
+    "of": 20
+   },
+   {
+    "feature": "regime",
+    "value": "down",
+    "count": 10,
+    "of": 20
    },
    {
     "feature": "regime",
     "value": "range",
     "count": 10,
-    "of": 17
+    "of": 20
    }
   ],
   "trend": [
@@ -146,30 +152,30 @@
   },
   {
    "loss_cause": "sentiment_wrong",
-   "count_30d": 4
+   "count_30d": 7
   }
  ],
  "post_exit": {
   "hours": 12,
-  "checked": 30,
+  "checked": 32,
   "stops_checked": 16,
   "stops_then_target": 6,
   "stops_then_target_share": 0.375,
   "median_mfe_r_after_stop": 2.151
  },
  "account": {
-  "drawdown_from_peak_pct": 14.648,
+  "drawdown_from_peak_pct": 11.809,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-06T03:39:19.932Z"
+  "sampled_at": "2026-11-06T18:26:14.886Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
   "closed_without_close_msg": 0,
-  "entries_without_fill": 3,
+  "entries_without_fill": 4,
   "broken_positions": 0,
-  "rows_with_issues": 3
+  "rows_with_issues": 4
  },
  "note": "그록봇 규칙서 6절용. R 단위 통계만 있고 금액·체결가·주문 ID·지갑 정보는 없음. 매매 권유 아님."
 }
