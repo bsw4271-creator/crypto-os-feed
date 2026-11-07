@@ -1,20 +1,20 @@
 {
- "updated_at": "2026-11-06T18:26:14.886Z",
+ "updated_at": "2026-11-07T03:11:39.866Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 34,
+ "counted_trades": 36,
  "cells": [
   {
    "setup": "bounce_fade",
    "regime": "down",
-   "n_live": 13,
-   "win_rate": 0.231,
-   "win_rate_ci_low": 0.082,
-   "breakeven_win_rate": 0.181,
-   "avg_r_net": 0.117,
-   "last10_avg_r": -0.183,
+   "n_live": 15,
+   "win_rate": 0.333,
+   "win_rate_ci_low": 0.152,
+   "breakeven_win_rate": 0.25,
+   "avg_r_net": 0.141,
+   "last10_avg_r": -0.1,
    "tier": "explore",
-   "median_hours_to_profit": null,
+   "median_hours_to_profit": 8.008,
    "top_loss_cause": "sentiment_wrong"
   },
   {
@@ -157,18 +157,18 @@
  ],
  "post_exit": {
   "hours": 12,
-  "checked": 32,
-  "stops_checked": 16,
+  "checked": 34,
+  "stops_checked": 17,
   "stops_then_target": 6,
-  "stops_then_target_share": 0.375,
-  "median_mfe_r_after_stop": 2.151
+  "stops_then_target_share": 0.353,
+  "median_mfe_r_after_stop": 2.021
  },
  "account": {
-  "drawdown_from_peak_pct": 11.809,
+  "drawdown_from_peak_pct": 12.627,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-06T18:26:14.886Z"
+  "sampled_at": "2026-11-07T03:11:39.866Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
