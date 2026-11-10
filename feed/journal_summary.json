@@ -1,18 +1,18 @@
 {
- "updated_at": "2026-11-10T04:47:41.251Z",
+ "updated_at": "2026-11-10T18:49:13.917Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
- "counted_trades": 38,
+ "counted_trades": 39,
  "cells": [
   {
    "setup": "bounce_fade",
    "regime": "down",
-   "n_live": 15,
-   "win_rate": 0.333,
-   "win_rate_ci_low": 0.152,
-   "breakeven_win_rate": 0.25,
-   "avg_r_net": 0.141,
-   "last10_avg_r": -0.1,
+   "n_live": 16,
+   "win_rate": 0.313,
+   "win_rate_ci_low": 0.142,
+   "breakeven_win_rate": 0.274,
+   "avg_r_net": 0.067,
+   "last10_avg_r": -0.177,
    "tier": "explore",
    "median_hours_to_profit": 8.008,
    "top_loss_cause": "sentiment_wrong"
@@ -101,20 +101,14 @@
    {
     "feature": "side",
     "value": "short",
-    "count": 20,
-    "of": 20
+    "count": 21,
+    "of": 21
    },
    {
     "feature": "regime",
     "value": "down",
-    "count": 10,
-    "of": 20
-   },
-   {
-    "feature": "regime",
-    "value": "range",
-    "count": 10,
-    "of": 20
+    "count": 11,
+    "of": 21
    }
   ],
   "trend": [
@@ -160,6 +154,10 @@
    "count_30d": 6
   },
   {
+   "loss_cause": "other",
+   "count_30d": 3
+  },
+  {
    "loss_cause": "stop_too_tight",
    "count_30d": 4
   },
@@ -177,18 +175,18 @@
   "median_mfe_r_after_stop": 2.151
  },
  "account": {
-  "drawdown_from_peak_pct": 12.674,
+  "drawdown_from_peak_pct": 15.328,
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-10T04:47:41.251Z"
+  "sampled_at": "2026-11-10T18:49:13.917Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
   "closed_without_close_msg": 0,
   "entries_without_fill": 4,
   "broken_positions": 0,
-  "rows_with_issues": 4
+  "rows_with_issues": 5
  },
  "note": "그록봇 규칙서 6절용. R 단위 통계만 있고 금액·체결가·주문 ID·지갑 정보는 없음. 매매 권유 아님."
 }
