@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T04:14:12.612Z",
+ "updated_at": "2026-11-12T19:06:20.286Z",
  "r_unit_pct_of_equity": 5,
  "r_definition": "r_multiple = 순손익(수수료·펀딩 차감) ÷ 계획 위험액(|평균 진입가 - 손절가| × 최대 보유 수량)",
  "counted_trades": 39,
@@ -179,7 +179,7 @@
   "circuit_breaker": false,
   "breaker_until": null,
   "last_breaker_at": null,
-  "sampled_at": "2026-11-12T04:14:12.612Z"
+  "sampled_at": "2026-11-12T19:06:20.286Z"
  },
  "data_issues": {
   "trades_without_entry_msg": 0,
