@@ -8,6 +8,7 @@ test('tickers from titles: parentheses and pairs, common words skipped', () => {
   assert.deepEqual(tickersIn('Binance Will List Berachain (BERA) with Seed Tag'), ['BERA']);
   assert.deepEqual(tickersIn('Notice of Removal of Spot Trading Pairs - 2026-11-15: FOO/USDT, BAR/BTC'), ['FOO', 'BAR']);
   assert.deepEqual(tickersIn('스카이프로토콜(SKY) 원화 마켓 추가 (USDT)'), ['SKY']);
+  assert.deepEqual(tickersIn('Binance Futures Will Launch USDⓈ-Margined HYPEUSDC and TRXUSDC Perpetual Contracts'), ['HYPE', 'TRX']);
   assert.deepEqual(tickersIn(null), []);
 });
 
@@ -28,6 +29,7 @@ test('bithumb parse: KST time without zone, kind from title', () => {
   assert.equal(r[0].published_at, '2026-11-14T09:00:00.000Z');
   assert.equal(r[1].kind, 'delisting');
   assert.equal(r[0].category, '거래지원');
+  assert.equal(parseBithumb([{ title: '맵프로토콜(MAPO) 거래유의종목 지정' }])[0].kind, 'warning');
   assert.throws(() => parseBithumb({ x: 1 }), /unexpected/);
 });
 
