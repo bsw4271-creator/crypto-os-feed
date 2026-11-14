@@ -12,6 +12,7 @@ import { fetchWhales } from './lib/whales.mjs';
 import { stopGuide, STOP_RULE, atr as atrOf } from './lib/stopguide.mjs';
 import { evaluateCatalyst, CATALYST_RULE } from './lib/catalyst.mjs';
 import { fetchBinanceBases } from './lib/binance-list.mjs';
+import { buildAnnouncements } from './lib/announcements.mjs';
 
 // Same lists as the paper-trading records in the private crypto-backtester repository.
 export const FIXED = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'HYPEUSDT', 'ZROUSDT'];
@@ -178,6 +179,21 @@ const whales = await fetchWhales({
   key: process.env.ETHERSCAN_API_KEY,
 });
 
+// 거래소 공지 묶음(바이낸스·빗썸·코인베이스)은 크기가 커서 feed.json과 따로 feed/announcements.json에 둔다.
+let announcements;
+try {
+  const annPath = join(outDir, 'announcements.json');
+  let prevAnn = null;
+  try {
+    if (existsSync(annPath)) prevAnn = JSON.parse(readFileSync(annPath, 'utf8'));
+  } catch {
+    prevAnn = null;
+  }
+  announcements = await buildAnnouncements({ prev: prevAnn, now });
+} catch (e) {
+  announcements = { error: e?.message ?? String(e) };
+}
+
 const kst = new Date(now + 9 * 3600000).toISOString().replace('T', ' ').slice(0, 16) + ' KST';
 const feed = {
   schema_version: 1,
@@ -231,12 +247,21 @@ const feed = {
     whales,
   },
   market: marketSummary(symbols),
+  announcements: {
+    file: 'https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/announcements.json',
+    note: '거래소 공지(바이낸스 신규 상장·상장 폐지, 빗썸 공지, 코인베이스 새 상품) 7일치. 업비트는 없음.',
+    new_count: announcements.new_count ?? null,
+    new_titles: (announcements.items ?? []).filter((x) => x.is_new).slice(0, 10).map((x) => `[${x.source}] ${x.title}`),
+    sources_ok: announcements.sources_ok ?? [],
+    errors: announcements.errors ?? (announcements.error ? [announcements.error] : []),
+  },
   symbols,
 };
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'feed.json'), JSON.stringify(feed, null, 1) + '\n');
 writeFileSync(join(outDir, 'feed.md'), toMarkdown(feed));
+if (!announcements.error) writeFileSync(join(outDir, 'announcements.json'), JSON.stringify(announcements, null, 1) + '\n');
 const bad = symbols.filter((x) => x.quality !== 'ok').map((x) => `${x.symbol}:${x.quality}`);
 console.log(`feed: ${symbols.length} symbols, regime ${feed.market.regime}${bad.length ? `, not ok: ${bad.join(' ')}` : ''}${autoError ? `, auto error: ${autoError}` : ''}`);
 if (!symbols.some((x) => x.quality === 'ok' || x.quality === 'fallback')) process.exitCode = 1;
