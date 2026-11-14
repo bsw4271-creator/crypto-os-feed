@@ -26,7 +26,17 @@ jobs:
         run: node feed.mjs --out feed
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+      - name: Branch check (branch runs never commit)
+        if: github.ref != 'refs/heads/main'
+        run: |
+          node -e "
+          const a = JSON.parse(require('fs').readFileSync('feed/announcements.json','utf8'));
+          const n = (m) => console.log('::notice::' + String(m).slice(0, 900));
+          n('ok=' + a.sources_ok.join(',') + ' errors=' + JSON.stringify(a.errors) + ' items=' + a.items.length + ' coinbase_ids=' + a.coinbase_product_ids.length);
+          for (const src of ['binance','bithumb','coinbase']) n(src + ': ' + JSON.stringify(a.items.filter(x => x.source === src).slice(0, 3).map(x => [x.kind, x.title, x.published_at, x.tickers, x.url])));
+          "
       - name: Save feed
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "crypto-os-feed-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

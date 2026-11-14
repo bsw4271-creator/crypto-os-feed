@@ -4,6 +4,7 @@ Crypto OS의 **공개 브리핑 피드**입니다. 그록봇 등 AI가 링크 �
 
 - 피드(JSON): https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/feed.json
 - 피드(표): https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/feed.md
+- 거래소 공지(JSON): https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/feed/announcements.json
 - 매매 규칙서: https://raw.githubusercontent.com/bsw4271-creator/crypto-os-feed/main/rules.md
 
 ## 담는 것 / 담지 않는 것
@@ -17,6 +18,11 @@ Crypto OS의 **공개 브리핑 피드**입니다. 그록봇 등 AI가 링크 �
 - 고정 5개: BTC, ETH, SOL, HYPE, ZRO
 - 자동 10개: Hyperliquid 선물 24시간 거래대금 상위 10개(고정 종목 제외), 매시간 다시 고름. 바이낸스 현물에 같은 이름이 있으면 바이낸스 1시간 봉, 없으면 Hyperliquid 선물 1시간 봉(`venue: Hyperliquid`)으로 지표를 계산합니다. 2026-10-22부터이며, 이전 규칙(바이낸스 상장 1년 이상)은 비공개 모의매매 저장소에만 남아 있습니다.
 - 전체 선물 목록(`hyperliquid.perps_all`): Hyperliquid에서 지금 거래할 수 있는 모든 선물의 가격·펀딩비·미결제약정·거래대금·최대 레버리지
+
+## 거래소 공지 (`feed/announcements.json`)
+- 바이낸스 신규 상장·상장 폐지 공지, 빗썸 공지(API), 코인베이스 새 상품(상품 목록을 직전 실행과 비교)을 매시간 모아 7일치를 둡니다.
+- `is_new=true`는 이번 실행에서 처음 본 항목, `tickers`는 제목에서 뽑은 추정값입니다. feed.json의 `announcements`에는 새 항목 제목 10개만 요약합니다.
+- 업비트·Bybit·바이낸스 선물은 GitHub 서버에서 막혀서 넣지 않습니다(2026-11-14 점검). 업비트는 Grok Bot이 직접 확인합니다.
 
 ## 데이터 품질 (`quality`)
 | 값 | 뜻 |
