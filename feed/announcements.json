@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-17T08:47:16.552Z",
+ "generated_at": "2026-11-17T09:47:21.729Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -16,6 +16,19 @@
    "source": "bithumb",
    "kind": "notice",
    "category": "입출금",
+   "title": "폴리곤에코시스템토큰(POL) 입출금 일시 중지 안내 (11/19 오후 8시~)",
+   "url": "https://feed.bithumb.com/notice/1655694",
+   "published_at": "2026-11-17T09:00:00.000Z",
+   "tickers": [
+    "POL"
+   ],
+   "first_seen_at": "2026-11-17T09:47:21.729Z",
+   "is_new": true
+  },
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "입출금",
    "title": "헤데라(HBAR) 입출금 일시 중지 안내 (11/18 오후 8시~)",
    "url": "https://feed.bithumb.com/notice/1655693",
    "published_at": "2026-11-17T08:00:00.000Z",
@@ -23,7 +36,7 @@
     "HBAR"
    ],
    "first_seen_at": "2026-11-17T08:47:16.552Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -376,17 +389,6 @@
    "tickers": [
     "MANTRA"
    ],
-   "first_seen_at": "2026-11-14T12:47:16.271Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "안내",
-   "title": "홈페이지 접속 시 안내 문구 오류 및 정상화 안내",
-   "url": "https://feed.bithumb.com/notice/1655609",
-   "published_at": "2026-11-10T08:54:18.000Z",
-   "tickers": [],
    "first_seen_at": "2026-11-14T12:47:16.271Z",
    "is_new": false
   }
