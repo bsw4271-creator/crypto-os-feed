@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-18T04:47:26.275Z",
+ "generated_at": "2026-11-18T05:47:14.485Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,18 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 0,
+ "new_count": 1,
  "items": [
+  {
+   "source": "binance",
+   "kind": "delisting",
+   "title": "Notice of Removal of Spot Trading Pairs - 2026-11-20",
+   "url": "https://www.binance.com/en/support/announcement/1c44ea17a57943aa95752f7b7360bd69",
+   "published_at": "2026-11-18T05:00:00.000Z",
+   "tickers": [],
+   "first_seen_at": "2026-11-18T05:47:14.485Z",
+   "is_new": true
+  },
   {
    "source": "binance",
    "kind": "listing",
@@ -332,19 +342,6 @@
    "published_at": "2026-11-11T06:10:17.000Z",
    "tickers": [
     "IOST"
-   ],
-   "first_seen_at": "2026-11-14T12:47:16.271Z",
-   "is_new": false
-  },
-  {
-   "source": "binance",
-   "kind": "listing",
-   "title": "Binance Futures Will Launch USDⓈ-Margined HYPEUSDC and TRXUSDC Perpetual Contracts (2026-11-16)",
-   "url": "https://www.binance.com/en/support/announcement/2d89a5966b174a2689ab2c2a15db1757",
-   "published_at": "2026-11-11T05:00:31.295Z",
-   "tickers": [
-    "HYPE",
-    "TRX"
    ],
    "first_seen_at": "2026-11-14T12:47:16.271Z",
    "is_new": false
