@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-20T03:47:14.310Z",
+ "generated_at": "2026-11-20T04:47:15.058Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -16,6 +16,17 @@
    "source": "bithumb",
    "kind": "notice",
    "category": "입출금",
+   "title": "젠신(AI) 입출금 일시 중지 안내 (11/23 오후 8시~)",
+   "url": "https://feed.bithumb.com/notice/1655751",
+   "published_at": "2026-11-20T03:30:00.000Z",
+   "tickers": [],
+   "first_seen_at": "2026-11-20T04:47:15.058Z",
+   "is_new": true
+  },
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "입출금",
    "title": "미버스(MEV) 입출금 일시 중지 안내 (11/23 오전 9시~)",
    "url": "https://feed.bithumb.com/notice/1655750",
    "published_at": "2026-11-20T03:00:00.000Z",
@@ -23,7 +34,7 @@
     "MEV"
    ],
    "first_seen_at": "2026-11-20T03:47:14.310Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -463,19 +474,6 @@
    "tickers": [
     "MANTRA",
     "RECALL"
-   ],
-   "first_seen_at": "2026-11-14T12:47:16.271Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "listing",
-   "category": "마켓 추가",
-   "title": "네오소울(DNA) 원화 마켓 추가",
-   "url": "https://feed.bithumb.com/notice/1655643",
-   "published_at": "2026-11-13T04:46:42.000Z",
-   "tickers": [
-    "DNA"
    ],
    "first_seen_at": "2026-11-14T12:47:16.271Z",
    "is_new": false
