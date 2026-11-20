@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-20T06:47:16.235Z",
+ "generated_at": "2026-11-20T07:47:22.737Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -13,6 +13,19 @@
  "new_count": 1,
  "items": [
   {
+   "source": "bithumb",
+   "kind": "warning",
+   "category": "거래유의",
+   "title": "멀티버스엑스(EGLD) 거래유의종목 지정 연장",
+   "url": "https://feed.bithumb.com/notice/1655752",
+   "published_at": "2026-11-20T07:00:00.000Z",
+   "tickers": [
+    "EGLD"
+   ],
+   "first_seen_at": "2026-11-20T07:47:22.737Z",
+   "is_new": true
+  },
+  {
    "source": "binance",
    "kind": "listing",
    "title": "Binance Futures Will Launch Multiple TradFi USDⓈ-Margined Perpetual Contracts (2026-11-20)",
@@ -20,7 +33,7 @@
    "published_at": "2026-11-20T06:15:30.908Z",
    "tickers": [],
    "first_seen_at": "2026-11-20T06:47:16.235Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -457,33 +470,6 @@
    "published_at": "2026-11-13T09:00:00.000Z",
    "tickers": [
     "MAPO"
-   ],
-   "first_seen_at": "2026-11-14T12:47:16.271Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "listing",
-   "category": "이벤트,수수료 이벤트",
-   "title": "총 1억 3천만원 상당, 네오소울(DNA) 원화마켓 추가 기념 에어드랍 이벤트 (*거래 수수료 무료)",
-   "url": "https://feed.bithumb.com/notice/1655646",
-   "published_at": "2026-11-13T07:30:00.000Z",
-   "tickers": [
-    "DNA"
-   ],
-   "first_seen_at": "2026-11-14T12:47:16.271Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "delisting",
-   "category": "거래지원종료",
-   "title": "만트라(MANTRA), 리콜(RECALL) 거래지원 종료",
-   "url": "https://feed.bithumb.com/notice/1655647",
-   "published_at": "2026-11-13T07:00:00.000Z",
-   "tickers": [
-    "MANTRA",
-    "RECALL"
    ],
    "first_seen_at": "2026-11-14T12:47:16.271Z",
    "is_new": false
