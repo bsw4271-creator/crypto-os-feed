@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-20T03:11:32.264Z",
+ "generated_at": "2026-11-20T03:47:14.310Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -16,6 +16,19 @@
    "source": "bithumb",
    "kind": "notice",
    "category": "입출금",
+   "title": "미버스(MEV) 입출금 일시 중지 안내 (11/23 오전 9시~)",
+   "url": "https://feed.bithumb.com/notice/1655750",
+   "published_at": "2026-11-20T03:00:00.000Z",
+   "tickers": [
+    "MEV"
+   ],
+   "first_seen_at": "2026-11-20T03:47:14.310Z",
+   "is_new": true
+  },
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "입출금",
    "title": "만트라(MANTRA) 출금 일시 중지 안내 (11/20 오후 6시~)",
    "url": "https://feed.bithumb.com/notice/1655749",
    "published_at": "2026-11-20T02:30:00.000Z",
@@ -23,7 +36,7 @@
     "MANTRA"
    ],
    "first_seen_at": "2026-11-20T03:11:32.264Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "binance",
