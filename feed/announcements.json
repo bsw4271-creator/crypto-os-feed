@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-23T06:47:18.094Z",
+ "generated_at": "2026-11-23T07:47:18.123Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,34 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 0,
+ "new_count": 2,
  "items": [
+  {
+   "source": "bithumb",
+   "kind": "warning",
+   "category": "거래유의",
+   "title": "사이버(CYBER) 거래유의종목 지정",
+   "url": "https://feed.bithumb.com/notice/1655778",
+   "published_at": "2026-11-23T07:30:00.000Z",
+   "tickers": [
+    "CYBER"
+   ],
+   "first_seen_at": "2026-11-23T07:47:18.123Z",
+   "is_new": true
+  },
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "입출금",
+   "title": "인젝티브(INJ) 입출금 일시 중지 안내 (11/24 오후 6시~)",
+   "url": "https://feed.bithumb.com/notice/1655776",
+   "published_at": "2026-11-23T07:00:00.000Z",
+   "tickers": [
+    "INJ"
+   ],
+   "first_seen_at": "2026-11-23T07:47:18.123Z",
+   "is_new": true
+  },
   {
    "source": "bithumb",
    "kind": "notice",
@@ -485,19 +511,6 @@
     "LIT"
    ],
    "first_seen_at": "2026-11-16T11:47:15.509Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "안내",
-   "title": "11월 2주차 가스(GAS) 에어드랍 지급 안내",
-   "url": "https://feed.bithumb.com/notice/1655677",
-   "published_at": "2026-11-16T07:26:30.000Z",
-   "tickers": [
-    "GAS"
-   ],
-   "first_seen_at": "2026-11-16T08:47:15.682Z",
    "is_new": false
   }
  ],
