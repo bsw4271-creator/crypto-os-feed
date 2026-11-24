@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-24T08:47:14.943Z",
+ "generated_at": "2026-11-24T09:47:14.685Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,19 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 0,
+ "new_count": 1,
  "items": [
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "점검,입출금",
+   "title": "가상자산 월별실사를 위한 가상자산 입출금 일시 중지 안내",
+   "url": "https://feed.bithumb.com/notice/1655796",
+   "published_at": "2026-11-24T09:00:00.000Z",
+   "tickers": [],
+   "first_seen_at": "2026-11-24T09:47:14.685Z",
+   "is_new": true
+  },
   {
    "source": "bithumb",
    "kind": "notice",
@@ -42,7 +53,7 @@
    "source": "bithumb",
    "kind": "listing",
    "category": "마켓 추가",
-   "title": "오로치네트워크(ON), 생텀(SANC), 서브스퀴드(SQD) 원화 마켓 추가 (SANC 거래 오픈 오후 5시 예정)",
+   "title": "오로치네트워크(ON), 생텀(SANC), 서브스퀴드(SQD) 원화 마켓 추가 (SANC 거래 오픈 오후 7시 예정)",
    "url": "https://feed.bithumb.com/notice/1655795",
    "published_at": "2026-11-24T03:45:35.000Z",
    "tickers": [
@@ -515,32 +526,6 @@
    "published_at": "2026-11-18T03:30:27.391Z",
    "tickers": [],
    "first_seen_at": "2026-11-18T03:47:15.178Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "입출금",
-   "title": "멀티버스엑스(EGLD) 출금 일시 중단 안내 (11/18 재개)",
-   "url": "https://feed.bithumb.com/notice/1655705",
-   "published_at": "2026-11-17T09:44:34.000Z",
-   "tickers": [
-    "EGLD"
-   ],
-   "first_seen_at": "2026-11-17T10:47:26.994Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "입출금",
-   "title": "폴리곤에코시스템토큰(POL) 입출금 일시 중지 안내 (11/20 재개)",
-   "url": "https://feed.bithumb.com/notice/1655694",
-   "published_at": "2026-11-17T09:00:00.000Z",
-   "tickers": [
-    "POL"
-   ],
-   "first_seen_at": "2026-11-17T09:47:21.729Z",
    "is_new": false
   }
  ],
