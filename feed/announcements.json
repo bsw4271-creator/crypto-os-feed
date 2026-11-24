@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-24T09:47:14.685Z",
+ "generated_at": "2026-11-24T10:47:15.661Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,7 +10,7 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 1,
+ "new_count": 0,
  "items": [
   {
    "source": "bithumb",
@@ -21,7 +21,7 @@
    "published_at": "2026-11-24T09:00:00.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-24T09:47:14.685Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -53,7 +53,7 @@
    "source": "bithumb",
    "kind": "listing",
    "category": "마켓 추가",
-   "title": "오로치네트워크(ON), 생텀(SANC), 서브스퀴드(SQD) 원화 마켓 추가 (SANC 거래 오픈 오후 7시 예정)",
+   "title": "오로치네트워크(ON), 생텀(SANC), 서브스퀴드(SQD) 원화 마켓 추가 (SANC, SQD 거래 오픈 오후 10시 예정)",
    "url": "https://feed.bithumb.com/notice/1655795",
    "published_at": "2026-11-24T03:45:35.000Z",
    "tickers": [
@@ -198,7 +198,7 @@
    "source": "bithumb",
    "kind": "notice",
    "category": "입출금",
-   "title": "사이버(CYBER) 입출금 일시 중지 안내",
+   "title": "사이버(CYBER) 입출금 일시 중지 안내 (11/24 출금 재개)",
    "url": "https://feed.bithumb.com/notice/1655756",
    "published_at": "2026-11-21T17:18:38.000Z",
    "tickers": [
