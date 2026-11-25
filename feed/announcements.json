@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-25T10:47:15.314Z",
+ "generated_at": "2026-11-25T11:47:14.946Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,7 +10,7 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 1,
+ "new_count": 0,
  "items": [
   {
    "source": "bithumb",
@@ -21,7 +21,7 @@
    "published_at": "2026-11-25T09:15:05.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-25T10:47:15.314Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -488,17 +488,6 @@
    "published_at": "2026-11-19T02:00:00.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-19T03:23:50.084Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "안내",
-   "title": "국가고객만족도 1위 거래소, 빗썸! 멈추지 않는 혁신으로 보답하겠습니다.",
-   "url": "https://feed.bithumb.com/notice/1655737",
-   "published_at": "2026-11-18T11:02:41.000Z",
-   "tickers": [],
-   "first_seen_at": "2026-11-18T11:47:16.298Z",
    "is_new": false
   }
  ],
