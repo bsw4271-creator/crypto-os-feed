@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-25T09:47:15.060Z",
+ "generated_at": "2026-11-25T10:47:15.314Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,19 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 3,
+ "new_count": 1,
  "items": [
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "안내",
+   "title": "가상자산 거래소 계정 대여 관련 사기 위험 안내",
+   "url": "https://feed.bithumb.com/notice/1649169",
+   "published_at": "2026-11-25T09:15:05.000Z",
+   "tickers": [],
+   "first_seen_at": "2026-11-25T10:47:15.314Z",
+   "is_new": true
+  },
   {
    "source": "bithumb",
    "kind": "warning",
@@ -21,7 +32,7 @@
    "published_at": "2026-11-25T09:10:03.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-25T09:47:15.060Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -32,7 +43,7 @@
    "published_at": "2026-11-25T09:00:05.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-25T09:47:15.060Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -45,7 +56,7 @@
     "BABY"
    ],
    "first_seen_at": "2026-11-25T09:47:15.060Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "binance",
@@ -488,48 +499,6 @@
    "published_at": "2026-11-18T11:02:41.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-18T11:47:16.298Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "입출금",
-   "title": "이더리움클래식(ETC), 리네아(LINEA), 에이다(ADA), 캔톤(CC) 입출금 중단 및 웨이브(WAVES), 뉴트리노토큰(NSBT) 출금 일시 중단 안내 (11/19재개)",
-   "url": "https://feed.bithumb.com/notice/1655736",
-   "published_at": "2026-11-18T10:33:19.000Z",
-   "tickers": [
-    "ETC",
-    "LINEA",
-    "ADA",
-    "CC",
-    "WAVES",
-    "NSBT"
-   ],
-   "first_seen_at": "2026-11-18T10:47:14.639Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "listing",
-   "category": "안내",
-   "title": "트래블룰 솔루션 CODE 연동 VASP 추가 안내",
-   "url": "https://feed.bithumb.com/notice/1655735",
-   "published_at": "2026-11-18T10:07:51.000Z",
-   "tickers": [],
-   "first_seen_at": "2026-11-18T10:47:14.639Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "입출금",
-   "title": "스텔라루멘(XLM) 네트워크 계열 가상자산 2종 입출금 일시 중지 안내 (11/23 오후 6시~)",
-   "url": "https://feed.bithumb.com/notice/1655734",
-   "published_at": "2026-11-18T10:00:00.000Z",
-   "tickers": [
-    "XLM"
-   ],
-   "first_seen_at": "2026-11-18T10:47:14.639Z",
    "is_new": false
   }
  ],
