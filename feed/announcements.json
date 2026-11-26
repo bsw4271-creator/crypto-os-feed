@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T02:47:14.778Z",
+ "generated_at": "2026-11-26T03:47:14.870Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,21 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 0,
+ "new_count": 1,
  "items": [
+  {
+   "source": "bithumb",
+   "kind": "notice",
+   "category": "입출금",
+   "title": "그램(GRAM) 입출금 일시 중지 안내 (11/26 오후 9시~)",
+   "url": "https://feed.bithumb.com/notice/1655850",
+   "published_at": "2026-11-26T02:30:00.000Z",
+   "tickers": [
+    "GRAM"
+   ],
+   "first_seen_at": "2026-11-26T03:47:14.870Z",
+   "is_new": true
+  },
   {
    "source": "bithumb",
    "kind": "notice",
@@ -464,19 +477,6 @@
    "published_at": "2026-11-19T06:00:00.000Z",
    "tickers": [],
    "first_seen_at": "2026-11-19T06:47:15.418Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "listing",
-   "category": "마켓 추가",
-   "title": "키네틱(KNTQ) 원화 마켓 추가",
-   "url": "https://feed.bithumb.com/notice/1655740",
-   "published_at": "2026-11-19T02:58:59.000Z",
-   "tickers": [
-    "KNTQ"
-   ],
-   "first_seen_at": "2026-11-19T03:23:50.084Z",
    "is_new": false
   }
  ],
