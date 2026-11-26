@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T16:47:14.231Z",
+ "generated_at": "2026-11-26T17:47:15.605Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -428,30 +428,6 @@
     "MANTRA"
    ],
    "first_seen_at": "2026-11-20T03:11:32.264Z",
-   "is_new": false
-  },
-  {
-   "source": "binance",
-   "kind": "listing",
-   "title": "Binance Will Add Anthropic (ANTB) bStocks Tokenized Securities as Collateral Asset - 2026-11-19",
-   "url": "https://www.binance.com/en/support/announcement/c4a6afb79b32434a88e826b9632242c0",
-   "published_at": "2026-11-19T17:10:04.122Z",
-   "tickers": [
-    "ANTB"
-   ],
-   "first_seen_at": "2026-11-19T17:47:14.107Z",
-   "is_new": false
-  },
-  {
-   "source": "binance",
-   "kind": "listing",
-   "title": "Binance Exchange Adds Anthropic (ANTB) bStocks Trading Pairs on Binance Spot/Convert - 2026-11-19",
-   "url": "https://www.binance.com/en/support/announcement/830c320848af4257812d5b6e99e031f9",
-   "published_at": "2026-11-19T16:52:15.297Z",
-   "tickers": [
-    "ANTB"
-   ],
-   "first_seen_at": "2026-11-19T17:47:14.107Z",
    "is_new": false
   }
  ],
