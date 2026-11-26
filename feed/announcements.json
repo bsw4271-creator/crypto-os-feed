@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T01:47:19.001Z",
+ "generated_at": "2026-11-26T02:47:14.778Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -476,17 +476,6 @@
    "tickers": [
     "KNTQ"
    ],
-   "first_seen_at": "2026-11-19T03:23:50.084Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "점검",
-   "title": "정부24 점검으로 인한 주민등록증 진위확인 서비스 일시 중단 안내",
-   "url": "https://feed.bithumb.com/notice/1655739",
-   "published_at": "2026-11-19T02:00:00.000Z",
-   "tickers": [],
    "first_seen_at": "2026-11-19T03:23:50.084Z",
    "is_new": false
   }
