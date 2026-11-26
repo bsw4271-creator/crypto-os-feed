@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T08:47:16.283Z",
+ "generated_at": "2026-11-26T09:47:14.620Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,8 +10,19 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 0,
+ "new_count": 1,
  "items": [
+  {
+   "source": "bithumb",
+   "kind": "warning",
+   "category": "안내",
+   "title": "‘개인정보 유출 통지’ 사칭 악성메일 주의. 개인정보위, 피해예방 수칙 안내",
+   "url": "https://feed.bithumb.com/notice/1655878",
+   "published_at": "2026-11-26T09:44:44.000Z",
+   "tickers": [],
+   "first_seen_at": "2026-11-26T09:47:14.620Z",
+   "is_new": true
+  },
   {
    "source": "binance",
    "kind": "listing",
