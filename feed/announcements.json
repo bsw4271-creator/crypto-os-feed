@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T06:47:14.332Z",
+ "generated_at": "2026-11-26T07:47:24.855Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -10,7 +10,7 @@
  ],
  "errors": [],
  "coinbase_baseline_run": false,
- "new_count": 1,
+ "new_count": 0,
  "items": [
   {
    "source": "binance",
@@ -20,7 +20,7 @@
    "published_at": "2026-11-26T06:15:09.831Z",
    "tickers": [],
    "first_seen_at": "2026-11-26T06:47:14.332Z",
-   "is_new": true
+   "is_new": false
   },
   {
    "source": "bithumb",
@@ -441,30 +441,6 @@
     "ANTB"
    ],
    "first_seen_at": "2026-11-19T17:47:14.107Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "delisting",
-   "category": "안내",
-   "title": "포트폴리오 매수 베타 서비스 종료 안내",
-   "url": "https://feed.bithumb.com/notice/1655743",
-   "published_at": "2026-11-19T07:00:16.000Z",
-   "tickers": [],
-   "first_seen_at": "2026-11-19T08:47:14.449Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "listing",
-   "category": "이벤트,수수료 이벤트",
-   "title": "총 1억 4천만원 상당, 키네틱(KNTQ) 원화마켓 추가 기념 에어드랍 이벤트 (*거래 수수료 무료)",
-   "url": "https://feed.bithumb.com/notice/1655741",
-   "published_at": "2026-11-19T06:50:00.000Z",
-   "tickers": [
-    "KNTQ"
-   ],
-   "first_seen_at": "2026-11-19T07:47:15.407Z",
    "is_new": false
   }
  ],
