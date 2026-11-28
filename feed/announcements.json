@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-28T16:47:22.319Z",
+ "generated_at": "2026-11-28T17:47:18.805Z",
  "note": "거래소 공지 묶음. 매시간 GitHub 서버에서 모은다. is_new=true는 이번 실행에서 처음 본 항목. 업비트는 여기 없음(GitHub 서버에서 막힘) → 직접 확인. tickers는 제목에서 뽑은 추정값이라 틀릴 수 있음.",
  "sources_ok": [
   "binance:listing",
@@ -419,32 +419,6 @@
     "ACE"
    ],
    "first_seen_at": "2026-11-22T22:47:13.477Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "warning",
-   "category": "안내",
-   "title": "사이버(CYBER) 유의촉구 안내",
-   "url": "https://feed.bithumb.com/notice/1655757",
-   "published_at": "2026-11-21T17:25:10.000Z",
-   "tickers": [
-    "CYBER"
-   ],
-   "first_seen_at": "2026-11-21T17:29:10.642Z",
-   "is_new": false
-  },
-  {
-   "source": "bithumb",
-   "kind": "notice",
-   "category": "입출금",
-   "title": "사이버(CYBER) 입출금 일시 중지 안내 (11/24 출금 재개)",
-   "url": "https://feed.bithumb.com/notice/1655756",
-   "published_at": "2026-11-21T17:18:38.000Z",
-   "tickers": [
-    "CYBER"
-   ],
-   "first_seen_at": "2026-11-21T17:29:10.642Z",
    "is_new": false
   }
  ],
